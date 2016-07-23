@@ -5,7 +5,7 @@ angular
     ]).config(function ($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: 'home.html',
+            templateUrl: '/assets/ng-app/templates/home.html',
             controller: 'HomeCtrl'
         });
 });
