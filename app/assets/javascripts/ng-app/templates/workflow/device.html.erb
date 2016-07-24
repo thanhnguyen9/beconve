@@ -1,0 +1,44 @@
+<div ng-controller="DeviceController as deviceController">
+  <div class="section location-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-block">
+              <div class="section">
+                <div class="container">
+                  <div class="row">
+                    <h1 class="text-center">Device</h1>
+                    <div class="col-md-offset-3 col-md-6">
+
+                      <form>
+
+                        <fieldset class="form-group">
+                          <label for="deviceSelect">Select your Device</label>
+                          <select class="form-control" data-ng-model="deviceController.deviceSelect" data-ng-options="option.id as option.name for option in deviceController.deviceNames"></select>
+                        </fieldset>
+
+                        <fieldset class="form-group">
+                          <label for="modelSelect">Select your Model</label>
+                          <select class="form-control" data-ng-model="deviceController.modelSelect" data-ng-options="option.name for option in deviceController.modelNames | modelDropDown: deviceController.deviceSelect"></select>
+                        </fieldset>
+
+                        <div class="form-group row">
+                          <div class="col-sm-offset-10 col-sm-2">
+                            <button type="submit" class="btn btn-danger btn-lg" ng-click="deviceController.next()">Next</button>
+                          </div>
+                        </div>
+
+                      </form>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

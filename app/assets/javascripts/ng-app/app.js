@@ -12,5 +12,9 @@ angular
         .when('/location', {
             templateUrl: '/assets/ng-app/templates/workflow/location.html',
             controller: 'LocationController'
+        })
+        .when('/device', {
+            templateUrl: '/assets/ng-app/templates/workflow/device.html',
+            controller: 'DeviceController'
         });
 });
