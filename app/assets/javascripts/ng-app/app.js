@@ -1,6 +1,7 @@
 angular
     .module('BeConve', [
         'ngRoute',
+        'ngStorage',
         'templates'
     ]).config(function ($routeProvider, $locationProvider) {
     $routeProvider

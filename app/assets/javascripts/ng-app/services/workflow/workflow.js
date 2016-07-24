@@ -1,12 +1,13 @@
-var module = angular.module('BeConve', []);
+angular
+    .module('BeConve')
 
-module.service('Workflow', function(){
+    .service('Workflow', function($sessionStorage){
 
-    this.get = function(prop){
-        $sessionStorage[prop]
-    };
+        this.get = function(prop){
+            $sessionStorage[prop]
+        };
 
-    this.set = function(prop, value){
-        $sessionStorage[prop] = value;
-    }
+        this.set = function(prop, value){
+            $sessionStorage[prop] = value;
+        }
 });

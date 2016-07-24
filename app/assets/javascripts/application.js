@@ -16,5 +16,6 @@
 //= require angular
 //= require angular-route
 //= require angular-rails-templates
-//= require ng-app/services/workflow/workflow.js
 //= require_tree .
+//= require ng-app/services/workflow/workflow.js
+//= require ng-app/controllers/workflow/location.js
