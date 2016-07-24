@@ -54,8 +54,8 @@
       <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7373595">
-              <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.1264045">
+              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -736,7 +736,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469375580537</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add rails factore 12 gem">
+      <created>1469375635049</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1469375635049</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -782,7 +788,8 @@
     <MESSAGE value="Add form validation for location page, device page" />
     <MESSAGE value="FInish Workflow Device page" />
     <MESSAGE value="Fix hero home page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix hero home page" />
+    <MESSAGE value="Add rails factore 12 gem" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add rails factore 12 gem" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1106,8 +1113,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7373595">
-          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.1264045">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
           <folding />
         </state>
       </provider>
