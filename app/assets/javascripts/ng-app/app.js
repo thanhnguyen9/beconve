@@ -2,6 +2,7 @@ angular
     .module('BeConve', [
         'ngRoute',
         'ngStorage',
+        'ngMessages',
         'templates'
     ]).config(function ($routeProvider, $locationProvider) {
     $routeProvider
