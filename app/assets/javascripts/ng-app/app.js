@@ -16,6 +16,6 @@ angular
         })
         .when('/device', {
             templateUrl: '/assets/ng-app/templates/workflow/device.html',
-            controller: 'DeviceController'
+            controller: 'deviceController'
         });
 });

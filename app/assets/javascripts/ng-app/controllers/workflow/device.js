@@ -1,7 +1,8 @@
 angular.module('BeConve')
-    .controller('DeviceController', ['$location', 'Workflow', function($location, Workflow) {
-
-        this.deviceNames = [{
+    .controller('deviceController', ['$scope', '$location', 'Workflow', function($scope, $location, Workflow) {
+$scope.text = 'hi';
+        $scope.deviceNames = [
+            {
             id: 1,
             name: 'Apple',
             desc: ''
@@ -16,7 +17,8 @@ angular.module('BeConve')
         }
         ];
 
-        this.modelNames = [{
+        $scope.modelNames = [
+            {
             parent: 1,
             id: 9,
             name: 'Iphone 4',
@@ -98,42 +100,214 @@ angular.module('BeConve')
             desc: ''
         }, {
             parent: 3,
-            id: 24,
+            id: 25,
             name: 'Ipad 2',
             desc: ''
         }, {
             parent: 3,
-            id: 24,
+            id: 26,
             name: 'Ipad 3',
             desc: ''
         }, {
             parent: 3,
-            id: 24,
+            id: 27,
             name: 'Ipad 4',
             desc: ''
         }, {
             parent: 3,
-            id: 24,
+            id: 28,
             name: 'Ipad Mini',
             desc: ''
         }, {
             parent: 3,
-            id: 24,
+            id: 29,
             name: 'Ipad Mini 2',
             desc: ''
         }, {
             parent: 3,
-            id: 24,
+            id: 30,
             name: 'Ipad Mini 3',
             desc: ''
         }, {
             parent: 3,
-            id: 24,
+            id: 31,
             name: 'Ipad Air',
             desc: ''
         }
 
         ];
+
+        $scope.$watch(angular.bind(this, function () {
+            return $scope.modelSelect;
+        }), function(value) {
+            if (value.name === 'Iphone 4' || value.name === 'Iphone 4S' || value.name === 'Iphone 5' || value.name === 'Iphone 5C' ||
+                value.name === 'Iphone 5S' || value.name === 'Note 3'){
+                $scope.colorNames = [
+                    {
+                        id: 1,
+                        name: 'White',
+                        desc: ''
+                    }, {
+                        id: 2,
+                        name: 'Black',
+                        desc: ''
+                    }
+                ];
+            }else if (value.name === 'Iphone 6' || value.name === 'Iphone 6 Plus'){
+                $scope.colorNames = [
+                    {
+                        id: 1,
+                        name: 'White',
+                        desc: ''
+                    }, {
+                        id: 2,
+                        name: 'Black',
+                        desc: ''
+                    }, {
+                        id: 3,
+                        name: 'Gold',
+                        desc: ''
+                    }
+                ];
+            }else if (value.name === 'Iphone 6S' || value.name === 'Iphone 6S Plus' || value.name === 'Iphone SE'){
+                $scope.colorNames = [
+                    {
+                        id: 1,
+                        name: 'White',
+                        desc: ''
+                    }, {
+                        id: 2,
+                        name: 'Black',
+                        desc: ''
+                    }, {
+                        id: 3,
+                        name: 'Gold',
+                        desc: ''
+                    }, {
+                        id: 4,
+                        name: 'Rose Gold',
+                        desc: ''
+                    }
+                ];
+            }else if (value.name === 'Note'){
+                $scope.colorNames = [
+                    {
+                        id: 1,
+                        name: 'White',
+                        desc: ''
+                    }, {
+                        id: 2,
+                        name: 'Black',
+                        desc: ''
+                    }, {
+                        id: 3,
+                        name: 'Gold',
+                        desc: ''
+                    }, {
+                        id: 4,
+                        name: 'Blue',
+                        desc: ''
+                    }
+                ];
+            }else if (value.name === 'Note 2'){
+                $scope.colorNames = [
+                    {
+                        id: 1,
+                        name: 'White',
+                        desc: ''
+                    }, {
+                        id: 2,
+                        name: 'Black',
+                        desc: ''
+                    }, {
+                        id: 3,
+                        name: 'Gold',
+                        desc: ''
+                    }, {
+                        id: 3,
+                        name: 'Blue',
+                        desc: ''
+                    }, {
+                        id: 4,
+                        name: 'Grey',
+                        desc: ''
+                    }
+                ];
+            }else if (value.name === 'S3'){
+                $scope.colorNames = [
+                    {
+                        id: 1,
+                        name: 'White',
+                        desc: ''
+                    }, {
+                        id: 2,
+                        name: 'Blue',
+                        desc: ''
+                    }, {
+                        id: 3,
+                        name: 'Purple',
+                        desc: ''
+                    }, {
+                        id: 4,
+                        name: 'Red',
+                        desc: ''
+                    }
+                ];
+            }else if (value.name === 'S4'){
+                $scope.colorNames = [
+                    {
+                        id: 1,
+                        name: 'White',
+                        desc: ''
+                    }, {
+                        id: 2,
+                        name: 'Blue',
+                        desc: ''
+                    }, {
+                        id: 3,
+                        name: 'Blue',
+                        desc: ''
+                    }, {
+                        id: 4,
+                        name: 'Purple',
+                        desc: ''
+                    }, {
+                        id: 5,
+                        name: 'Red',
+                        desc: ''
+                    }, {
+                        id: 6,
+                        name: 'Grey',
+                        desc: ''
+                    }
+                ];
+            }else if (value.name === 'S5'){
+                $scope.colorNames = [
+                    {
+                        id: 1,
+                        name: 'White',
+                        desc: ''
+                    }, {
+                        id: 2,
+                        name: 'Blue',
+                        desc: ''
+                    }, {
+                        id: 3,
+                        name: 'Gold',
+                        desc: ''
+                    }, {
+                        id: 4,
+                        name: 'Red',
+                        desc: ''
+                    }, {
+                        id: 5,
+                        name: 'Grey',
+                        desc: ''
+                    }
+                ];
+            }
+        });
+
     }])
 
 .filter('modelDropDown', function () {
