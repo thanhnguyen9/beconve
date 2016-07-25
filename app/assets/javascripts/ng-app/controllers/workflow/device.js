@@ -140,7 +140,9 @@ $scope.text = 'hi';
         $scope.$watch(angular.bind(this, function () {
             return $scope.modelSelect;
         }), function(value) {
-            if (value.name === 'Iphone 4' || value.name === 'Iphone 4S' || value.name === 'Iphone 5' || value.name === 'Iphone 5C' ||
+            if (value === undefined){
+                console.log("Waiting for user's input");
+            }else if (value.name === 'Iphone 4' || value.name === 'Iphone 4S' || value.name === 'Iphone 5' || value.name === 'Iphone 5C' ||
                 value.name === 'Iphone 5S' || value.name === 'Note 3'){
                 $scope.colorNames = [
                     {
