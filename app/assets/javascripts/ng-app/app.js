@@ -3,6 +3,7 @@ angular
         'ngRoute',
         'ngStorage',
         'ngMessages',
+        'ngAutocomplete',
         'templates'
     ]).config(function ($routeProvider, $locationProvider) {
     $routeProvider
