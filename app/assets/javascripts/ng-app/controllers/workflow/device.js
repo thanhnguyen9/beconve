@@ -1,6 +1,6 @@
 angular.module('BeConve')
-    .controller('deviceController', ['$scope', '$location', 'Workflow', function($scope, $location, Workflow) {
-$scope.text = 'hi';
+    .controller('deviceController', ['$scope', '$location', 'Workflow', '$sessionStorage', function($scope, $location, Workflow, $sessionStorage) {
+
         $scope.deviceNames = [
             {
             id: 1,
@@ -143,7 +143,8 @@ $scope.text = 'hi';
             if (value === undefined){
                 console.log("Waiting for user's input");
             }else if (value.name === 'Iphone 4' || value.name === 'Iphone 4S' || value.name === 'Iphone 5' || value.name === 'Iphone 5C' ||
-                value.name === 'Iphone 5S' || value.name === 'Note 3'){
+                value.name === 'Iphone 5S' || value.name === 'Note 3' || value.name === 'Ipad 2' || value.name === 'Ipad 3' || value.name === 'Ipad 4' ||
+                    value.name === 'Ipad Mini'){
                 $scope.colorNames = [
                     {
                         id: 1,
@@ -307,8 +308,64 @@ $scope.text = 'hi';
                         desc: ''
                     }
                 ];
+            }else if (value.name === 'Ipad Mini 2'){
+                $scope.colorNames = [
+                    {
+                        id: 1,
+                        name: 'Silver',
+                        desc: ''
+                    }, {
+                        id: 2,
+                        name: 'Space Gray',
+                        desc: ''
+                    }
+                ];
+            }else if (value.name === 'Ipad Mini 3'){
+                $scope.colorNames = [
+                    {
+                        id: 1,
+                        name: 'Silver',
+                        desc: ''
+                    }, {
+                        id: 2,
+                        name: 'Gold',
+                        desc: ''
+                    }, {
+                        id: 3,
+                        name: 'Space Gray',
+                        desc: ''
+                    }
+                ];
+            }else{
+                $scope.colorNames = [
+                    {
+                        id: 1,
+                        name: 'Space Gray',
+                        desc: ''
+                    }, {
+                        id: 2,
+                        name: 'Silver',
+                        desc: ''
+                    }
+                ];
             }
         });
+
+        $scope.next = function(){
+            var deviceSelect = '';
+
+            if ($scope.deviceSelect === 1){
+                var deviceSelect = 'Apple'
+            }else if($scope.deviceSelect === 1){
+                var deviceSelect = 'Samsung'
+            }else {
+                var deviceSelect = 'Ipad'
+            }
+            $sessionStorage['device'] = deviceSelect;
+            $sessionStorage['model'] = $scope.modelSelect.name;
+            $sessionStorage['color'] = $scope.colorSelect.name;
+            $location.path('/availability');
+        }
 
     }])
 

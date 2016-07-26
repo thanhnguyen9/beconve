@@ -1,8 +1,9 @@
 angular.module('BeConve')
-        .controller('LocationController', ['$location', 'Workflow', function($location, Workflow) {
+        .controller('LocationController', ['$location', '$sessionStorage', function($location, $sessionStorage) {
+
 
             this.next = function(){
-                Workflow.set('location', this.location);
+                $sessionStorage['location'] = this.location;
                 $location.url('/device');
             }
         }]);
