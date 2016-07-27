@@ -16,4 +16,7 @@
 //= require angular
 //= require angular-route
 //= require angular-rails-templates
+//= require lodash/lodash
+//= require angular-simple-logger/dist/angular-simple-logger
+//= require angular-google-maps/dist/angular-google-maps
 //= require_tree .

@@ -18,5 +18,8 @@ angular
         .when('/device', {
             templateUrl: '/assets/ng-app/templates/workflow/device.html',
             controller: 'deviceController'
-        });
+        }).when('/availability', {
+        templateUrl: '/assets/ng-app/templates/workflow/availability.html',
+        controller: 'AvailabilityController'
+    });
 });

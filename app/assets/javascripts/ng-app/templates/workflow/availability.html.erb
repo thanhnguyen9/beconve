@@ -1,0 +1,31 @@
+<div ng-controller="AvailabilityController as availabilityController">
+  <div class="section">
+    <div class="container-fluid workflow-availability">
+      <div class="row">
+        <div class="col-md-7 availability-tech">
+          <div class="row">
+            <div class="row-md-12" >
+
+              <div class="col-md-6 availability-card" ng-repeat-start="tech in availabilityController.techs">
+                <div class="card availability-card">
+                  <img class="card-img-top img-responsive" src="http://images.cellphonerepair.com/dallas-north-tx/wp-content/uploads/sites/83/2014/08/cell-phone-repair-tx-dallas-uptown.jpg" alt="Card image cap">
+                  <div class="card-block">
+                    <h4 class="card-title">{{ tech.name }}</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                  </div>
+                </div>
+              </div>
+              <div ng-repeat-end=""></div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden-xs col-md-5">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
