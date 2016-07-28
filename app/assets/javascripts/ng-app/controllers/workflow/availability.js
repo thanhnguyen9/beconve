@@ -6,40 +6,80 @@ angular
         $scope.techs = [
             {
                 name: 'CPR Cell Phone Repair Dallas Uptown',
+                warranty: '1 month',
                 distance: '3 mile',
                 intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec mi a ma',
+                price: '110',
                 responseTime: '2 minutes',
-                rating: '4.5'
+                rating: '4.5',
+                images: 'http://images.cellphonerepair.com/dallas-north-tx/wp-content/uploads/sites/83/2014/08/cell-phone-repair-tx-dallas-uptown.jpg'
             }, {
                 name: 'Cell Tech',
+                warranty: '1 month',
                 distance: '4 mile',
                 intro: 'Sollicitudin. Aenean auctor consequat mauris, a pharetra elit scele',
                 responseTime: '1 minutes',
-                rating: '4.8'
+                rating: '4.8',
+                images: 'http://files.hgsitebuilder.com/hostgator260927/image/cellphonefront1.jpg',
+                price: '110'
             },{
                 name: 'Cellular Geek',
+                warranty: '1 month',
+                price: '110',
                 distance: '3 mile',
                 intro: 'sque ac. Praesent nisi tortor, auctor at rutrum vitae, blandit sit amet ',
                 responseTime: '1 minutes',
-                rating: '4.9'
+                rating: '4.9',
+                images: 'http://images.cellphonerepair.com/dallas-north-tx/wp-content/uploads/sites/83/2014/08/cell-phone-repair-tx-dallas-uptown.jpg'
+
+            },{
+                name: 'Cellular Geek',
+                warranty: '1 month',
+                price: '110',
+                distance: '3 mile',
+                intro: 'sque ac. Praesent nisi tortor, auctor at rutrum vitae, blandit sit amet ',
+                responseTime: '1 minutes',
+                rating: '4.9',
+                images: 'http://images.cellphonerepair.com/dallas-north-tx/wp-content/uploads/sites/83/2014/08/cell-phone-repair-tx-dallas-uptown.jpg'
+
+            },{
+                name: 'Cellular Geek',
+                warranty: '1 month',
+                price: '110',
+                distance: '3 mile',
+                intro: 'sque ac. Praesent nisi tortor, auctor at rutrum vitae, blandit sit amet ',
+                responseTime: '1 minutes',
+                rating: '4.9',
+                images: 'http://images.cellphonerepair.com/dallas-north-tx/wp-content/uploads/sites/83/2014/08/cell-phone-repair-tx-dallas-uptown.jpg'
+
+            },{
+                name: 'Cellular Geek',
+                warranty: '1 month',
+                distance: '3 mile',
+                price: '110',
+                intro: 'sque ac. Praesent nisi tortor, auctor at rutrum vitae, blandit sit amet ',
+                responseTime: '1 minutes',
+                rating: '4.9',
+                images: 'http://images.cellphonerepair.com/dallas-north-tx/wp-content/uploads/sites/83/2014/08/cell-phone-repair-tx-dallas-uptown.jpg'
+
             }
         ];
 
         $scope.map = {
             center: {
-                latitude: 39.5925511,
-                longitude: 2.633202
+                latitude: 32.7767,
+                longitude: -96.7970
             },
             zoom: 14,
             markers: [{
                 id: 1,
-                latitude: 39.5924115,
-                longitude: 2.6468146
+                latitude: 32.783585,
+                longitude: -96.805077
 
             }, {
                 id: 2,
-                latitude: 39.5925511,
-                longitude: 2.633202
+                latitude: 32.771290,
+                longitude: -96.798966
             }],
 
             markersEvents: {

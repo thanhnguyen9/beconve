@@ -1,6 +1,26 @@
+.angular-google-map-container { height: 100vh; }
+
 .container-fluid.workflow-availability {
   margin-top: 6em;
+  overflow: hidden;
+  height:100%;
 }
 
+#left, #right{
+  text-align: center;
+  height:100%;
+  overflow-y: scroll;
+}
 
-.angular-google-map-container { height: 400px; }
+img.card-img-top.img-responsive.availability-image {
+  height: 262px;
+  width: 318px;
+}
+
+span.availability-icon.ng-binding {
+  margin: 5px;
+}
+
+.col-md-6.availability-card.ng-scope {
+  margin-bottom: 15px;
+}

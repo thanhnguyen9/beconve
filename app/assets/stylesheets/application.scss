@@ -4,13 +4,9 @@
 @import "location";
 @import "availability";
 
-#map {
-  height: 500px;
-  margin: 20px 0;
-  border-radius: 5px;
-  border: 1px solid silver;
+body {
+  background: whitesmoke;
 }
-
 .container.nomapping {
   padding: 0 !important;
   margin: 0 !important;

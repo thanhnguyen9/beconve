@@ -2,27 +2,27 @@
   <div class="section">
     <div class="container-fluid workflow-availability">
       <div class="row">
-        <div class="col-md-7 availability-tech">
+
+        <div class="col-xs-12 col-sm-6 availability-tech" id="left">
           <div class="row">
             <div class="row-md-12" >
-
               <div class="col-md-6 availability-card" ng-repeat-start="tech in techs">
                 <div class="card availability-card">
-                  <img class="card-img-top img-responsive" src="http://images.cellphonerepair.com/dallas-north-tx/wp-content/uploads/sites/83/2014/08/cell-phone-repair-tx-dallas-uptown.jpg" alt="Card image cap">
+                  <img class="card-img-top img-responsive availability-image" ng-src="{{ tech.images }}" alt="Card image cap">
                   <div class="card-block">
-                    <h4 class="card-title">{{ tech.name }}</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
+                    <h4 class="card-title">{{ tech.name | limitTo: 40}}</h4>
+                    <span class="availability-icon"><i class="fa fa-fw fa-map-marker text-inverse" aria-hidden="true"></i>{{ tech.distance }}</span>
+                    <span class="availability-icon"><i class="fa fa-fw fa-usd text-inverse" aria-hidden="true"></i>{{ tech.price }}</span>
+                    <span class="availability-icon">Warranty: {{ tech.warranty}}</span>
                   </div>
                 </div>
               </div>
               <div ng-repeat-end=""></div>
-
             </div>
           </div>
         </div>
 
-        <div class="hidden-xs col-md-5">
+        <div class="hidden-xs col-sm-6" id="right">
           <ui-gmap-google-map center="map.center" zoom="map.zoom">
 
             <ui-gmap-window
@@ -43,6 +43,8 @@
 
           </ui-gmap-google-map>
         </div>
+
+
       </div>
     </div>
   </div>
