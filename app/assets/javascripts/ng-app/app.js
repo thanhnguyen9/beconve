@@ -4,8 +4,10 @@ angular
         'ngStorage',
         'ngMessages',
         'ngAutocomplete',
+        'uiGmapgoogle-maps',
         'templates'
-    ]).config(function ($routeProvider, $locationProvider) {
+    ])
+    .config(['$routeProvider', '$locationProvider', 'uiGmapGoogleMapApiProvider', function ($routeProvider, $locationProvider, uiGmapGoogleMapApiProvider) {
     $routeProvider
         .when('/', {
             templateUrl: '/assets/ng-app/templates/home.html',
@@ -22,4 +24,14 @@ angular
         templateUrl: '/assets/ng-app/templates/workflow/availability.html',
         controller: 'AvailabilityController'
     });
-});
+
+    uiGmapGoogleMapApiProvider.configure({
+        china: true
+    });
+
+    uiGmapGoogleMapApiProvider.configure({
+        key: 'my-api-key',
+        v: '3.17',
+        libraries: 'weather,geometry,visualization'
+    });
+}]);
