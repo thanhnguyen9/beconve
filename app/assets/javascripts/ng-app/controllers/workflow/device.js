@@ -1,5 +1,5 @@
 angular.module('BeConve')
-    .controller('deviceController', ['$scope', '$location', 'Workflow', '$sessionStorage', function($scope, $location, Workflow, $sessionStorage) {
+    .controller('deviceController', ['$scope', '$location', '$sessionStorage', function($scope, $location, $sessionStorage) {
 
         $scope.deviceNames = [
             {

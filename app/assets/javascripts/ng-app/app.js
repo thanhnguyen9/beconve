@@ -11,18 +11,18 @@ angular
     $routeProvider
         .when('/', {
             templateUrl: '/assets/ng-app/templates/home.html',
-            controller: 'HomeController'
+            controller: 'homeController'
         })
         .when('/location', {
             templateUrl: '/assets/ng-app/templates/workflow/location.html',
-            controller: 'LocationController'
+            controller: 'locationController'
         })
         .when('/device', {
             templateUrl: '/assets/ng-app/templates/workflow/device.html',
             controller: 'deviceController'
         }).when('/availability', {
         templateUrl: '/assets/ng-app/templates/workflow/availability.html',
-        controller: 'AvailabilityController'
+        controller: 'availabilityController'
     });
 
     uiGmapGoogleMapApiProvider.configure({

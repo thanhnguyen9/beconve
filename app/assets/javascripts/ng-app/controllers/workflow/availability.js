@@ -1,7 +1,7 @@
 angular
     .module('BeConve')
 
-    .controller('AvailabilityController', ['$scope', function($scope) {
+    .controller('availabilityController', ['$scope', function($scope) {
 
         $scope.techs = [
             {

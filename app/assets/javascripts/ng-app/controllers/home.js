@@ -1,6 +1,6 @@
 angular.module('BeConve')
-    .controller('HomeController', ['$location',  function($location) {
-        this.startProcess = function(){
+    .controller('homeController', ['$scope', '$location',  function($scope, $location) {
+        $scope.startProcess = function(){
             $location.path('/location');
         }
     }]);

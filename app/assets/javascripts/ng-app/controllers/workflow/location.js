@@ -1,8 +1,8 @@
 angular.module('BeConve')
-        .controller('LocationController', ['$location', '$sessionStorage', function($location, $sessionStorage) {
+    .controller('locationController', ['$scope', '$location', '$sessionStorage', function($scope, $location, $sessionStorage) {
 
 
-            this.next = function(){
+            $scope.next = function(){
                 $sessionStorage['location'] = this.location;
                 $location.url('/device');
             }
