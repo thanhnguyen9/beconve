@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47b03c1c-5747-4577-96a7-3f7fe1c1132f" name="Default" comment="e'">
+    <list default="true" id="47b03c1c-5747-4577-96a7-3f7fe1c1132f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/templates/workflow/availability.html.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/templates/workflow/availability.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/availability.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/availability.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/location.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/location.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/workflow.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/workflow.js" />
     </list>
     <ignored path="beconve.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,10 +31,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="availability.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="availability.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availability.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7183099">
+            <state vertical-scroll-proportion="0.0">
               <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
               <folding />
             </state>
@@ -61,22 +61,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.scss">
+      <file leaf-file-name="device.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/device.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
-              <folding />
+              <caret line="366" column="41" selection-start-line="366" selection-start-column="29" selection-end-line="366" selection-end-column="41" />
+              <folding>
+                <element signature="e#3028#3078#0" expanded="false" />
+                <element signature="e#3135#3207#0" expanded="false" />
+                <element signature="e#3951#4425#0" expanded="false" />
+                <element signature="e#3989#4410#0" expanded="false" />
+                <element signature="e#4526#5132#0" expanded="false" />
+                <element signature="e#4564#5117#0" expanded="false" />
+                <element signature="e#5201#5749#0" expanded="false" />
+                <element signature="e#5835#6510#0" expanded="false" />
+                <element signature="e#6592#7140#0" expanded="false" />
+                <element signature="e#6614#6740#0" expanded="false" />
+                <element signature="e#7184#8039#0" expanded="false" />
+                <element signature="e#7222#8024#0" expanded="false" />
+                <element signature="e#8106#8779#0" expanded="false" />
+                <element signature="e#8832#9185#0" expanded="false" />
+                <element signature="e#9223#9703#0" expanded="false" />
+                <element signature="e#9261#9688#0" expanded="false" />
+                <element signature="e#9745#10045#0" expanded="false" />
+                <element signature="e#10685#11084#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="location.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/location.scss">
+      <file leaf-file-name="workflow.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/workflow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-              <folding />
+            <state vertical-scroll-proportion="0.2535211">
+              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,21 +112,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bower.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bower.json">
+      <file leaf-file-name="application.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0">
-              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bowerfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Bowerfile">
+      <file leaf-file-name="ng-complete.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/services/ng-complete.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="21" />
+              <caret line="97" column="7" selection-start-line="97" selection-start-column="7" selection-end-line="97" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="location.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/location.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -116,16 +147,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-18.75">
               <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -165,9 +186,7 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/ng-complete.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/workflow.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/device.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/location.js" />
         <option value="$PROJECT_DIR$/Bowerfile" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/location.scss" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/templates/workflow/location.html.erb" />
@@ -179,6 +198,8 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/templates/workflow/availability.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/availability.scss" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availability.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/location.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/workflow.js" />
       </list>
     </option>
   </component>
@@ -857,7 +878,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469673502140</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add border right to distance, price">
+      <created>1469760837774</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1469760837774</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -866,6 +893,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22634898" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -875,7 +903,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -911,7 +938,8 @@
     <MESSAGE value="Finish Device page" />
     <MESSAGE value="- Display the map&#10;- Initially design availability page" />
     <MESSAGE value="- Dynamically display tech in availability page.&#10;- Display google map with marker" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Dynamically display tech in availability page.&#10;- Display google map with marker" />
+    <MESSAGE value="Add border right to distance, price" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add border right to distance, price" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1134,20 +1162,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/services/ng-complete.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8735955">
-          <caret line="97" column="7" selection-start-line="97" selection-start-column="7" selection-end-line="97" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/location.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/assets/bower.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.0">
@@ -1176,52 +1190,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/device.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.8028169">
-          <caret line="366" column="41" selection-start-line="366" selection-start-column="29" selection-end-line="366" selection-end-column="41" />
-          <folding>
-            <element signature="e#3028#3078#0" expanded="false" />
-            <element signature="e#3135#3207#0" expanded="false" />
-            <element signature="e#3951#4425#0" expanded="false" />
-            <element signature="e#3989#4410#0" expanded="false" />
-            <element signature="e#4526#5132#0" expanded="false" />
-            <element signature="e#4564#5117#0" expanded="false" />
-            <element signature="e#5201#5749#0" expanded="false" />
-            <element signature="e#5835#6510#0" expanded="false" />
-            <element signature="e#6592#7140#0" expanded="false" />
-            <element signature="e#6614#6740#0" expanded="false" />
-            <element signature="e#7184#8039#0" expanded="false" />
-            <element signature="e#7222#8024#0" expanded="false" />
-            <element signature="e#8106#8779#0" expanded="false" />
-            <element signature="e#8832#9185#0" expanded="false" />
-            <element signature="e#9223#9703#0" expanded="false" />
-            <element signature="e#9261#9688#0" expanded="false" />
-            <element signature="e#9745#10045#0" expanded="false" />
-            <element signature="e#10685#11084#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/assets/bower_components/angular-google-maps/.bower.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/workflow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1253,14 +1225,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1307,9 +1271,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availability.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7183099">
+        <state vertical-scroll-proportion="0.0">
           <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/device.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="366" column="41" selection-start-line="366" selection-start-column="29" selection-end-line="366" selection-end-column="41" />
+          <folding>
+            <element signature="e#3028#3078#0" expanded="false" />
+            <element signature="e#3135#3207#0" expanded="false" />
+            <element signature="e#3951#4425#0" expanded="false" />
+            <element signature="e#3989#4410#0" expanded="false" />
+            <element signature="e#4526#5132#0" expanded="false" />
+            <element signature="e#4564#5117#0" expanded="false" />
+            <element signature="e#5201#5749#0" expanded="false" />
+            <element signature="e#5835#6510#0" expanded="false" />
+            <element signature="e#6592#7140#0" expanded="false" />
+            <element signature="e#6614#6740#0" expanded="false" />
+            <element signature="e#7184#8039#0" expanded="false" />
+            <element signature="e#7222#8024#0" expanded="false" />
+            <element signature="e#8106#8779#0" expanded="false" />
+            <element signature="e#8832#9185#0" expanded="false" />
+            <element signature="e#9223#9703#0" expanded="false" />
+            <element signature="e#9261#9688#0" expanded="false" />
+            <element signature="e#9745#10045#0" expanded="false" />
+            <element signature="e#10685#11084#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/services/ng-complete.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="97" column="7" selection-start-line="97" selection-start-column="7" selection-end-line="97" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/location.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/workflow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2535211">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
