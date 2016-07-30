@@ -1,7 +1,7 @@
 angular
     .module('BeConve')
 
-    .controller('availabilityController', ['$scope', function($scope) {
+    .controller('availabilityController', ['$scope', '$sessionStorage', function($scope, $sessionStorage) {
 
         $scope.techs = [
             {
@@ -99,4 +99,7 @@ angular
             }
         };
 
+        $scope.pick = function(){
+            console.log($sessionStorage)
+        }
 }]);

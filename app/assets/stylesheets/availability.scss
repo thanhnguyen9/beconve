@@ -17,9 +17,9 @@ img.card-img-top.img-responsive.availability-image {
   width: 318px;
 }
 
-span.availability-icon.ng-binding {
-  margin: 5px;
-}
+//span.availability-icon.ng-binding {
+//  margin: 5px;
+//}
 
 .col-md-6.availability-card.ng-scope {
   margin-bottom: 15px;
@@ -27,5 +27,9 @@ span.availability-icon.ng-binding {
 
 span.availability-icon.availability-border.ng-binding {
   border-right: 1px solid #b6b6b6;
-  padding-right: 10px;
+  padding-right: 2px;
+}
+
+button.btn.btn-danger {
+  background-color: red;
 }

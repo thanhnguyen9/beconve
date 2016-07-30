@@ -11,9 +11,10 @@
                   <img class="card-img-top img-responsive availability-image" ng-src="{{ tech.images }}" alt="Card image cap">
                   <div class="card-block">
                     <h4 class="card-title">{{ tech.name | limitTo: 40}}</h4>
-                    <span class="availability-icon availability-border"><i class="fa fa-fw fa-map-marker text-inverse" aria-hidden="true"></i>{{ tech.distance }}</span>
-                    <span class="availability-icon availability-border"><i class="fa fa-fw fa-usd text-inverse" aria-hidden="true"></i>{{ tech.price }}</span>
-                    <span class="availability-icon">Warranty: {{ tech.warranty}}</span>
+                    <span class="availability-icon"><i class="fa fa-fw fa-map-marker text-inverse" aria-hidden="true"></i>{{ tech.distance }}</span> -
+                    <span class="availability-icon"><i class="fa fa-fw fa-usd text-inverse" aria-hidden="true"></i>{{ tech.price }}</span> -
+                    <span class="availability-icon">Warranty: {{ tech.warranty}}</span> -
+                    <span><button ng-click="pick()" class="btn btn-danger">Pick</button></span>
                   </div>
                 </div>
               </div>
