@@ -20,10 +20,15 @@ angular
         .when('/device', {
             templateUrl: 'workflow/device.html',
             controller: 'deviceController'
-        }).when('/availability', {
-        templateUrl: 'workflow/availability.html',
-        controller: 'availabilityController'
-    });
+        })
+        .when('/availability', {
+            templateUrl: 'workflow/availability.html',
+            controller: 'availabilityController'
+        })
+        .when('/reservation', {
+        templateUrl: 'workflow/reservation.html',
+        controller: 'reservationController'
+        });
 
     uiGmapGoogleMapApiProvider.configure({
         china: true
