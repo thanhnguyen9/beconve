@@ -27,6 +27,11 @@
                           <select class="form-control" ng-model="colorSelect" ng-options="option.name for option in colorNames" required></select>
                         </fieldset>
 
+                        <fieldset class="form-group">
+                          <label for="issueSelect">Select the issue</label>
+                          <select class="form-control" ng-model="issueSelect" ng-options="option.name for option in issueNames" required></select>
+                        </fieldset>
+
                         <div class="form-group row">
                           <div class="col-sm-offset-10 col-sm-2">
                             <button type="submit" class="btn btn-danger btn-lg" ng-disabled="!deviceInput.$valid" ng-click="next()">Next</button>
