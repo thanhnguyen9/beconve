@@ -27,6 +27,8 @@ gem 'bower-rails'
 gem 'angular-rails-templates'
 gem 'bootstrap-sass', '~> 3.3.6'
 
+gem "braintree", "~> 2.64.0"
+
 # Heroku
 gem 'rails_12factor'
 

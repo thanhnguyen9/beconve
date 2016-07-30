@@ -22,5 +22,10 @@ module Beconve
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    Braintree::Configuration.environment = :sandbox
+    Braintree::Configuration.merchant_id = "t8q4pkxqzx7p6sbz"
+    Braintree::Configuration.public_key = "jwtvr3rgmrvzfj37"
+    Braintree::Configuration.private_key = "5585b628a09dde6cec7df43a7adfc772"
   end
 end
