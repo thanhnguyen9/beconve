@@ -356,7 +356,7 @@ angular.module('BeConve')
 
             if ($scope.deviceSelect === 1){
                 var deviceSelect = 'Apple'
-            }else if($scope.deviceSelect === 1){
+            }else if($scope.deviceSelect === 2){
                 var deviceSelect = 'Samsung'
             }else {
                 var deviceSelect = 'Ipad'

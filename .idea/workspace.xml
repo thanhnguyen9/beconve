@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47b03c1c-5747-4577-96a7-3f7fe1c1132f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/reservation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/workflow/reservation.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/app.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/device.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/device.js" />
     </list>
     <ignored path="beconve.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="device.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="device.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/device.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="366" column="12" selection-start-line="366" selection-start-column="12" selection-end-line="366" selection-end-column="44" />
+            <state vertical-scroll-proportion="4.5211267">
+              <caret line="358" column="46" selection-start-line="358" selection-start-column="46" selection-end-line="358" selection-end-column="46" />
               <folding>
                 <element signature="e#3006#3056#0" expanded="false" />
                 <element signature="e#3113#3185#0" expanded="false" />
@@ -114,10 +112,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reservation.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="reservation.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/reservation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14788732">
+            <state vertical-scroll-proportion="0.0">
               <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
               <folding />
             </state>
@@ -191,13 +189,13 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/location.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/workflow/device.html" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/workflow/location.html" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/device.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/availability.scss" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/workflow/availability.html" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availability.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/app.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/workflow/reservation.html" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/reservation.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/device.js" />
       </list>
     </option>
   </component>
@@ -846,7 +844,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469855933436</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Display summary on reservation page">
+      <created>1469856839593</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1469856839593</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -907,7 +911,8 @@
     <MESSAGE value="- Change view name to html&#10;- Validate form &#10;- Change danger button style" />
     <MESSAGE value="- Fix validation of location page&#10;- Add pick button to availability page" />
     <MESSAGE value="Finish availability page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish availability page" />
+    <MESSAGE value="Display summary on reservation page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Display summary on reservation page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1063,22 +1068,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/device.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="366" column="12" selection-start-line="366" selection-start-column="12" selection-end-line="366" selection-end-column="44" />
-          <folding>
-            <element signature="e#3006#3056#0" expanded="false" />
-            <element signature="e#3113#3185#0" expanded="false" />
-            <element signature="e#3513#3860#0" expanded="false" />
-            <element signature="e#3967#4388#0" expanded="false" />
-            <element signature="e#4542#5095#0" expanded="false" />
-            <element signature="e#5179#5727#0" expanded="false" />
-            <element signature="e#5813#6488#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1125,9 +1114,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/reservation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14788732">
+        <state vertical-scroll-proportion="0.0">
           <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/device.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.5211267">
+          <caret line="358" column="46" selection-start-line="358" selection-start-column="46" selection-end-line="358" selection-end-column="46" />
+          <folding>
+            <element signature="e#3006#3056#0" expanded="false" />
+            <element signature="e#3113#3185#0" expanded="false" />
+            <element signature="e#3513#3860#0" expanded="false" />
+            <element signature="e#3967#4388#0" expanded="false" />
+            <element signature="e#4542#5095#0" expanded="false" />
+            <element signature="e#5179#5727#0" expanded="false" />
+            <element signature="e#5813#6488#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
