@@ -3,7 +3,18 @@ angular.module('BeConve')
 
 
             $scope.next = function(){
-                $sessionStorage['location'] = this.location;
+                $sessionStorage['location'] = $scope.location;
                 $location.url('/device');
+            };
+
+        $scope.$watch(angular.bind(this, function () {
+            return $scope.location;
+        }), function(value) {
+            if (angular.isUndefined(value) || value === '') {
+                $scope.valid = false;
+            } else {
+                $scope.valid = true;
             }
-        }]);
+        });
+
+    }]);

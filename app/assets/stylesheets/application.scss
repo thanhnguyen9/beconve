@@ -11,3 +11,11 @@ body {
   padding: 0 !important;
   margin: 0 !important;
 }
+
+button.btn.btn-danger.btn-lg {
+  background-color: red;
+}
+
+button.btn.btn-danger.btn-lg:hover {
+  background-color: #ff5422;
+}
