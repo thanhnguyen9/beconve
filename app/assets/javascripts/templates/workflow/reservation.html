@@ -29,18 +29,22 @@
                                                         <input class="form-control" id="color" ng-model="color">
                                                     </div>
                                                     <div class="form-group">
+                                                        <label for="issue">Issue</label>
+                                                        <input class="form-control" id="issue" ng-model="issue">
+                                                    </div>
+                                                    <div class="form-group">
                                                         <label for="model">Price</label>
-                                                        <input class="form-control" id="color" ng-model="price">
+                                                        <input class="form-control" id="price" ng-model="price">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="warranty">Warranty</label>
                                                         <input class="form-control" id="warranty" ng-model="warranty">
                                                     </div>
-                                            </div>
                                                 </fieldset>
+                                            </div>
 
                                             <div class="col-md-6">
-                                                <form id="checkout" method="post" action="/checkout">
+                                                <form id="checkout" method="post" action="/checkouts">
                                                     <div id="payment-form"></div>
                                                     <input type="submit" class="btn btn-success btn-lg" value="Reserve">
                                                 </form>

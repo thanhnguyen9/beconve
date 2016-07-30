@@ -137,6 +137,26 @@ angular.module('BeConve')
 
         ];
 
+        $scope.issueNames = [
+            {
+                id: 1,
+                name: 'Broken Screen',
+                desc: ''
+            }, {
+                id: 2,
+                name: 'Faulty Battery',
+                desc: ''
+            }, {
+                id: 3,
+                name: "Won't turn on",
+                desc: ''
+            }, {
+                id: 4,
+                name: "Liquid Damage diagnostic",
+                desc: ''
+            }
+        ];
+
         $scope.$watch(angular.bind(this, function () {
             return $scope.modelSelect;
         }), function(value) {
@@ -364,6 +384,8 @@ angular.module('BeConve')
             $sessionStorage['device'] = deviceSelect;
             $sessionStorage['model'] = $scope.modelSelect.name;
             $sessionStorage['color'] = $scope.colorSelect.name;
+            $sessionStorage['issue'] = $scope.issueSelect.name;
+
             $location.path('/availability');
         }
 
