@@ -9,6 +9,10 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-12">
+                                            <ul ng-repeat="error in errors" class="list-group">
+                                                <li class="list-group-item list-group-item-action list-group-item-danger">{{ error }}</li>
+                                            </ul>
+
                                             <div class="col-md-6">
 
                                                 <fieldset disabled>
@@ -46,7 +50,8 @@
                                             <div class="col-md-6">
                                                 <form id="checkout">
                                                     <div id="payment-form"></div>
-                                                    <input type="submit" class="btn btn-success btn-lg" value="Reserve">
+                                                    <loading></loading>
+                                                    <input type="submit" class="btn btn-success btn-lg" ng-hide="success" value="Reserve">
                                                 </form>
                                             </div>
 

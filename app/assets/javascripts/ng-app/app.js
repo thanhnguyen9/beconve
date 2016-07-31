@@ -28,7 +28,11 @@ angular
         .when('/reservation', {
         templateUrl: 'workflow/reservation.html',
         controller: 'reservationController'
-        });
+        })
+        .when('/thank_you', {
+        templateUrl: 'workflow/thank_you.html',
+        controller: 'thankYouController'
+    });
 
     uiGmapGoogleMapApiProvider.configure({
         china: true

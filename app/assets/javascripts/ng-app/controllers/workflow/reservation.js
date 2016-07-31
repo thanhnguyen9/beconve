@@ -1,6 +1,8 @@
 angular.module('BeConve')
     .controller('reservationController', ['$scope', '$location', '$sessionStorage', '$http', function($scope, $location, $sessionStorage, $http) {
 
+        $scope.loading = false;
+
         $scope.location = $sessionStorage.location;
         $scope.device = $sessionStorage.device;
         $scope.model = $sessionStorage.model;
@@ -29,15 +31,26 @@ angular.module('BeConve')
                  onPaymentMethodReceived: function (obj) {
                      $scope.info['payment_method_nonce'] = obj.nonce;
                      $scope.$apply(function(obj) {
+                         $scope.loading = true;
+                         $scope.success = true;
+
                          $http({
                              method: 'POST',
                              url: '/checkouts',
                              data: $scope.info
                          }).then(function successCallback(response) {
-                             console.log(response);
+                             if (response.data.result === 'success'){
+                                 $scope.loading = false;
+
+                                 console.log(response.data.result);
+                                 $location.path('/thank_you');
+                             } else{
+                                 $scope.errors = "hi";
+                                 $scope.loading = false;
+                                 $scope.success = false;
+                             }
                          }, function errorCallback(response) {
-                             // called asynchronously if an error occurs
-                             // or server returns response with an error status.
+                             $scope.errors
                          });
                      });
                  }
