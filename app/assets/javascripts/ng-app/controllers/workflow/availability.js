@@ -108,7 +108,7 @@ angular
         $scope.pick = function(tech_id){
             $sessionStorage['tech_id'] = tech_id;
             $sessionStorage['name'] = 'Geek fix';
-            $sessionStorage['price'] = '$ 110';
+            $sessionStorage['price'] = '110';
             $sessionStorage['warranty'] = '3 months';
 
             $location.path('/reservation');
