@@ -1,5 +1,6 @@
 angular.module('BeConve')
-    .controller('reservationController', ['$scope', '$location', '$sessionStorage', '$http', function($scope, $location, $sessionStorage, $http) {
+    .controller('reservationController', ['$scope', '$location', '$sessionStorage', '$http', 'Auth',
+        function($scope, $location, $sessionStorage, $http, Auth) {
 
         $scope.loading = false;
 
@@ -11,8 +12,9 @@ angular.module('BeConve')
         $scope.price = $sessionStorage.price;
         $scope.warranty = $sessionStorage.warranty;
 
-
-        $scope.info = {location: $scope.location,
+        $scope.info = {
+            customer_id: Auth._currentUser.id,
+            location: $scope.location,
             device: $scope.device,
             model: $scope.model,
             color: $scope.color,

@@ -13,10 +13,10 @@ angular
 
         $httpProvider.defaults.withCredentials = true;
         AuthInterceptProvider.interceptAuth(true);
-        AuthProvider.resourceName('customer');
-        AuthProvider.loginPath('/customers/sign_in.json');
-        AuthProvider.logoutPath('/customers/sign_out.json');
-        AuthProvider.registerPath('/customers.json');
+        AuthProvider.resourceName('users');
+        AuthProvider.loginPath('/users/sign_in.json');
+        AuthProvider.logoutPath('/users/sign_out.json');
+        AuthProvider.registerPath('/users.json');
 
         $routeProvider
             .when('/', {
@@ -57,7 +57,9 @@ angular
 
     .run(['Auth', function (Auth) {
         Auth.currentUser().then(function(user) {
-            console.log(user);
             console.log(Auth._currentUser);
+        }, function(error) {
+            // unauthenticated error
+            console.log("not auth")
         });
     }]);
