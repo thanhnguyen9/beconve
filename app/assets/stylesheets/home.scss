@@ -1,6 +1,6 @@
-body {
-  background: none;
-  font-family: ff-clan-web-pro,"Helvetica Neue",Helvetica,sans-serif!important;
+.section.front-page-pic.gray-background {
+  background: whitesmoke;
+  padding: 5em;
 }
 
 .full {
@@ -36,8 +36,8 @@ img.center-block.img-circle.img-responsive.work-flow {
   background: #f1f1f1;
 }
 
-.section.front-page-pic.ng-scope {
-  padding: 5em 0 5em 0;
+.section.front-page-pic {
+  padding: 2em;
 }
 
 h1, h2, h3, h4, h5, h6, html {
