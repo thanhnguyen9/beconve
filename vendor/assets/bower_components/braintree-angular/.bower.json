@@ -1,0 +1,14 @@
+{
+  "name": "braintree-angular",
+  "homepage": "https://github.com/jeffcarp/braintree-angular",
+  "version": "2.0.0",
+  "_release": "2.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.0.0",
+    "commit": "bc8296d32ded071a1bb4eb138b30e7e051b8f942"
+  },
+  "_source": "https://github.com/jeffcarp/braintree-angular.git",
+  "_target": "*",
+  "_originalSource": "braintree-angular"
+}

@@ -1,4 +1,5 @@
 asset 'angular'
 asset 'angular-route'
 asset 'braintree-angular'
+asset 'angular-devise'
 asset 'angular-google-maps'

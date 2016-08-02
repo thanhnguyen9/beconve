@@ -3,6 +3,8 @@
   "dependencies": {
     "angular": "latest",
     "angular-route": "latest",
+    "braintree-angular": "latest",
+    "angular-devise": "latest",
     "angular-google-maps": "latest"
   }
 }
