@@ -1,8 +1,8 @@
 angular.module('BeConve')
-    .controller('navbarController', ['$scope', '$location', 'Auth', function($scope, $location) {
+    .controller('navbarController', ['$scope', '$window', 'Auth', function($scope, $window) {
 
 
         $scope.goHomeSubmit = function(){
-            $location.path('/');
+            $window.location.href = '/home.html';
         }
     }]);

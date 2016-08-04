@@ -13,7 +13,6 @@ angular.module('BeConve')
         $scope.warranty = $sessionStorage.warranty;
 
         $scope.info = {
-            customer_id: Auth._currentUser.id,
             location: $scope.location,
             device: $scope.device,
             model: $scope.model,
