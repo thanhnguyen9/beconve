@@ -31,6 +31,18 @@ angular
                 templateUrl: 'workflow/device.html',
                 controller: 'deviceController'
             })
+            .when('/model', {
+                templateUrl: 'workflow/model.html',
+                controller: 'modelController'
+            })
+            .when('/color', {
+                templateUrl: 'workflow/color.html',
+                controller: 'colorController'
+            })
+            .when('/issue', {
+                templateUrl: 'workflow/issue.html',
+                controller: 'issueController'
+            })
             .when('/availability', {
                 templateUrl: 'workflow/availability.html',
                 controller: 'availabilityController'

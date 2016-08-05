@@ -48,7 +48,49 @@
                                             </div>
 
                                             <div class="col-md-6">
-                                                <form id="checkout">
+                                                <form name="paymentForm" id="checkout">
+                                                    <div class="form-group">
+                                                        <label for="warranty">Email</label>
+                                                        <input type="email"
+                                                               class="form-control"
+                                                               name="email"
+                                                               id="inputEmail"
+                                                               ng-model="email"
+                                                               ng-required="true"><br>
+                                                        <span class="list-group-item list-group-item-action list-group-item-danger"
+                                                              ng-show="paymentForm.email.$error.required">
+                                                            Valid email is required</span>
+                                                        <span class="list-group-item list-group-item-action list-group-item-danger"
+                                                              ng-show="paymentForm.$error.email">
+                                                            Valid email is required</span>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="warranty">Phone</label>
+                                                        <input type="number"
+                                                               class="form-control"
+                                                               ng-minlength="10"
+                                                               ng-maxlength="10"
+                                                               id="inputPhone"
+                                                               name="phone"
+                                                               placeholder="Ex: 1234567890"
+                                                               ng-model="user.phone"
+                                                               ng-required="true"><br>
+
+                                                        <span class="list-group-item list-group-item-action list-group-item-danger"
+                                                              ng-show="paymentForm.phone.$error.required ||
+                                                                       paymentForm.phone.$error.number">
+                                                                       Valid phone number is required
+                                                        </span>
+                                                        <span class="list-group-item list-group-item-action list-group-item-danger"
+                                                              ng-show="((
+                                                                        paymentForm.phone.$error.minlength ||
+                                                                       paymentForm.phone.$error.maxlength) &&
+                                                                       paymentForm.phone.$dirty) ">
+                                                                       phone number should be 10 digits
+                                                        </span>
+                                                    </div>
+
                                                     <div id="payment-form"></div>
                                                     <loading></loading>
                                                     <input type="submit" class="btn btn-success btn-lg" ng-hide="success" value="Reserve">

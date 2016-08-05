@@ -8,38 +8,16 @@
               <div class="section">
                 <div class="container">
                   <div class="row">
-                    <h1 class="text-center">Device</h1>
-                    <div class="col-md-offset-3 col-md-6">
-
-                      <form name="deviceInput">
-                        <fieldset class="form-group">
-                          <label for="deviceSelect">Select your Device</label>
-                          <select class="form-control" ng-model="deviceSelect" ng-options="option.id as option.name for option in deviceNames" required></select>
-                        </fieldset>
-
-                        <fieldset class="form-group">
-                          <label for="modelSelect">Select your Model</label>
-                          <select class="form-control" ng-model="modelSelect" ng-options="option.name for option in modelNames | modelDropDown: deviceSelect" required></select>
-                        </fieldset>
-
-                        <fieldset class="form-group">
-                          <label for="modelSelect">Select your Color</label>
-                          <select class="form-control" ng-model="colorSelect" ng-options="option.name for option in colorNames" required></select>
-                        </fieldset>
-
-                        <fieldset class="form-group">
-                          <label for="issueSelect">Select the issue</label>
-                          <select class="form-control" ng-model="issueSelect" ng-options="option.name for option in issueNames" required></select>
-                        </fieldset>
-
-                        <div class="form-group row">
-                          <div class="col-sm-offset-10 col-sm-2">
-                            <button type="submit" class="btn btn-danger btn-lg" ng-disabled="!deviceInput.$valid" ng-click="next()">Next</button>
-                          </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div ng-repeat="device in deviceNames" ng-click="devicePick(device.name)">
+                                <div class="col-md-2 text-center device-workflow">
+                                    <h1>{{ device.name }}</h1>
+                                </div>
+                            </div>
+                            <div class="col-md-3"></div>
                         </div>
-
-                      </form>
-
                     </div>
                   </div>
                 </div>
