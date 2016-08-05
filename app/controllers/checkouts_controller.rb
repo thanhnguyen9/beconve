@@ -1,5 +1,15 @@
 class CheckoutsController < ActionController::Base
 
+  TRANSACTION_SUCCESS_STATUSES = [
+      Braintree::Transaction::Status::Authorizing,
+      Braintree::Transaction::Status::Authorized,
+      Braintree::Transaction::Status::Settled,
+      Braintree::Transaction::Status::SettlementConfirmed,
+      Braintree::Transaction::Status::SettlementPending,
+      Braintree::Transaction::Status::Settling,
+      Braintree::Transaction::Status::SubmittedForSettlement,
+  ]
+
   def new
     render inline:Braintree::ClientToken.generate
   end
@@ -7,12 +17,17 @@ class CheckoutsController < ActionController::Base
   def create
     result = Braintree::Transaction.sale(transaction_params)
 
-    if result.success? || result.transaction
-      response = {result: 'success'}
+    if result.transaction
+      if result.success?
+          response = {result: 'success'}
+      else
+        response = {result: result.transaction.status}
+      end
     else
       error_messages = result.errors.map { |error| "Error: #{error.code}: #{error.message}" }
       response = {result: error_messages}
     end
+
     render json:response
   end
 

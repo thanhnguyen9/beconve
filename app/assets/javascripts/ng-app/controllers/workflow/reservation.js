@@ -13,12 +13,14 @@ angular.module('BeConve')
         $scope.warranty = $sessionStorage.warranty;
 
         $scope.info = {
+            email: $scope.email,
+            phone: $scope.phone,
             location: $scope.location,
             device: $scope.device,
             model: $scope.model,
             color: $scope.color,
             issue: $scope.issue,
-            price: $scope.price,
+            price: '2000.00',
             warranty: $scope.warranty,
             nonce: $scope.nonce
         };
@@ -40,18 +42,19 @@ angular.module('BeConve')
                              url: '/checkouts',
                              data: $scope.info
                          }).then(function successCallback(response) {
+                             debugger;
                              if (response.data.result === 'success'){
                                  $scope.loading = false;
 
                                  console.log(response.data.result);
                                  $location.path('/thank_you');
                              } else{
-                                 $scope.errors = "hi";
+                                 $scope.error = response.data.result;
                                  $scope.loading = false;
                                  $scope.success = false;
                              }
                          }, function errorCallback(response) {
-                             $scope.errors
+                             $scope.errors= 'Something went wrong. Please try after somet times'
                          });
                      });
                  }
