@@ -20,4 +20,5 @@
 //= require angular-simple-logger/dist/angular-simple-logger
 //= require angular-google-maps/dist/angular-google-maps
 //= require angular-devise/lib/devise
+//= require angular-resource/angular-resource
 //= require_tree .

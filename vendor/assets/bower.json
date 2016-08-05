@@ -5,6 +5,7 @@
     "angular-route": "latest",
     "braintree-angular": "latest",
     "angular-devise": "latest",
-    "angular-google-maps": "latest"
+    "angular-google-maps": "latest",
+    "angular-resource": "latest"
   }
 }

@@ -4,6 +4,9 @@ angular.module('BeConve')
 
         $scope.loading = false;
 
+
+        $scope.techId = $sessionStorage.techId;
+        $scope.techName = $sessionStorage.techName;
         $scope.location = $sessionStorage.location;
         $scope.device = $sessionStorage.device;
         $scope.model = $sessionStorage.model;
@@ -13,6 +16,7 @@ angular.module('BeConve')
         $scope.warranty = $sessionStorage.warranty;
 
         $scope.info = {
+            tech_id: $scope.tech_id,
             email: $scope.email,
             phone: $scope.phone,
             location: $scope.location,

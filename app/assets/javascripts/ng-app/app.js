@@ -6,7 +6,8 @@ angular
         'ngAutocomplete',
         'uiGmapgoogle-maps',
         'templates',
-        'Devise'
+        'Devise',
+        'ngResource'
     ])
     .config(['$routeProvider', '$locationProvider', 'uiGmapGoogleMapApiProvider', '$httpProvider', 'AuthProvider', 'AuthInterceptProvider',
         function ($routeProvider, $locationProvider, uiGmapGoogleMapApiProvider, $httpProvider, AuthProvider, AuthInterceptProvider) {
