@@ -60,9 +60,9 @@ angular
                 templateUrl: 'host/setting.html',
                 controller: 'settingController'
             })
-            .when('/bank', {
-                templateUrl: 'host/bank.html',
-                controller: 'bankController'
+            .when('/price_setup', {
+                templateUrl: 'host/price_setup.html',
+                controller: 'priceSetupController'
             });
 
         uiGmapGoogleMapApiProvider.configure({

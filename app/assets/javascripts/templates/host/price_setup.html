@@ -1,0 +1,45 @@
+<div>
+    <div class="section location-section">
+        <div class="container nomapping">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-block">
+                            <div class="section">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+
+                                            <form name="myForm">
+                                                <div class="col-xs-4 text-center">
+                                                    <label>IPHONE
+                                                        <input type="checkbox" class="box-check" ng-model="checkboxModel.iphone">
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-4 text-center">
+                                                    <label>IPAD
+                                                        <input type="checkbox" class="box-check" ng-model="checkboxModel.ipad">
+                                                    </label>
+                                                </div>
+                                                <div class="col-xs-4 text-center">
+                                                    <label>SAMSUNG
+                                                        <input type="checkbox" class="box-check" ng-model="checkboxModel.samsung">
+                                                    </label>
+                                                </div>
+
+                                            </form>
+
+                                            <div ng-show="checkboxModel.iphone">Hi</div>
+                                            <div ng-show="checkboxModel.ipad">Hi</div>
+                                            <div ng-show="checkboxModel.samsung">Hi</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

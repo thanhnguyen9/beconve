@@ -1,0 +1,21 @@
+input[type=checkbox].box-check + label {
+  font-size: 18px;
+  vertical-align: middle;
+}
+input[type=checkbox].box-check {
+  -webkit-appearance:button;
+  -moz-appearance:button;
+  appearance: button;
+  border-radius:2.5px;
+  border: 1px solid #AD6969;
+
+  width:40px;
+  height:40px;
+  margin:0px;
+  margin-right:5px;
+  vertical-align: middle;
+}
+
+input[type=checkbox].box-check:checked {
+  background-color:#F9C4C4;
+}
