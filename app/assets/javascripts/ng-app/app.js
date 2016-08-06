@@ -55,7 +55,15 @@ angular
             .when('/thank_you', {
             templateUrl: 'workflow/thank_you.html',
             controller: 'thankYouController'
-        });
+            })
+            .when('/setting', {
+                templateUrl: 'host/setting.html',
+                controller: 'settingController'
+            })
+            .when('/bank', {
+                templateUrl: 'host/bank.html',
+                controller: 'bankController'
+            });
 
         uiGmapGoogleMapApiProvider.configure({
             china: true
