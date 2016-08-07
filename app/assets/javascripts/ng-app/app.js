@@ -56,9 +56,9 @@ angular
             templateUrl: 'workflow/thank_you.html',
             controller: 'thankYouController'
             })
-            .when('/setting', {
-                templateUrl: 'host/setting.html',
-                controller: 'settingController'
+            .when('/bank_setup', {
+                templateUrl: 'host/bank_setup.html',
+                controller: 'bankSetupController'
             })
             .when('/price_setup', {
                 templateUrl: 'host/price_setup.html',

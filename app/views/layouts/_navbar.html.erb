@@ -23,8 +23,8 @@
         <ul class="nav navbar-nav navbar-right">
 
           <% if user_signed_in? %>
-              <li><a href="#setting">Setting</a></li>
-              <li><a href="#bank">Bank</a></li>
+              <li><a href="#bank_setup">Bank Setup</a></li>
+              <li><a href="#price_setup">Price Setup</a></li>
               <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
           <%else%>
             <li><a href="/users/sign_up" class="btn btn-success" style="background: transparent; border-color: white;">Become a Shop</a></li>

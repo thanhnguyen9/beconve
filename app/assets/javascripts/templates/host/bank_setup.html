@@ -1,0 +1,183 @@
+<div>
+    <div class="section location-section">
+        <div class="container nomapping">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-block">
+                            <div id="exTab2" class="container">
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h1 class="text-center">Bank Setup</h1>
+                                        <form name="bankSetupForm">
+                                            <div class="col-md-4">
+                                                <div class="form-group f-spacing">
+                                                    <span class="form-span-color">First Name</span>
+                                                    <input name="firstName"
+                                                           type="text"
+                                                           class="form-control"
+                                                           id="work-flow-location"
+                                                           placeholder="First Name"
+                                                           ng-model="firstName"
+                                                           required>
+                                                </div>
+
+                                                <div class="form-group f-spacing">
+                                                    <span class="form-span-color">Last Name</span>
+                                                    <input name="lastName"
+                                                           type="text"
+                                                           class="form-control"
+                                                           id="work-flow-location"
+                                                           placeholder="Last Name"
+                                                           ng-model="lastName"
+                                                           required>
+                                                </div>
+
+                                                <div class="form-group f-spacing">
+                                                    <span class="form-span-color">Date of Birth</span><br>
+                                                    <input type="date"
+                                                           id="exampleInput"
+                                                           class="form-control"
+                                                           name="dob"
+                                                           placeholder="yyyy-MM-dd"
+                                                           ng-model="dob"
+                                                           min="1950-01-01"
+                                                           max="2013-12-31"
+                                                           required />
+                                                    <div ng-messages="bankSetupForm.zip.$error" style="color:maroon" role="alert">
+                                                        <div ng-message="min" class="alert alert-danger">Not a valid date</div>
+                                                        <div ng-message="max" class="alert alert-danger">Not a valid date</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group f-spacing">
+                                                    <span class="form-span-color">Last 4 SSN</span><br>
+                                                    <input type="number"
+                                                           name="ssn"
+                                                           class="form-control"
+                                                           ng-model="ssn"
+                                                           ng-minlength="4"
+                                                           ng-maxlength="4"
+                                                           placeholder="1234"
+                                                           required />
+                                                    <div ng-messages="bankSetupForm.ssn.$error" style="color:maroon" role="alert">
+                                                        <div ng-message="minlength" class="alert alert-danger">Please input last 4 SSN</div>
+                                                        <div ng-message="maxlength" class="alert alert-danger">Only input last 4 SSN</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <div class="form-group f-spacing">
+                                                    <span class="form-span-color">Address</span>
+                                                    <input name="address"
+                                                           type="text"
+                                                           class="form-control"
+                                                           id="work-flow-location"
+                                                           placeholder="123 St"
+                                                           ng-model="address"
+                                                           required>
+                                                </div>
+
+                                                <div class="form-group f-spacing">
+                                                    <span class="form-span-color">City</span>
+                                                    <input name="city"
+                                                           type="text"
+                                                           class="form-control"
+                                                           id="work-flow-location"
+                                                           placeholder="Dallas"
+                                                           ng-model="city"
+                                                           required>
+                                                </div>
+
+                                                <div class="form-group f-spacing">
+                                                    <span class="form-span-color">State</span>
+                                                    <input name="region"
+                                                           type="text"
+                                                           class="form-control"
+                                                           id="work-flow-location"
+                                                           placeholder="TX"
+                                                           ng-model="region"
+                                                           required>
+                                                </div>
+
+                                                <div class="form-group f-spacing">
+                                                    <span class="form-span-color">Zip Code</span>
+                                                    <input name="zip"
+                                                           type="number"
+                                                           class="form-control"
+                                                           id="work-flow-location"
+                                                           placeholder="75039"
+                                                           ng-model="zip"
+                                                           ng-minlength="5"
+                                                           ng-maxlength="5"
+                                                           required>
+                                                    <div ng-messages="bankSetupForm.zip.$error" style="color:maroon" role="alert">
+                                                        <div ng-message="minlength" class="alert alert-danger">Please correct zip code</div>
+                                                        <div ng-message="maxlength" class="alert alert-danger">Please correct zip code</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <div class="form-group f-spacing">
+                                                    <span class="form-span-color">Business Legal Name</span>
+                                                    <input name="legalName"
+                                                           type="text"
+                                                           class="form-control"
+                                                           id="work-flow-location"
+                                                           ng-model="legalName"
+                                                           required>
+                                                </div>
+
+                                                <div class="form-group f-spacing">
+                                                    <span class="form-span-color">Tax ID</span>
+                                                    <input name="taxId"
+                                                           type="text"
+                                                           class="form-control"
+                                                           id="work-flow-location"
+                                                           ng-model="taxId"
+                                                           required>
+                                                </div>
+
+                                                <div class="form-group f-spacing">
+                                                    <span class="form-span-color">Account Number</span><br>
+                                                    <input type="number"
+                                                           name="account"
+                                                           class="form-control"
+                                                           ng-model="accountNumber"
+                                                           required />
+                                                </div>
+
+                                                <div class="form-group f-spacing">
+                                                    <span class="form-span-color">Routing Number</span><br>
+                                                    <input type="number"
+                                                           name="routing"
+                                                           class="form-control"
+                                                           ng-model="routingNumber"
+                                                           required />
+                                                </div>
+                                            </div>
+
+                                            <button type="submit" class="btn btn-danger btn-lg pull-right" ng-click="bankSetupForm.$valid && submit()">Setup my bank</button>
+
+                                        </form>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+    descriptor: BECONVE
+    :destination => Braintree::MerchantAccount::FundingDestination::Bank,
+    master_merchant_account_id: Beconve ID
+-->
