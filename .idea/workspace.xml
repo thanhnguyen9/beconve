@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47b03c1c-5747-4577-96a7-3f7fe1c1132f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/host/bank_setup.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/host/setting.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/setting.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/bankSetup.js" />
+    <list default="true" id="47b03c1c-5747-4577-96a7-3f7fe1c1132f" name="Default" comment="Hot fix syntax">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/app.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/bankSetup.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/bankSetup.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/priceSetup.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/priceSetup.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/host/price_setup.html" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/host/price_setup.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/host.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/host.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_navbar.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_navbar.html.erb" />
     </list>
     <ignored path="beconve.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,20 +36,19 @@
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/priceSetup.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="388" column="29" selection-start-line="388" selection-start-column="15" selection-end-line="388" selection-end-column="29" />
+              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
               <folding>
-                <element signature="e#237#1144#0" expanded="false" />
-                <element signature="e#1180#2087#0" expanded="false" />
-                <element signature="e#2120#3027#0" expanded="false" />
-                <element signature="e#3061#3968#0" expanded="false" />
-                <element signature="e#4000#4627#0" expanded="false" />
-                <element signature="e#4661#5288#0" expanded="false" />
-                <element signature="e#5319#5946#0" expanded="false" />
-                <element signature="e#5978#6605#0" expanded="false" />
-                <element signature="e#6640#7152#0" expanded="false" />
-                <element signature="e#7189#7701#0" expanded="false" />
-                <element signature="e#7735#8247#0" expanded="false" />
-                <element signature="e#8282#8794#0" expanded="false" />
+                <element signature="e#404#1311#0" expanded="false" />
+                <element signature="e#2287#3194#0" expanded="false" />
+                <element signature="e#3228#4135#0" expanded="false" />
+                <element signature="e#4167#4794#0" expanded="false" />
+                <element signature="e#4828#5455#0" expanded="false" />
+                <element signature="e#5486#6113#0" expanded="false" />
+                <element signature="e#6145#6772#0" expanded="false" />
+                <element signature="e#6807#7319#0" expanded="false" />
+                <element signature="e#7356#7868#0" expanded="false" />
+                <element signature="e#7902#8414#0" expanded="false" />
+                <element signature="e#8449#8961#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -64,7 +58,27 @@
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+              <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20160731223226_devise_create_users.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20160731223226_devise_create_users.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bankSetup.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/bankSetup.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="7" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -73,17 +87,17 @@
       <file leaf-file-name="price_setup.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/host/price_setup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.7083335">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.3333335">
+              <caret line="57" column="166" selection-start-line="57" selection-start-column="166" selection-end-line="57" selection-end-column="166" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_navbar.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_navbar.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_navbar.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54269177">
+            <state vertical-scroll-proportion="-15.625">
               <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
               <folding />
             </state>
@@ -120,7 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/location.scss" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/templates/workflow/device.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/location.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/workflow.js" />
@@ -166,11 +179,12 @@
         <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/host.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/priceSetup.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/host/setting.html" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/host/price_setup.html" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/app.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/_navbar.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/bankSetup.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/host/price_setup.html" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/priceSetup.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/app.js" />
       </list>
     </option>
   </component>
@@ -241,7 +255,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beconve" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beconve1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -886,7 +918,19 @@
       <option name="project" value="LOCAL" />
       <updated>1470504699967</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Finish bank setup&#10;Finish price setup">
+      <created>1470596208426</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1470596208426</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Hot fix syntax">
+      <created>1470596591624</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1470596591624</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -917,8 +961,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add gem pg" />
-    <MESSAGE value="- Added Bowerfile.&#10;- Updated database.yml" />
     <MESSAGE value="Do not throw erro before user select device." />
     <MESSAGE value="Add autocomplete to  location page." />
     <MESSAGE value="Finish Device page" />
@@ -942,7 +984,9 @@
     <MESSAGE value="Edit notice and alert message of the app" />
     <MESSAGE value="Merge branch 'bank_set_up'&#10;" />
     <MESSAGE value="FInish select box functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="FInish select box functionality" />
+    <MESSAGE value="Finish bank setup&#10;Finish price setup" />
+    <MESSAGE value="Hot fix syntax" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hot fix syntax" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -951,13 +995,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availability.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/workflow/availability.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1287,47 +1324,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/bankSetup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/priceSetup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="388" column="29" selection-start-line="388" selection-start-column="15" selection-end-line="388" selection-end-column="29" />
-          <folding>
-            <element signature="e#237#1144#0" expanded="false" />
-            <element signature="e#1180#2087#0" expanded="false" />
-            <element signature="e#2120#3027#0" expanded="false" />
-            <element signature="e#3061#3968#0" expanded="false" />
-            <element signature="e#4000#4627#0" expanded="false" />
-            <element signature="e#4661#5288#0" expanded="false" />
-            <element signature="e#5319#5946#0" expanded="false" />
-            <element signature="e#5978#6605#0" expanded="false" />
-            <element signature="e#6640#7152#0" expanded="false" />
-            <element signature="e#7189#7701#0" expanded="false" />
-            <element signature="e#7735#8247#0" expanded="false" />
-            <element signature="e#8282#8794#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/host/bank_setup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.875">
           <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/host/price_setup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.7083335">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1340,18 +1340,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/app.js">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_navbar.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+        <state vertical-scroll-proportion="-15.625">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_navbar.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/host/price_setup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54269177">
-          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+        <state vertical-scroll-proportion="-4.3333335">
+          <caret line="57" column="166" selection-start-line="57" selection-start-column="166" selection-end-line="57" selection-end-column="166" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/bankSetup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="7" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/priceSetup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding>
+            <element signature="e#404#1311#0" expanded="false" />
+            <element signature="e#2287#3194#0" expanded="false" />
+            <element signature="e#3228#4135#0" expanded="false" />
+            <element signature="e#4167#4794#0" expanded="false" />
+            <element signature="e#4828#5455#0" expanded="false" />
+            <element signature="e#5486#6113#0" expanded="false" />
+            <element signature="e#6145#6772#0" expanded="false" />
+            <element signature="e#6807#7319#0" expanded="false" />
+            <element signature="e#7356#7868#0" expanded="false" />
+            <element signature="e#7902#8414#0" expanded="false" />
+            <element signature="e#8449#8961#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20160731223226_devise_create_users.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

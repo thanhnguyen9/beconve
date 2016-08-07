@@ -74,13 +74,13 @@ angular
             v: '3.17',
             libraries: 'weather,geometry,visualization'
         })
-    }])
-
-    .run(['Auth', function (Auth) {
-        Auth.currentUser().then(function(user) {
-            console.log(Auth._currentUser);
-        }, function(error) {
-            // unauthenticated error
-            console.log("not auth")
-        });
     }]);
+
+    //.run(['Auth', function (Auth) {
+    //    Auth.currentUser().then(function(user) {
+    //        console.log(Auth._currentUser);
+    //    }, function(error) {
+    //        // unauthenticated error
+    //        console.log("not auth")
+    //    });
+    //}]);

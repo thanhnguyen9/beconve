@@ -1,6 +1,12 @@
 angular.module('BeConve')
     .controller('priceSetupController', ['$scope', '$location', 'Auth', function($scope, $location, Auth) {
 
+        Auth.currentUser().then(function(user) {
+            console.log(Auth._currentUser);
+        }, function(error) {
+            $location.path('/')
+        });
+
         $scope.checkboxModel = {
             iphone : true
         };
