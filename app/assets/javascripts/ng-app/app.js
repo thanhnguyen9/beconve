@@ -60,10 +60,19 @@ angular
                 templateUrl: 'host/bank_setup.html',
                 controller: 'bankSetupController'
             })
-            .when('/price_setup', {
-                templateUrl: 'host/price_setup.html',
-                controller: 'priceSetupController'
-            });
+            .when('/iphone_price_setup', {
+                templateUrl: 'host/iphone_price_setup.html',
+                controller: 'iphonePriceSetupController'
+            })
+            .when('/ipad_price_setup', {
+                templateUrl: 'host/ipad_price_setup.html',
+                controller: 'ipadPriceSetupController'
+            })
+            .when('/samsung_price_setup', {
+                templateUrl: 'host/samsung_price_setup.html',
+                controller: 'samsungPriceSetupController'
+            })
+        ;
 
         uiGmapGoogleMapApiProvider.configure({
             china: true

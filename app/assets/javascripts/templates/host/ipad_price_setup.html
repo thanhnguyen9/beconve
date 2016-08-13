@@ -1,0 +1,121 @@
+<div>
+    <div class="section location-section">
+        <div class="container nomapping">
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <form>
+
+                        <div class="form-group">
+                            <label class="radio-inline"><input type="radio" name="issue" value="brokenScreen" ng-model="issue">Broken Screen</label>
+                            <label class="radio-inline"><input type="radio" name="issue" value="faultyBattery" ng-model="issue">Faulty Battery</label>
+                            <label class="radio-inline"><input type="radio" name="issue" value="notOn" ng-model="issue">Won't Turn On</label>
+                            <label class="radio-inline"><input type="radio" name="issue" value="liquidDamage" ng-model="issue">Liquid Damage</label>
+                        </div>
+
+                    </form>
+                    <div class="tab-pane active" id="bank">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <br>
+
+                                <!--IPHONE-->
+                                <div class="text-center" ng-show="issue == 'brokenScreen'">
+                                    <h1>Broken Screen</h1>
+                                    <form name="notOnPriceForm">
+
+                                        <div class="col-md-2" ng-repeat="model in ipadScreens">
+                                            <div class="form-group f-spacing">
+                                                <label class="form-span-color">{{ model.name }}</label>
+                                                <input type="number"
+                                                       class="form-control"
+                                                       id="work-flow-location"
+                                                       placeholder="110"
+                                                       ng-model="model.price"
+                                                       required>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <button type="submit" class="btn btn-danger btn-lg" ng-click="ipadBrokenScreenSubmit()">Save price</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+
+                                <div class="text-center" ng-show="issue == 'faultyBattery'">
+                                    <h1>Faulty Battery</h1>
+                                    <form name="faultyBatteryPriceForm">
+
+                                        <div class="col-md-2" ng-repeat="model in ipadBatteries">
+                                            <div class="form-group f-spacing">
+                                                <label class="form-span-color">{{ model.name }}</label>
+                                                <input type="number"
+                                                       class="form-control"
+                                                       id="work-flow-location"
+                                                       placeholder="110"
+                                                       ng-model="model.price"
+                                                       required>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <button type="submit" class="btn btn-danger btn-lg" ng-click="ipadFaultyBatterySubmit()">Save price</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+
+                                <div class="text-center" ng-show="issue == 'notOn'">
+                                    <h1>Won't Turn on</h1>
+                                    <form name="notOnPriceForm">
+
+                                        <div class="col-md-2" ng-repeat="model in ipadNotOns">
+                                            <div class="form-group f-spacing">
+                                                <label class="form-span-color">{{ model.name }}</label>
+                                                <input type="number"
+                                                       class="form-control"
+                                                       id="work-flow-location"
+                                                       placeholder="110"
+                                                       ng-model="model.price"
+                                                       required>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <button type="submit" class="btn btn-danger btn-lg" ng-click="ipadNotTurnOnSubmit()">Save price</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+
+                                <div class="text-center" ng-show="issue == 'liquidDamage'">
+                                    <h1>Liquid Damge</h1>
+                                    <form name="liquidDamagePriceForm">
+
+                                        <div class="col-md-2" ng-repeat="model in ipadLiquids">
+                                            <div class="form-group f-spacing">
+                                                <label class="form-span-color">{{ model.name }}</label>
+                                                <input type="number"
+                                                       class="form-control"
+                                                       id="work-flow-location"
+                                                       placeholder="110"
+                                                       ng-model="model.price"
+                                                       required>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <button type="submit" class="btn btn-danger btn-lg" ng-click="ipadLiquidDamageSubmit()">Save price</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
