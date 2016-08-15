@@ -21,4 +21,5 @@
 //= require angular-google-maps/dist/angular-google-maps
 //= require angular-devise/lib/devise
 //= require angular-resource/angular-resource
+//= require angular-payments/lib/angular-payments
 //= require_tree .

@@ -49,55 +49,86 @@
                                             </div>
 
                                             <div class="col-md-6">
-                                                <form name="paymentForm" id="checkout">
-                                                    <div class="form-group">
-                                                        <label for="warranty">Email</label>
-                                                        <input type="email"
-                                                               class="form-control"
-                                                               name="email"
-                                                               id="inputEmail"
-                                                               ng-model="email"
-                                                               ng-required="true"
-                                                               placeholder="contact@beconve.com"><br>
-                                                        <span class="list-group-item list-group-item-action list-group-item-danger"
-                                                              ng-show="paymentForm.email.$error.required">
-                                                            Valid email is required</span>
-                                                        <span class="list-group-item list-group-item-action list-group-item-danger"
-                                                              ng-show="paymentForm.$error.email">
-                                                            Valid email is required</span>
+                                                <!--<form name="paymentForm" id="checkout">-->
+                                                    <!--<div class="form-group">-->
+                                                        <!--<label for="warranty">Email</label>-->
+                                                        <!--<input type="email"-->
+                                                               <!--class="form-control"-->
+                                                               <!--name="email"-->
+                                                               <!--id="inputEmail"-->
+                                                               <!--ng-model="email"-->
+                                                               <!--ng-required="true"-->
+                                                               <!--placeholder="contact@beconve.com"><br>-->
+                                                        <!--<span class="list-group-item list-group-item-action list-group-item-danger"-->
+                                                              <!--ng-show="paymentForm.email.$error.required">-->
+                                                            <!--Valid email is required</span>-->
+                                                        <!--<span class="list-group-item list-group-item-action list-group-item-danger"-->
+                                                              <!--ng-show="paymentForm.$error.email">-->
+                                                            <!--Valid email is required</span>-->
+                                                    <!--</div>-->
+
+                                                    <!--<div class="form-group">-->
+                                                        <!--<label for="warranty">Phone</label>-->
+                                                        <!--<input type="number"-->
+                                                               <!--class="form-control"-->
+                                                               <!--ng-minlength="10"-->
+                                                               <!--ng-maxlength="10"-->
+                                                               <!--id="inputPhone"-->
+                                                               <!--name="phone"-->
+                                                               <!--placeholder="Ex: 1234567890"-->
+                                                               <!--ng-model="phone"-->
+                                                               <!--ng-required="true"><br>-->
+
+                                                        <!--<span class="list-group-item list-group-item-action list-group-item-danger"-->
+                                                              <!--ng-show="paymentForm.phone.$error.required ||-->
+                                                                       <!--paymentForm.phone.$error.number">-->
+                                                                       <!--Valid phone number is required-->
+                                                        <!--</span>-->
+                                                        <!--<span class="list-group-item list-group-item-action list-group-item-danger"-->
+                                                              <!--ng-show="((-->
+                                                                        <!--paymentForm.phone.$error.minlength ||-->
+                                                                       <!--paymentForm.phone.$error.maxlength) &&-->
+                                                                       <!--paymentForm.phone.$dirty) ">-->
+                                                                       <!--phone number should be 10 digits-->
+                                                        <!--</span>-->
+                                                    <!--</div>-->
+
+                                                    <!--<div id="payment-form"></div>-->
+                                                    <!--<loading></loading>-->
+                                                    <!--<p>{{ error }}</p>-->
+                                                    <!--<input type="submit" class="btn btn-success btn-lg" ng-hide="success" value="Reserve">-->
+                                                <!--</form>-->
+
+                                                <form stripe-form="stripeCallback" name="checkoutForm">
+
+                                                    <label for="techName">Email</label>
+                                                    <input class="form-control" type="email" class="form-control" id="email" ng-model="email" required>
+
+                                                    <label for="techName">Phone number</label><br>
+                                                    <input class="form-control input-phone" type='text' phone-input ng-model="phoneVal" placeholder="(123) 456-6789" required/><br>
+
+                                                    <label for="techName">Card Number</label>
+                                                    <input class="form-control" ng-model="number" placeholder="Card Number"
+                                                           payments-format="card" payments-validate="card" name="card" required/><br>
+
+                                                    <label for="techName">Expiration MM/YYYY</label>
+                                                    <input class="form-control" ng-model="expiry" placeholder="MM/YYYY"
+                                                           payments-format="expiry" payments-validate="expiry"
+                                                           name="expiry" required/><br>
+
+                                                    <label for="techName">CVC</label>
+                                                    <input class="form-control" ng-model="cvc" placeholder="CVC" payments-format="cvc" payments-validate="cvc" name="cvc" required/><br>
+
+                                                    <button type="submit" class="btn btn-success btn-lg" ng-click="pay()">Pay</button>
+                                                    <div ng-if="checkoutForm.$invalid">
+                                                        Error: Please correct card's information
                                                     </div>
-
-                                                    <div class="form-group">
-                                                        <label for="warranty">Phone</label>
-                                                        <input type="number"
-                                                               class="form-control"
-                                                               ng-minlength="10"
-                                                               ng-maxlength="10"
-                                                               id="inputPhone"
-                                                               name="phone"
-                                                               placeholder="Ex: 1234567890"
-                                                               ng-model="phone"
-                                                               ng-required="true"><br>
-
-                                                        <span class="list-group-item list-group-item-action list-group-item-danger"
-                                                              ng-show="paymentForm.phone.$error.required ||
-                                                                       paymentForm.phone.$error.number">
-                                                                       Valid phone number is required
-                                                        </span>
-                                                        <span class="list-group-item list-group-item-action list-group-item-danger"
-                                                              ng-show="((
-                                                                        paymentForm.phone.$error.minlength ||
-                                                                       paymentForm.phone.$error.maxlength) &&
-                                                                       paymentForm.phone.$dirty) ">
-                                                                       phone number should be 10 digits
-                                                        </span>
-                                                    </div>
-
-                                                    <div id="payment-form"></div>
-                                                    <loading></loading>
-                                                    <p>{{ error }}</p>
-                                                    <input type="submit" class="btn btn-success btn-lg" ng-hide="success" value="Reserve">
                                                 </form>
+
+
+
+
+
                                             </div>
 
                                         </div>

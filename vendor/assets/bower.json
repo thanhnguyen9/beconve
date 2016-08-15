@@ -6,6 +6,8 @@
     "braintree-angular": "latest",
     "angular-devise": "latest",
     "angular-google-maps": "latest",
-    "angular-resource": "latest"
+    "angular-resource": "latest",
+    "angular-payments": "latest",
+    "angular-spinner": "latest"
   }
 }
