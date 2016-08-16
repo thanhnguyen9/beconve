@@ -68,7 +68,6 @@ module Api
             images: 'http://images.cellphonerepair.com/dallas-north-tx/wp-content/uploads/sites/83/2014/08/cell-phone-repair-tx-dallas-uptown.jpg'
 
         }
-        response = {result: response}
         render json:response
       end
     end

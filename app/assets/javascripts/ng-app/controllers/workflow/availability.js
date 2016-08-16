@@ -1,10 +1,10 @@
 angular
     .module('BeConve')
 
-    .controller('availabilityController', ['$scope', '$sessionStorage', '$location', 'Technician',
-        function($scope, $sessionStorage, $location, Technician) {
+    .controller('availabilityController', ['$scope', '$sessionStorage', '$location', 'AvailableTechnicians',
+        function($scope, $sessionStorage, $location, AvailableTechnicians) {
 
-            var techs = Technician.query(function() {
+            var techs = AvailableTechnicians.query(function() {
                 $scope.techs = techs;
             });
 
