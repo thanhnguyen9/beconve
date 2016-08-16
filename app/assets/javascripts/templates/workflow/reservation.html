@@ -2,6 +2,12 @@
     <div class="section location-section">
         <div class="container nomapping">
             <div class="row">
+                <div class="col-md-2"><label for="techName">Shop name</label>: {{ techName }} </div>
+                <div class="col-md-4"><label for="location">Location</label>: {{ location }} </div>
+                <div class="col-md-3"><label for="device">Device</label>: {{ model }} - {{ color }} - {{ issue }}</div>
+                <div class="col-md-1"><label for="model">Price</label>: {{ price }}</div>
+                <div class="col-md-2"><label for="warranty">Warranty</label>: {{ warranty }}</div>
+
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-block">
@@ -9,44 +15,61 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-12">
-
+                                            <div class="col-md-3"></div>
                                             <div class="col-md-6">
 
-                                                <fieldset disabled>
-                                                    <div class="form-group">
-                                                        <label for="techName">Shop name</label>
-                                                        <input class="form-control" id="techName" ng-model="techName">
+                                                <h1 class="text-center">You are almost done!</h1>
+
+                                                <form stripe-form="stripeCallback" name="checkoutForm">
+
+                                                    <label for="techName">Email</label>
+                                                    <input class="form-control" type="email" class="form-control" id="email" ng-model="email" required>
+
+                                                    <label for="techName">Phone number</label><br>
+                                                    <input class="form-control input-phone" type='text' phone-input ng-model="phoneVal" placeholder="(123) 456-6789" required/><br>
+
+                                                    <label for="techName">Card Number</label>
+                                                    <input class="form-control" ng-model="number" placeholder="Card Number"
+                                                           payments-format="card" payments-validate="card" name="card" required/><br>
+
+                                                    <label for="techName">Expiration MM/YYYY</label>
+                                                    <input class="form-control" ng-model="expiry" placeholder="MM/YYYY"
+                                                           payments-format="expiry" payments-validate="expiry"
+                                                           name="expiry" required/><br>
+
+                                                    <label for="techName">CVC</label>
+                                                    <input class="form-control" ng-model="cvc" placeholder="CVC" payments-format="cvc" payments-validate="cvc" name="cvc" required/><br>
+
+                                                    <div ng-if="checkoutForm.$invalid" class="alert alert-danger">
+                                                        Error: Please correct card's information
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label for="location">Location</label>
-                                                        <input class="form-control" id="location" ng-model="location">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="device">Device</label>
-                                                        <input class="form-control" id="device" ng-model="device">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="model">Model</label>
-                                                        <input class="form-control" id="model" ng-model="model">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="color">Color</label>
-                                                        <input class="form-control" id="color" ng-model="color">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="issue">Issue</label>
-                                                        <input class="form-control" id="issue" ng-model="issue">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="model">Price</label>
-                                                        <input class="form-control" id="price" ng-model="price">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="warranty">Warranty</label>
-                                                        <input class="form-control" id="warranty" ng-model="warranty">
-                                                    </div>
-                                                </fieldset>
+
+                                                    <button type="submit" class="btn btn-success btn-lg pull-right" ng-click="pay()">Pay</button>
+
+                                                </form>
+
                                             </div>
+                                            <div class="col-md-3"></div>
+                                            <!--<div class="col-md-6">-->
+
+                                                <!--<fieldset disabled>-->
+                                                    <!--<div class="form-group">-->
+                                                        <!--<label for="techName">Shop name</label>: {{ techName }}-->
+                                                    <!--</div>-->
+                                                    <!--<div class="form-group">-->
+                                                        <!--<label for="location">Location</label>: {{ location }}-->
+                                                    <!--</div>-->
+                                                    <!--<div class="form-group">-->
+                                                        <!--<label for="device">Device</label>: {{ model }} - {{ color }} - {{ issue }}-->
+                                                    <!--</div>-->
+                                                    <!--<div class="form-group">-->
+                                                        <!--<label for="model">Price</label>: {{ price }}-->
+                                                    <!--</div>-->
+                                                    <!--<div class="form-group">-->
+                                                        <!--<label for="warranty">Warranty</label>: {{ warranty }}-->
+                                                    <!--</div>-->
+                                                <!--</fieldset>-->
+                                            <!--</div>-->
 
                                             <div class="col-md-6">
                                                 <!--<form name="paymentForm" id="checkout">-->
@@ -98,37 +121,6 @@
                                                     <!--<p>{{ error }}</p>-->
                                                     <!--<input type="submit" class="btn btn-success btn-lg" ng-hide="success" value="Reserve">-->
                                                 <!--</form>-->
-
-                                                <form stripe-form="stripeCallback" name="checkoutForm">
-
-                                                    <label for="techName">Email</label>
-                                                    <input class="form-control" type="email" class="form-control" id="email" ng-model="email" required>
-
-                                                    <label for="techName">Phone number</label><br>
-                                                    <input class="form-control input-phone" type='text' phone-input ng-model="phoneVal" placeholder="(123) 456-6789" required/><br>
-
-                                                    <label for="techName">Card Number</label>
-                                                    <input class="form-control" ng-model="number" placeholder="Card Number"
-                                                           payments-format="card" payments-validate="card" name="card" required/><br>
-
-                                                    <label for="techName">Expiration MM/YYYY</label>
-                                                    <input class="form-control" ng-model="expiry" placeholder="MM/YYYY"
-                                                           payments-format="expiry" payments-validate="expiry"
-                                                           name="expiry" required/><br>
-
-                                                    <label for="techName">CVC</label>
-                                                    <input class="form-control" ng-model="cvc" placeholder="CVC" payments-format="cvc" payments-validate="cvc" name="cvc" required/><br>
-
-                                                    <button type="submit" class="btn btn-success btn-lg" ng-click="pay()">Pay</button>
-                                                    <div ng-if="checkoutForm.$invalid">
-                                                        Error: Please correct card's information
-                                                    </div>
-                                                </form>
-
-
-
-
-
                                             </div>
 
                                         </div>
