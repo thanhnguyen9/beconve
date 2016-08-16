@@ -7,10 +7,21 @@ angular
         'uiGmapgoogle-maps',
         'templates',
         'Devise',
-        'ngResource'
+        'ngResource',
+        'angularPayments'
     ])
-    .config(['$routeProvider', '$locationProvider', 'uiGmapGoogleMapApiProvider', '$httpProvider', 'AuthProvider', 'AuthInterceptProvider',
-        function ($routeProvider, $locationProvider, uiGmapGoogleMapApiProvider, $httpProvider, AuthProvider, AuthInterceptProvider) {
+    .config([
+            '$routeProvider',
+            '$locationProvider',
+            'uiGmapGoogleMapApiProvider',
+            '$httpProvider',
+            'AuthProvider',
+            'AuthInterceptProvider',
+            '$windowProvider',
+        function ($routeProvider, $locationProvider, uiGmapGoogleMapApiProvider, $httpProvider, AuthProvider, AuthInterceptProvider, $windowProvider) {
+
+        var $window = $windowProvider.$get();
+        $window.Stripe.setPublishableKey('pk_test_8kPHFFUZjXxX2TmqALPXWpM4');
 
         $httpProvider.defaults.withCredentials = true;
         AuthInterceptProvider.interceptAuth(true);
@@ -83,6 +94,7 @@ angular
             v: '3.17',
             libraries: 'weather,geometry,visualization'
         })
+
     }]);
 
     //.run(['Auth', function (Auth) {

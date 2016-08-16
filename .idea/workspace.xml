@@ -1,11 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47b03c1c-5747-4577-96a7-3f7fe1c1132f" name="Default" comment="Change to https">
+    <list default="true" id="47b03c1c-5747-4577-96a7-3f7fe1c1132f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/directives/phoneInput.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/filters/phoneInput.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/reservation.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-payments/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-payments/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-payments/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-payments/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-payments/example/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-payments/lib/angular-payments.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-payments/lib/angular-payments.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-payments/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-payments/src/cards.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-payments/src/common.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-payments/src/form.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-payments/src/format.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-payments/src/module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-payments/src/validate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-spinner/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-spinner/.editorconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-spinner/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-spinner/.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-spinner/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-spinner/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-spinner/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-spinner/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-spinner/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-spinner/angular-spinner.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-spinner/angular-spinner.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-spinner/angular-spinner.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-spinner/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-spinner/karma.conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-spinner/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-spinner/tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/spin.js/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/spin.js/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/spin.js/.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/spin.js/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/spin.js/.spmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/spin.js/LICENSE.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/spin.js/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/spin.js/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/spin.js/jquery.spin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/spin.js/spin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/spin.js/spin.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availability.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availability.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/availability.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/availability.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/technicians_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/technicians_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Bowerfile" afterPath="$PROJECT_DIR$/Bowerfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/app.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/reservation.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/reservation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/workflow/reservation.html" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/workflow/reservation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/bower.json" afterPath="$PROJECT_DIR$/vendor/assets/bower.json" />
     </list>
     <ignored path="beconve.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/reservation.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -1006,7 +1055,13 @@
       <option name="project" value="LOCAL" />
       <updated>1471302360195</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Fix availability $resource">
+      <created>1471310217891</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1471310217891</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1045,7 +1100,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add border right to distance, price" />
     <MESSAGE value="Heroku test" />
     <MESSAGE value="Change structure to use $scope" />
     <MESSAGE value="Add google key" />
@@ -1070,7 +1124,8 @@
     <MESSAGE value="Finish price set up template" />
     <MESSAGE value="Take custom address from user" />
     <MESSAGE value="Change to https" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change to https" />
+    <MESSAGE value="Fix availability $resource" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix availability $resource" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1343,9 +1398,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding>
-            <element signature="e#229#3093#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1392,7 +1445,7 @@
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/reservation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
           <folding />
         </state>
       </provider>
