@@ -20,6 +20,8 @@
 
                                                 <h1 class="text-center">You are almost done!</h1>
 
+                                                <span class="alert alert-danger error" ng-show="error" ng-cloak> {{error}}</span><br>
+
                                                 <form stripe-form="stripeCallback" name="checkoutForm">
 
                                                     <label for="techName">Email</label>

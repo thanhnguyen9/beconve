@@ -81,7 +81,7 @@ angular.module('BeConve')
                     if (result.error) {
                         $window.alert('Something went wrong! Error: ' + result.error.message);
                     } else {
-                        $scope.info['stripeToken'] = result.id
+                        $scope.info['stripeToken'] = result.id;
 
                         $http({
                             method: 'POST',
@@ -94,7 +94,7 @@ angular.module('BeConve')
                                 console.log(response.data.result);
                                 $location.path('/thank_you');
                             } else{
-                                $scope.error = response.data.result;
+                                $scope.error = response.data.message;
                                 $scope.loading = false;
                                 $scope.success = false;
                             }
