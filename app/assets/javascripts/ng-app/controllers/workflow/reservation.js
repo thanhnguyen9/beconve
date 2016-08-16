@@ -79,8 +79,28 @@ angular.module('BeConve')
                 // Stripe Response Handler
                 $scope.stripeCallback = function (code, result) {
                     if (result.error) {
-                        $window.alert('it failed! error: ' + result.error.message);
+                        $window.alert('Something went wrong! Error: ' + result.error.message);
                     } else {
+                        $scope.info['stripeToken'] = result.id
+
+                        $http({
+                            method: 'POST',
+                            url: '/checkouts',
+                            data: $scope.info
+                        }).then(function successCallback(response) {
+                            if (response.data.result === 'success'){
+                                $scope.loading = false;
+
+                                console.log(response.data.result);
+                                $location.path('/thank_you');
+                            } else{
+                                $scope.error = response.data.result;
+                                $scope.loading = false;
+                                $scope.success = false;
+                            }
+                        }, function errorCallback(response) {
+                            $scope.error = 'Something went wrong. Please try after some times'
+                        });
                         console.log('success! token: ' + result.id);
                     }
                 };

@@ -1,34 +1,35 @@
 class CheckoutsController < ActionController::Base
 
-  TRANSACTION_SUCCESS_STATUSES = [
-      Braintree::Transaction::Status::Authorizing,
-      Braintree::Transaction::Status::Authorized,
-      Braintree::Transaction::Status::Settled,
-      Braintree::Transaction::Status::SettlementConfirmed,
-      Braintree::Transaction::Status::SettlementPending,
-      Braintree::Transaction::Status::Settling,
-      Braintree::Transaction::Status::SubmittedForSettlement,
-  ]
-
   def new
-    render inline:Braintree::ClientToken.generate
+    binding.pry
   end
 
   def create
-    result = Braintree::Transaction.sale(transaction_params)
+    Stripe.api_key = ENV["STRIPE_SECRET_KEY"]
 
-    if result.transaction
-      if result.success?
-          response = {result: 'success'}
-      else
-        response = {result: result.transaction.status}
-      end
-    else
-      error_messages = result.errors.map { |error| "Error: #{error.code}: #{error.message}" }
-      response = {result: error_messages}
-    end
+    # Get the credit card details submitted by the form
+    token = params[:stripeToken]
 
-    render json:response
+    # Create a Customer
+    customer = Stripe::Customer.create(
+        :source => token,
+        :description => "Example customer"
+    )
+
+    # Charge the Customer instead of the card
+    Stripe::Charge.create(
+        :amount => 1000, # in cents
+        :currency => "usd",
+        :customer => customer.id
+    )
+
+    render json: {result: 'success'}
+  rescue Stripe::CardError => e
+    render json: { result: 'failed', message: "#{e.message}"}
+
+  rescue Stripe::StripeError => e
+    render :json => { result: 'failed', message: "#{e.message}"}
+
   end
 
   private
