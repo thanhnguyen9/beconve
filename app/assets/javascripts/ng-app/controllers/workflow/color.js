@@ -1,6 +1,10 @@
 angular.module('BeConve')
     .controller('colorController', ['$scope', '$location', '$sessionStorage', function($scope, $location, $sessionStorage) {
 
+        if (angular.isUndefined($sessionStorage.model) || $sessionStorage.model === ''){
+            $location.url('/model');
+        }
+
         var model = $sessionStorage.model;
 
         if (model === 'Iphone 4' || model === 'Iphone 4S' || model === 'Iphone 5' || model === 'Iphone 5C' ||

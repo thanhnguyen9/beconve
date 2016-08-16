@@ -1,6 +1,10 @@
 angular.module('BeConve')
     .controller('deviceController', ['$scope', '$location', '$sessionStorage', function($scope, $location, $sessionStorage) {
 
+        if (angular.isUndefined($sessionStorage.location) || $sessionStorage.location === ''){
+            $location.url('/location');
+        }
+
         $scope.deviceNames = [
             {
                 name: 'Iphone'

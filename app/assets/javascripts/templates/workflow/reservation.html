@@ -5,7 +5,7 @@
                 <div class="col-md-2"><label for="techName">Shop name</label>: {{ techName | limitTo: 40 }} </div>
                 <div class="col-md-4"><label for="location">Location</label>: {{ location }} </div>
                 <div class="col-md-3"><label for="device">Device</label>: {{ model }} - {{ color }} - {{ issue }}</div>
-                <div class="col-md-1"><label for="model">Price</label>: ${{ price }}</div>
+                <div class="col-md-1"><label for="model">Price</label>: {{ price }}</div>
                 <div class="col-md-2"><label for="warranty">Warranty</label>: {{ warranty }}</div>
 
                 <div class="col-md-12">
@@ -44,7 +44,7 @@
                                                         Error: Please correct card's information
                                                     </div>
 
-                                                    <button type="submit" class="btn btn-success btn-lg pull-right" ng-click="pay()">Pay</button>
+                                                    <button type="submit" class="btn btn-success btn-lg pull-right" ng-click="pay()">Finish Order</button>
 
                                                 </form>
 

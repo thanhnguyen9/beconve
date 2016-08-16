@@ -2,12 +2,15 @@ angular.module('BeConve')
     .controller('reservationController', ['$scope', '$location', '$sessionStorage', '$http', 'Auth', '$window',
         function($scope, $location, $sessionStorage, $http, Auth, $window) {
 
+        if (angular.isUndefined($sessionStorage.techId) || $sessionStorage.techId === ''){
+            $location.url('/availability');
+        }
+
         if(angular.isUndefined($sessionStorage.techName) || $sessionStorage.techName === ''){
             $location.url('/availability');
         }
 
         $scope.loading = false;
-
 
         $scope.techId = $sessionStorage.techId;
         $scope.techName = $sessionStorage.techName;

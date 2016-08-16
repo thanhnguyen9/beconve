@@ -4,6 +4,10 @@ angular
     .controller('availabilityController', ['$scope', '$sessionStorage', '$location', 'AvailableTechnicians',
         function($scope, $sessionStorage, $location, AvailableTechnicians) {
 
+            if (angular.isUndefined($sessionStorage.issue) || $sessionStorage.issue === ''){
+                $location.url('/issue');
+            }
+
             var techs = AvailableTechnicians.query(function() {
                 $scope.techs = techs;
             });
