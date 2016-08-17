@@ -31,81 +31,40 @@ angular.module('BeConve')
             model: $scope.model,
             color: $scope.color,
             issue: $scope.issue,
-            price: '2000.00',
+            price: '110',
             warranty: $scope.warranty,
             nonce: $scope.nonce
         };
 
-        //$http({
-        //    method: 'GET',
-        //    url: '/checkouts/new'
-        //}).then(function successCallback(response) {
-        //     braintree.setup(response.data, "dropin", {
-        //         container: "payment-form",
-        //         onPaymentMethodReceived: function (obj) {
-        //             $scope.info['payment_method_nonce'] = obj.nonce;
-        //             $scope.$apply(function(obj) {
-        //                 $scope.loading = true;
-        //                 $scope.success = true;
-        //
-        //                 $http({
-        //                     method: 'POST',
-        //                     url: '/checkouts',
-        //                     data: $scope.info
-        //                 }).then(function successCallback(response) {
-        //                     debugger;
-        //                     if (response.data.result === 'success'){
-        //                         $scope.loading = false;
-        //
-        //                         console.log(response.data.result);
-        //                         $location.path('/thank_you');
-        //                     } else{
-        //                         $scope.error = response.data.result;
-        //                         $scope.loading = false;
-        //                         $scope.success = false;
-        //                     }
-        //                 }, function errorCallback(response) {
-        //                     $scope.errors= 'Something went wrong. Please try after somet times'
-        //                 });
-        //             });
-        //         }
-        //     });
-        //}, function errorCallback(response) {
-        //    // called asynchronously if an error occurs
-        //    // or server returns response with an error status.
-        //});
+        $scope.pay = function(){
+            // Stripe Response Handler
+            $scope.stripeCallback = function (code, result) {
+                if (result.error) {
+                    $window.alert('Something went wrong! Error: ' + result.error.message);
+                } else {
+                    $scope.info['stripeToken'] = result.id;
 
-            $scope.pay = function(){
-                // Stripe Response Handler
-                $scope.stripeCallback = function (code, result) {
-                    if (result.error) {
-                        $window.alert('Something went wrong! Error: ' + result.error.message);
-                    } else {
-                        $scope.info['stripeToken'] = result.id;
+                    $http({
+                        method: 'POST',
+                        url: '/checkouts',
+                        data: $scope.info
+                    }).then(function successCallback(response) {
+                        if (response.data.result === 'success'){
+                            $scope.loading = false;
 
-                        $http({
-                            method: 'POST',
-                            url: '/checkouts',
-                            data: $scope.info
-                        }).then(function successCallback(response) {
-                            if (response.data.result === 'success'){
-                                $scope.loading = false;
-
-                                console.log(response.data.result);
-                                $location.path('/thank_you');
-                            } else{
-                                $scope.error = response.data.message;
-                                $scope.loading = false;
-                                $scope.success = false;
-                            }
-                        }, function errorCallback(response) {
-                            $scope.error = 'Something went wrong. Please try after some times'
-                        });
-                        console.log('success! token: ' + result.id);
-                    }
-                };
+                            console.log(response.data.result);
+                            $location.path('/thank_you');
+                        } else{
+                            $scope.error = response.data.message;
+                            $scope.loading = false;
+                            $scope.success = false;
+                        }
+                    }, function errorCallback(response) {
+                        $scope.error = 'Something went wrong. Please try after sometimes'
+                    });
+                    console.log('success! token: ' + result.id);
+                }
             };
-
-
+        };
     }])
 ;

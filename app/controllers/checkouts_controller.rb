@@ -1,7 +1,7 @@
 class CheckoutsController < ActionController::Base
 
   def new
-    binding.pry
+
   end
 
   def create
@@ -16,11 +16,15 @@ class CheckoutsController < ActionController::Base
         :description => "Example customer"
     )
 
+    # tech = Technician.find(params[:tech_id])
+    tech = User.find(2)
+
     # Charge the Customer instead of the card
     Stripe::Charge.create(
-        :amount => 1000, # in cents
+        :amount => params[:price].to_i * 100, # in cents
         :currency => "usd",
-        :customer => customer.id
+        :customer => customer.id,
+        :destination => "#{tech.uid}"
     )
 
     render json: {result: 'success'}
@@ -32,22 +36,4 @@ class CheckoutsController < ActionController::Base
 
   end
 
-  private
-  def transaction_params
-    nonce = params[:payment_method_nonce]
-    {
-        amount: params[:price],
-        :payment_method_nonce => nonce,
-        customer: {
-            first_name: 'Thanh',
-            last_name: 'Nguyen',
-            email: 'people8604@yahoo.com',
-            id: 1,
-            phone: '2542146688'
-        },
-        :options => {
-            :submit_for_settlement => true
-        }
-    }
-  end
 end
