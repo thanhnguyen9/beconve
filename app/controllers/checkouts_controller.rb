@@ -17,7 +17,7 @@ class CheckoutsController < ActionController::Base
     )
 
     # tech = Technician.find(params[:tech_id])
-    tech = User.find(2)
+    tech = User.find(4)
 
     # Charge the Customer instead of the card
     Stripe::Charge.create(
