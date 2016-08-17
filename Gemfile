@@ -37,6 +37,8 @@ gem 'devise'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'angular_rails_csrf'
 
+# Stripe Connect
+gem 'omniauth-stripe-connect'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
