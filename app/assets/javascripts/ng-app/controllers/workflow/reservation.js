@@ -39,8 +39,10 @@ angular.module('BeConve')
         $scope.pay = function(){
             // Stripe Response Handler
             $scope.stripeCallback = function (code, result) {
+                $scope.paying = true;
                 if (result.error) {
-                    $window.alert('Something went wrong! Error: ' + result.error.message);
+                    $scope.error = 'Something went wrong. Please check the card information';
+                    $scope.paying = false;
                 } else {
                     $scope.info['stripeToken'] = result.id;
 
@@ -50,19 +52,15 @@ angular.module('BeConve')
                         data: $scope.info
                     }).then(function successCallback(response) {
                         if (response.data.result === 'success'){
-                            $scope.loading = false;
-
-                            console.log(response.data.result);
                             $location.path('/thank_you');
                         } else{
                             $scope.error = response.data.message;
-                            $scope.loading = false;
-                            $scope.success = false;
+                            $scope.paying = false;
                         }
                     }, function errorCallback(response) {
-                        $scope.error = 'Something went wrong. Please try after sometimes'
+                        $scope.error = 'Something went wrong. Please try after sometimes';
+                        $scope.paying = false;
                     });
-                    console.log('success! token: ' + result.id);
                 }
             };
         };

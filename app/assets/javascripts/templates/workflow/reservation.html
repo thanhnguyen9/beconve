@@ -17,7 +17,7 @@
                                         <div class="col-md-12">
                                             <div class="col-md-3"></div>
                                             <div class="col-md-6">
-
+                                                <span us-spinner></span>
                                                 <h1 class="text-center">You are almost done!</h1>
 
                                                 <span class="alert alert-danger error" ng-show="error" ng-cloak> {{error}}</span><br>
@@ -46,8 +46,8 @@
                                                         Error: Please correct card's information
                                                     </div>
 
-                                                    <button type="submit" class="btn btn-success btn-lg pull-right" ng-click="pay()">Finish Order</button>
-
+                                                    <button type="submit" class="btn btn-success btn-lg pull-right" ng-hide="paying" ng-click="pay()">Finish Order</button>
+                                                    <img src="/assets/ajax-loader.gif" class="pulll-right" alt="" ng-show="paying">
                                                 </form>
 
                                             </div>
