@@ -11,21 +11,40 @@ class CheckoutsController < ActionController::Base
     token = params[:stripeToken]
 
     # Create a Customer
-    customer = Stripe::Customer.create(
+    charge_customer = Stripe::Customer.create(
         :source => token,
         :description => "Example customer"
     )
 
-    # tech = Technician.find(params[:tech_id])
-    tech = User.find(4)
+    tech = User.find(params[:tech_id])
 
-    # Charge the Customer instead of the card
-    Stripe::Charge.create(
-        :amount => params[:price].to_i * 100, # in cents
-        :currency => "usd",
-        :customer => customer.id,
-        :destination => "#{tech.uid}"
-    )
+    if tech.status == 'online'
+      order = {
+          location: params[:location],
+          device: params[:device],
+          model: params[:model],
+          color: params[:color],
+          issue: params[:issue],
+          price: params[:price],
+          customer_id: customer.id,
+          tech_id: params[:tech_id],
+          request_status: 'open'
+      }
+
+      EmailRepairRequestNotification.to_tech(tech, order)
+    else
+      render json: {res: 'failed'}
+    end
+    binding.pry
+
+
+    # # Charge the Customer instead of the card
+    # Stripe::Charge.create(
+    #     :amount => params[:price].to_i * 100, # in cents
+    #     :currency => "usd",
+    #     :customer => customer.id,
+    #     :destination => "#{tech.uid}"
+    # )
 
     render json: {result: 'success'}
   rescue Stripe::CardError => e

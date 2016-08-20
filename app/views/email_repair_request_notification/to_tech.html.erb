@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+  </head>
+  <body>
+    <p>Hi,</p><br>
+
+    <p>A customer have requested you to repair his devise. Please ACCEPT or DECLINE the quest.</p><br>
+
+    <p>The request will be declined automaticaly after 2 minutes.</p>
+
+    <h4>More info:</h4>
+
+    <table style="width:100%">
+      <tr>
+        <th>Location</th>
+        <th>Device</th>
+        <th>Issue</th>
+        <th>Phone</th>
+      </tr>
+      <tr>
+        <td><%= order.lation %></td>
+        <td><%= order.model %> - <%= order.color %></td>
+        <td><%= order.issue %></td>
+        <td><%= order.lation %></td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+location: params[:location],
+device: params[:device],
+model: params[:model],
+color: params[:color],
+issue: params[:issue],
+price: params[:price],
+customer_id: customer.id,
+tech_id: params[:tech_id],
+request_status: 'open'

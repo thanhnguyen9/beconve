@@ -23,8 +23,9 @@ angular.module('BeConve')
         $scope.warranty = $sessionStorage.warranty;
 
         $scope.info = {
-            tech_id: $scope.tech_id,
-            email: $scope.email,
+            //tech_id: $scope.tech_id,
+            tech_id: 3,
+            customer_email: $scope.customer_email,
             phone: $scope.phone,
             location: $scope.location,
             device: $scope.device,

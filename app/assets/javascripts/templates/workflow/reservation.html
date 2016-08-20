@@ -24,22 +24,22 @@
 
                                                 <form stripe-form="stripeCallback" name="checkoutForm">
 
-                                                    <label for="techName">Email</label>
-                                                    <input class="form-control" type="email" class="form-control" id="email" ng-model="email" placeholder="contact@beconve.com" required>
+                                                    <label>Email</label>
+                                                    <input class="form-control" type="email" class="form-control" id="email" ng-model="customer_email" placeholder="contact@beconve.com" required>
 
-                                                    <label for="techName">Phone number</label><br>
+                                                    <label>Phone number</label><br>
                                                     <input class="form-control input-phone" type='text' phone-input ng-model="phoneVal" placeholder="(123) 456-6789" required/><br>
 
-                                                    <label for="techName">Card Number</label>
+                                                    <label>Card Number</label>
                                                     <input class="form-control" ng-model="number" placeholder="Card Number"
                                                            payments-format="card" payments-validate="card" name="card" required/><br>
 
-                                                    <label for="techName">Expiration MM/YYYY</label>
+                                                    <label>Expiration MM/YYYY</label>
                                                     <input class="form-control" ng-model="expiry" placeholder="MM/YYYY"
                                                            payments-format="expiry" payments-validate="expiry"
                                                            name="expiry" required/><br>
 
-                                                    <label for="techName">CVC</label>
+                                                    <label>CVC</label>
                                                     <input class="form-control" ng-model="cvc" placeholder="CVC" payments-format="cvc" payments-validate="cvc" name="cvc" required/><br>
 
                                                     <div ng-if="checkoutForm.$invalid" class="alert alert-danger">
