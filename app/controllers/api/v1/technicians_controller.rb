@@ -70,6 +70,22 @@ module Api
         }
         render json:response
       end
+
+      def show
+        user = User.find(params[:id])
+        data = {status: 'online'}
+        render json: {response: data}
+      end
+
+      def update
+        render json: {result: 'success'}
+      end
+
+      private
+
+      def technician_params
+
+      end
     end
   end
 end

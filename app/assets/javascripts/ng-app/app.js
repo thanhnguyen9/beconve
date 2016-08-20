@@ -83,6 +83,10 @@ angular
                 templateUrl: 'host/samsung_price_setup.html',
                 controller: 'samsungPriceSetupController'
             })
+            .when('/host_services', {
+                templateUrl: 'host/services.html',
+                controller: 'hostServicesController'
+            })
         ;
 
         uiGmapGoogleMapApiProvider.configure({
