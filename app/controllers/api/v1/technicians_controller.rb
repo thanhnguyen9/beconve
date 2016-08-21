@@ -81,6 +81,22 @@ module Api
         render json: {result: 'success'}
       end
 
+      def tech_request
+        binding.pry
+        order = [{
+                     location: '6632 Deseo, Irving, TX 75039',
+                     device: 'Iphone',
+                     model: 'Iphone 6',
+                     color: 'White',
+                     issue: 'Broken Screen',
+                     price: '110',
+                     customer_id: 1,
+                     tech_id: params[:tech_id],
+                     request_status: 'open'
+                 }]
+        render json: order
+      end
+
       private
 
       def technician_params

@@ -18,40 +18,35 @@ class CheckoutsController < ActionController::Base
 
     tech = User.find(params[:tech_id])
 
-    if tech.status == 'online'
-      order = {
-          location: params[:location],
-          device: params[:device],
-          model: params[:model],
-          color: params[:color],
-          issue: params[:issue],
-          price: params[:price],
-          customer_id: customer.id,
-          tech_id: params[:tech_id],
-          request_status: 'open'
-      }
+    # if tech.status == 'online'
+    #   order = {
+    #       location: params[:location],
+    #       device: params[:device],
+    #       model: params[:model],
+    #       color: params[:color],
+    #       issue: params[:issue],
+    #       price: params[:price],
+    #       customer_id: customer.id,
+    #       tech_id: params[:tech_id],
+    #       request_status: 'open'
+    #   }
+    #
+    #   EmailRepairRequestNotification.to_tech(tech, order)
+    # else
+    #   render json: {res: 'failed'}
+    # end
 
-      EmailRepairRequestNotification.to_tech(tech, order)
-    else
-      render json: {res: 'failed'}
-    end
-    binding.pry
-
-
-    # # Charge the Customer instead of the card
-    # Stripe::Charge.create(
-    #     :amount => params[:price].to_i * 100, # in cents
-    #     :currency => "usd",
-    #     :customer => customer.id,
-    #     :destination => "#{tech.uid}"
-    # )
-
-    render json: {result: 'success'}
-  rescue Stripe::CardError => e
-    render json: { result: 'failed', message: "#{e.message}"}
-
-  rescue Stripe::StripeError => e
-    render :json => { result: 'failed', message: "#{e.message}"}
+    order = {
+              location: params[:location],
+              device: params[:device],
+              model: params[:model],
+              color: params[:color],
+              issue: params[:issue],
+              price: params[:price],
+              customer_id: customer.id,
+              tech_id: params[:tech_id],
+              request_status: 'open'
+          }
 
   end
 

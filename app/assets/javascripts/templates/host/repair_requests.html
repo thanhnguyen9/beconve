@@ -1,0 +1,47 @@
+<div>
+    <div class="section location-section">
+        <div class="container nomapping">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-block">
+                            <div id="exTab2" class="container text-center">
+                                <div class="table-responsive">
+
+                                    <p class="alert alert-success" ng-show="info_message">{{ info_message }}</p>
+
+                                    <div class="col-md-3">
+                                        <label>Location</label>
+                                        <p>{{ order.location }}</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>Device</label>
+                                        <p>{{ order.model }} - {{ order.color }} - {{ order.issue }} - ${{ order.price }}</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>Approve</label><br>
+                                        <button
+                                                class="btn btn-success btn-lg"
+                                                confirmed-click="actionOnRequest('approved')"
+                                                ng-confirm-click="Are you sure ?"
+                                                ng-hide="info_message">Approve
+                                        </button>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>Decline</label><br>
+                                        <button
+                                                class="btn btn-danger btn-lg"
+                                                confirmed-click="actionOnRequest('declined')"
+                                                ng-confirm-click="Are you sure ?"
+                                                ng-hide="info_message"  >Decline
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

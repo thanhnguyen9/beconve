@@ -87,6 +87,14 @@ angular
                 templateUrl: 'host/services.html',
                 controller: 'hostServicesController'
             })
+            .when('/repair_requests', {
+                templateUrl: 'host/repair_requests.html',
+                controller: 'repairRequestsController'
+            })
+            .when('/complete_request', {
+                templateUrl: 'host/complete_request.html',
+                controller: 'completeRequestController'
+            })
         ;
 
         uiGmapGoogleMapApiProvider.configure({
