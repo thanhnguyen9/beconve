@@ -73,16 +73,20 @@ module Api
 
       def show
         user = User.find(params[:id])
-        data = {status: 'online'}
-        render json: {response: data}
+        render json: {response: user}
       end
 
       def update
-        render json: {result: 'success'}
+        tech = User.find(params[:id])
+
+        if tech.update(account_update_params)
+          render json: {status: 'success'}
+        else
+          render json: {status: 'failed'}
+        end
       end
 
       def tech_request
-        binding.pry
         order = [{
                      location: '6632 Deseo, Irving, TX 75039',
                      device: 'Iphone',
@@ -99,9 +103,12 @@ module Api
 
       private
 
-      def technician_params
+      private
 
+      def account_update_params
+        params.require(:user).permit(:name, :address, :warranty, :response_time, :rating, :device_count, :image, :status)
       end
+
     end
   end
 end

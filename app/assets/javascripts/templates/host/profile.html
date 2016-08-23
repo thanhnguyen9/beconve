@@ -1,0 +1,79 @@
+<div>
+    <div class="section location-section">
+        <div class="container nomapping">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-block">
+                            <div id="exTab2" class="container text-center">
+                               <h1>Create your Profile</h1>
+
+                                <p class="alert alert-success" ng-show="info">{{ info }}</p>
+
+                                <div class="col-md-4"></div>
+
+                                <div class="col-md-4">
+                                    <form name="updateProfile" novalidate>
+
+                                        <div class="form-group f-spacing">
+                                            <label class="form-span-color">Shop Name</label>
+                                            <input type="text"
+                                                   class="form-control"
+                                                   placeholder=""
+                                                   ng-model="name"
+                                                   name="name"
+                                                   required>
+                                            <div ng-show="updateProfile.$submitted || updateProfile.name.$touched">
+                                                <div ng-show="updateProfile.name.$error.required">Please input shop name.</div>
+                                            </div>
+
+                                            <label class="form-span-color">Address</label>
+                                            <input type="text"
+                                                   class="form-control"
+                                                   placeholder=""
+                                                   ng-model="address"
+                                                   name="address"
+                                                   required>
+                                            <div ng-show="updateProfile.$submitted || updateProfile.address.$touched">
+                                                <div ng-show="updateProfile.address.$error.required">Please input address.</div>
+                                            </div>
+
+                                            <label class="form-span-color">Warranty</label>
+                                            <input type="text"
+                                                   class="form-control"
+                                                   placeholder=""
+                                                   ng-model="warranty"
+                                                   name="warranty"
+                                                   required>
+                                            <div ng-show="updateProfile.$submitted || updateProfile.warranty.$touched">
+                                                <div ng-show="updateProfile.warranty.$error.required">Please input warranty.</div>
+                                            </div>
+
+                                            <label class="form-span-color">Image</label>
+                                            <input type="text"
+                                                   class="form-control"
+                                                   placeholder=""
+                                                   ng-model="image"
+                                                   required>
+                                            <div ng-show="updateProfile.$submitted || updateProfile.image.$touched">
+                                                <div ng-show="updateProfile.image.$error.required">Tell us your name.</div>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <button type="submit" class="btn btn-danger btn-lg" ng-click="updateProfile.$valid && submit()">Save profile</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <div class="col-md-4"></div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
