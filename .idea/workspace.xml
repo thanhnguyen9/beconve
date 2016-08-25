@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47b03c1c-5747-4577-96a7-3f7fe1c1132f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/technician.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/host/technician.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/host/technician.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availabilityController.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availabilityController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/availability.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/availability.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/technician.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/technician.js" />
     </list>
     <ignored path="beconve.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="technician.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="technician.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/technician.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="8" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.020920502">
+              <caret line="1" column="0" selection-start-line="0" selection-start-column="2" selection-end-line="8" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -103,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="technician.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="technician.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/services/host/technician.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20236088">
-              <caret line="8" column="9" selection-start-line="0" selection-start-column="2" selection-end-line="8" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -119,7 +120,7 @@
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/availability.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="34" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="34" />
+              <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -155,8 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availability.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/workflow/availability.html" />
         <option value="$PROJECT_DIR$/app/views/devise/shared/_links.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/directives/hostServices.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/host/technicians.js" />
@@ -186,7 +185,6 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/repairRequestsController.js" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/repair_requests_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/workflow/model.html" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availabilityController.js" />
         <option value="$PROJECT_DIR$/app/controllers/registrations_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_navbar.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/app.js" />
@@ -206,6 +204,9 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/host/technician.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availabilityController.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/availability.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/technician.js" />
       </list>
     </option>
   </component>
@@ -933,12 +934,6 @@
       <option name="number" value="Default" />
       <updated>1469243953120</updated>
     </task>
-    <task id="LOCAL-00016" summary="Add border right to distance, price">
-      <created>1469760837774</created>
-      <option name="number" value="00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1469760837774</updated>
-    </task>
     <task id="LOCAL-00017" summary="Heroku test">
       <created>1469761426611</created>
       <option name="number" value="00017" />
@@ -1227,19 +1222,25 @@
       <option name="project" value="LOCAL" />
       <updated>1472095023214</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Testing Technician resource">
+      <created>1472095071912</created>
+      <option name="number" value="00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1472095071912</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="23" width="1421" height="817" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34201267" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34201267" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839838" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16644295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47919464" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1258,7 +1259,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Finish price set up template" />
     <MESSAGE value="Take custom address from user" />
     <MESSAGE value="Change to https" />
     <MESSAGE value="Fix availability $resource" />
@@ -1283,7 +1283,8 @@
     <MESSAGE value="Shop is able to create their profile" />
     <MESSAGE value="Add geocoder to user model" />
     <MESSAGE value="Add stripe to auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add stripe to auth" />
+    <MESSAGE value="Testing Technician resource" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing Technician resource" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1640,14 +1641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availabilityController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1656,29 +1649,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/services/host/technician.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availabilityController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/availability.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="34" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="34" />
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/technician.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="8" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.020920502">
+          <caret line="1" column="0" selection-start-line="0" selection-start-column="2" selection-end-line="8" selection-end-column="9" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/services/host/technician.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20236088">
-          <caret line="8" column="9" selection-start-line="0" selection-start-column="2" selection-end-line="8" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

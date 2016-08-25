@@ -1,8 +1,8 @@
 angular
     .module('BeConve')
 
-    .controller('availabilityController', ['$scope', '$sessionStorage', '$location', 'AvailableTechnicians',
-        function($scope, $sessionStorage, $location, AvailableTechnicians) {
+    .controller('availabilityController', ['$scope', '$sessionStorage', '$location', 'Technician',
+        function($scope, $sessionStorage, $location, Technician) {
 
             if (angular.isUndefined($sessionStorage.issue) || $sessionStorage.issue === ''){
                 $location.url('/issue');
