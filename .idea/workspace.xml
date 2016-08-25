@@ -5,7 +5,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/workflow/technician.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/host/technician.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/services/host/technician.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
     </list>
     <ignored path="beconve.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -934,12 +933,6 @@
       <option name="number" value="Default" />
       <updated>1469243953120</updated>
     </task>
-    <task id="LOCAL-00015" summary="- Dynamically display tech in availability page.&#10;- Display google map with marker">
-      <created>1469673502140</created>
-      <option name="number" value="00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1469673502140</updated>
-    </task>
     <task id="LOCAL-00016" summary="Add border right to distance, price">
       <created>1469760837774</created>
       <option name="number" value="00016" />
@@ -1228,7 +1221,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472093602966</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Add stripe to auth">
+      <created>1472095023214</created>
+      <option name="number" value="00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1472095023214</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1259,7 +1258,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add google id" />
     <MESSAGE value="Finish price set up template" />
     <MESSAGE value="Take custom address from user" />
     <MESSAGE value="Change to https" />
@@ -1284,7 +1282,8 @@
     <MESSAGE value="Finish initialize request handle process" />
     <MESSAGE value="Shop is able to create their profile" />
     <MESSAGE value="Add geocoder to user model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add geocoder to user model" />
+    <MESSAGE value="Add stripe to auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add stripe to auth" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
