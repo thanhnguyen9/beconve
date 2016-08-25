@@ -4,11 +4,11 @@ angular.module('BeConve')
 
         Auth.currentUser().then(function(user) {
 
-            $scope.technician = Auth._currentUser;
+            var tech = Technician.get({ id: user.id }, function() {
 
-            Technician.get({ id: $scope.technician.id }, function(res) {
+                $scope.status = tech.response.status;
 
-                if(res.response.status == 'online'){
+                if($scope.status  == 'online'){
                     $scope.info = 'You are now online';
                     $scope.show = true;
                 }else{
@@ -18,17 +18,29 @@ angular.module('BeConve')
             });
 
             $scope.servicesControl = function(arg) {
-                if(arg === 'on'){
-                    Technician.update({id: $scope.technician.id}, $scope.technician, function() {
-                        $scope.info = 'You are now online';
-                        $scope.show = true;
-                        $location.path('/host_services')
+                tech.user = {};
+
+                if(arg === 'online'){
+                    tech.user.status = 'online';
+                    tech.$update({id: Auth._currentUser.id}, function(res){
+                        if(res.status === 'success'){
+                            $scope.info = 'You are now online';
+                            $scope.show = true;
+                            $location.path('/host_services')
+                        }else{
+                            $scope.info = 'Something went wrong. Please try again'
+                        }
                     })
                 }else{
-                    Technician.update({id: $scope.technician.id}, $scope.technician, function() {
-                        $scope.info = 'You are now offline';
-                        $scope.show = false;
-                        $location.path('/host_services')
+                    tech.user.status = 'offline';
+                    tech.$update({id: Auth._currentUser.id}, function(res){
+                        if(res.status === 'success'){
+                            $scope.info = 'You are now offline';
+                            $scope.show = false;
+                            $location.path('/host_services')
+                        }else{
+                            $scope.info = 'Something went wrong. Please try again'
+                        }
                     })
                 }
             }

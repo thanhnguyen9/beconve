@@ -9,6 +9,6 @@ class AddMoreInfoToUsers < ActiveRecord::Migration
     add_column :users, :rating, :float
     add_column :users, :device_count, :integer
     add_column :users, :image, :string
-    add_column :users, :status, :text, :default => "false"
+    add_column :users, :status, :text, :default => "offline"
   end
 end
