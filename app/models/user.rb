@@ -3,4 +3,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
+
+  geocoded_by :address   # can also be an IP address
+  reverse_geocoded_by :latitude, :longitude
+  after_validation :geocode, :reverse_geocode, :if => :address_changed?
 end

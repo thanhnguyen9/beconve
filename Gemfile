@@ -43,6 +43,7 @@ gem 'angular_rails_csrf'
 # Stripe Connect
 gem 'omniauth-stripe-connect'
 
+gem 'geocoder'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

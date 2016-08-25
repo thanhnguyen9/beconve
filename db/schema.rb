@@ -29,10 +29,10 @@ ActiveRecord::Schema.define(version: 20160823015331) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
-    t.string   "publishable_key"
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "access_code"
+    t.string   "stripe_publishable_key"
+    t.string   "stripe_provider"
+    t.string   "stripe_uid"
+    t.string   "stripe_access_code"
     t.text     "name"
     t.string   "address"
     t.string   "latitude"
