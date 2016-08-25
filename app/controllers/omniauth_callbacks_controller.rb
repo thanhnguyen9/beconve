@@ -3,10 +3,10 @@ class OmniauthCallbacksController < Devise::RegistrationsController
   def stripe_connect
     @user = current_user
     if @user.update_attributes({
-                                   provider: request.env["omniauth.auth"].provider,
-                                   uid: request.env["omniauth.auth"].uid,
-                                   access_code: request.env["omniauth.auth"].credentials.token,
-                                   publishable_key: request.env["omniauth.auth"].info.stripe_publishable_key
+                                   stripe_provider: request.env["omniauth.auth"].provider,
+                                   stripe_uid: request.env["omniauth.auth"].uid,
+                                   stripe_access_code: request.env["omniauth.auth"].credentials.token,
+                                   stripe_publishable_key: request.env["omniauth.auth"].info.stripe_publishable_key
                                })
       # anything else you need to do in response..
       sign_in_and_redirect @user, :event => :authentication
