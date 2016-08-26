@@ -1,25 +1,14 @@
 <div>
     <div class="section location-section">
-        <div class="container nomapping">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-block">
-                            <div class="section">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="row">
-                                                <div ng-repeat="model in modelNames" ng-click="modelPick(model.name)">
-                                                    <div class="col-md-2 text-center device-workflow">
-                                                        <h4>{{ model.name }}</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <h1 class="text-center" style=" color: #5b6675;">What <span style="color: red;">Model?</span></h1>
+                            <ul class="list-inline text-center" >
+                                <li class="model-workflow text-center" ng-repeat="model in modelNames" ng-click="modelPick(model.name)"><h3>{{ model.name }}</h3></li>
+                            </ul>
                         </div>
                     </div>
                 </div>

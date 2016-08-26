@@ -1,26 +1,14 @@
 <div>
     <div class="section location-section">
-        <div class="container nomapping">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-block">
-                            <div class="section">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="row">
-                                                <div ng-repeat="color in colorNames" ng-click="colorPick(color.name)">
-                                                    <div class="col-md-2 text-center device-workflow">
-                                                        <h1>{{ color.name }}</h1>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <h1 class="text-center" style=" color: #5b6675;">Great, what <span style="color: red;">Color</span> is it?</h1>
+                            <ul class="list-inline text-center" >
+                                <li class="color-workflow" ng-repeat="color in colorNames" ng-click="colorPick(color.name)"><h3>{{ color.name }}</h3></li>
+                            </ul>
                         </div>
                     </div>
                 </div>

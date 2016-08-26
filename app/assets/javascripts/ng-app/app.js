@@ -35,10 +35,10 @@ angular
                 templateUrl: 'home.html',
                 controller: 'homeController'
             })
-            .when('/location', {
-                templateUrl: 'workflow/location.html',
-                controller: 'locationController'
-            })
+            //.when('/location', {
+            //    templateUrl: 'workflow/location.html',
+            //    controller: 'locationController'
+            //})
             .when('/device', {
                 templateUrl: 'workflow/device.html',
                 controller: 'deviceController'

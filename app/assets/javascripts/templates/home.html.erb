@@ -6,7 +6,23 @@
           <h2 class="text-jumbo">Worry Free</h2>
           <h3>Get your phone fix anytime, anywhere you want by a certified business</h3><br><br>
           <h3>No more waiting. Save more time</h3>
-          <button class="btn btn-danger btn-lg" ng-click="startProcess()">Fix My Phone</button>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="col-md-6 col-md-offset-3">
+                <form action="">
+                  <div class="input-group">
+                    <input name="locationInput" type="text" class="form-control input-lg" id="work-flow-location" ng-model="location" ng-model="location" ng-autocomplete="location" placeholder="Tell us where to meet"><br>
+                    <span class="input-group-btn">
+                      <button type="submit" class="btn btn-danger btn-lg pull-right" ng-disabled="location.$invalid" ng-click="next()">Search</button>
+                    </span>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <p class="center" ng-show="alert" style="color: white;"> Please input location </p>
+
         </div>
       </div>
     </div>

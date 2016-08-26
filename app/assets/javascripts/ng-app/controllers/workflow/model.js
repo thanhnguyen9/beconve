@@ -8,25 +8,25 @@ angular.module('BeConve')
         if ($sessionStorage.device === 'Iphone'){
             $scope.modelNames = [
                 {
-                    name: 'Iphone 4'
+                    name: '4'
                 }, {
-                    name: 'Iphone 4S'
+                    name: '4S'
                 }, {
-                    name: 'Iphone 5'
+                    name: '5'
                 }, {
-                    name: 'Iphone 5C'
+                    name: '5C'
                 }, {
-                    name: 'Iphone 5S'
+                    name: '5S'
                 }, {
-                    name: 'Iphone 6'
+                    name: '6'
                 }, {
-                    name: 'Iphone 6 Plus'
+                    name: '6+'
                 }, {
-                    name: 'Iphone 6S'
+                    name: '6S'
                 }, {
-                    name: 'Iphone 6S Plus'
+                    name: '6S+'
                 }, {
-                    name: 'Iphone SE'
+                    name: 'SE'
                 }
             ];
         }else if($sessionStorage.device === 'Ipad'){
@@ -34,37 +34,37 @@ angular.module('BeConve')
                 {
                     parent: 3,
                     id: 25,
-                    name: 'Ipad 2',
+                    name: '2',
                     desc: ''
                 }, {
                     parent: 3,
                     id: 26,
-                    name: 'Ipad 3',
+                    name: '3',
                     desc: ''
                 }, {
                     parent: 3,
                     id: 27,
-                    name: 'Ipad 4',
+                    name: '4',
                     desc: ''
                 }, {
                     parent: 3,
                     id: 28,
-                    name: 'Ipad Mini',
+                    name: 'Mini',
                     desc: ''
                 }, {
                     parent: 3,
                     id: 29,
-                    name: 'Ipad Mini 2',
+                    name: 'Mini 2',
                     desc: ''
                 }, {
                     parent: 3,
                     id: 30,
-                    name: 'Ipad Mini 3',
+                    name: 'Mini 3',
                     desc: ''
                 }, {
                     parent: 3,
                     id: 31,
-                    name: 'Ipad Air',
+                    name: 'Air',
                     desc: ''
                 }
             ]
@@ -85,7 +85,6 @@ angular.module('BeConve')
                 }
             ];
         }
-
 
         $scope.modelPick = function(model){
             $sessionStorage['model'] = model;

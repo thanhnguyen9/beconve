@@ -8,7 +8,7 @@ angular
                 $location.url('/issue');
             }
 
-            var techs = AvailableTechnicians.query(function() {
+            var techs = Technician.query(function() {
                 $scope.techs = techs;
             });
 

@@ -2,49 +2,52 @@
   <div class="section">
     <div class="container-fluid workflow-availability">
       <div class="row">
+        <div class="col-md-12">
 
-        <div class="col-xs-12 col-sm-6 availability-tech" id="left">
-          <div class="row">
-            <div class="row-md-12" >
-              <div class="col-md-6 availability-card" ng-repeat-start="tech in techs">
-                <div class="card availability-card">
-                  <img class="card-img-top img-responsive availability-image" ng-src="{{ tech.images }}" alt="Card image cap">
-                  <div class="card-block">
-                    <h4 class="card-title">{{ tech.name | limitTo: 40}}</h4>
-                    <span class="availability-icon"><i class="fa fa-fw fa-map-marker text-inverse" aria-hidden="true"></i>{{ tech.distance }}</span> -
-                    <span class="availability-icon"><i class="fa fa-fw fa-usd text-inverse" aria-hidden="true"></i>{{ tech.price }}</span> -
-                    <span class="availability-icon">Warranty: {{ tech.warranty}}</span> -
-                    <span><button ng-click="pick(tech.id, tech.name)" class="btn btn-danger">Pick</button></span>
-                  </div>
+            <div class="col-xs-12 col-sm-6 availability-tech" id="left">
+                <div class="row">
+                    <div class="row-md-12" >
+                        <div class="col-md-6 availability-card" ng-repeat-start="tech in techs">
+                            <div class="card availability-card">
+                                <img class="card-img-top img-responsive availability-image text-center" ng-src="{{ tech.images }}" alt="Card image cap">
+                                <div class="card-block">
+                                    <h4 class="card-title">{{ tech.name | limitTo: 40}}</h4>
+                                    <span class="availability-icon"><i class="fa fa-fw fa-map-marker text-inverse" aria-hidden="true"></i>{{ tech.distance }}</span> -
+                                    <span class="availability-icon"><i class="fa fa-fw fa-usd text-inverse" aria-hidden="true"></i>{{ tech.price }}</span> -
+                                    <span class="availability-icon">Warranty: {{ tech.warranty}}</span> -
+                                    <span><button ng-click="pick(tech.id, tech.name)" class="btn btn-danger">Pick</button></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-repeat-end=""></div>
+                    </div>
                 </div>
-              </div>
-              <div ng-repeat-end=""></div>
             </div>
-          </div>
+
+            <div class="hidden-xs col-sm-6" id="right">
+                <ui-gmap-google-map center="map.center" zoom="map.zoom">
+
+                    <ui-gmap-window
+                            show="map.window.show"
+                            coords="map.window.model"
+                            options="map.window.options"
+                            closeClick="map.window.closeClick()"
+                            templateUrl="'infowindow.tpl.html'"
+                            templateParameter="map.window">
+                    </ui-gmap-window>
+
+                    <ui-gmap-markers
+                            models="map.markers"
+                            coords="'self'"
+                            events="map.markersEvents"
+                            options="'options'">
+                    </ui-gmap-markers>
+
+                </ui-gmap-google-map>
+            </div>
+
+
         </div>
-
-        <div class="hidden-xs col-sm-6" id="right">
-          <ui-gmap-google-map center="map.center" zoom="map.zoom">
-
-            <ui-gmap-window
-            show="map.window.show"
-            coords="map.window.model"
-            options="map.window.options"
-            closeClick="map.window.closeClick()"
-            templateUrl="'infowindow.tpl.html'"
-            templateParameter="map.window">
-            </ui-gmap-window>
-
-            <ui-gmap-markers
-            models="map.markers"
-            coords="'self'"
-            events="map.markersEvents"
-            options="'options'">
-            </ui-gmap-markers>
-
-          </ui-gmap-google-map>
-        </div>
-
 
       </div>
     </div>

@@ -1,13 +1,15 @@
 <div >
     <div class="section location-section">
-        <div class="container nomapping">
+        <div class="container">
             <div class="row">
-                <div class="col-md-2"><label for="techName">Shop name</label>: {{ techName | limitTo: 40 }} </div>
-                <div class="col-md-4"><label for="location">Location</label>: {{ location }} </div>
-                <div class="col-md-3"><label for="device">Device</label>: {{ model }} - {{ color }} - {{ issue }}</div>
-                <div class="col-md-1"><label for="model">Price</label>: {{ price }}</div>
-                <div class="col-md-2"><label for="warranty">Warranty</label>: {{ warranty }}</div>
-
+                <ul class="list-inline text-center" >
+                    <li class="text-center"><label for="techName">Shop name</label>: {{ techName | limitTo: 40 }}</li>
+                    <li class="text-center"><label for="location">Location</label>: {{ location }}</li>
+                    <li class="text-center"><label for="device">Device</label>: {{ model }} - {{ color }} - {{ issue }}</li>
+                    <li class="text-center"><label for="model">Price</label>: ${{ price }}</li>
+                    <li class="text-center"><label for="warranty">Warranty</label>: {{ warranty }}</li>
+                </ul>
+                <hr>
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-block">
