@@ -1,29 +1,24 @@
 <div>
     <div class="section location-section">
-        <div class="container nomapping">
+        <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-block">
-                            <div id="exTab2" class="container text-center">
+                <div class="col-md-12 text-center">
+                    <br>
+                    <p class="alert alert-success text-center" ng-show="info"> {{ info }} </p>
+                    <p class="alert alert-danger text-center" ng-show="alert"> {{ alert }} </p>
 
-                                <p class="alert alert-success" ng-show="info"> {{ info }} </p>
-
-                                <button
-                                    class="btn btn-success btn-lg"
-                                    confirmed-click="servicesControl('online')"
-                                    ng-confirm-click="Are you sure ?"
-                                    ng-hide="show">Be Online
-                                </button>
-                                <button
-                                    class="btn btn-danger btn-lg"
-                                    confirmed-click="servicesControl('offline')"
-                                    ng-confirm-click="Are you sure ?"
-                                    ng-show="show">Be Offline
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    <button
+                            class="btn btn-success btn-lg"
+                            confirmed-click="servicesControl('online')"
+                            ng-confirm-click="Are you sure ?"
+                            ng-hide="isOnline">Be Online
+                    </button>
+                    <button
+                            class="btn btn-danger btn-lg"
+                            confirmed-click="servicesControl('offline')"
+                            ng-confirm-click="Are you sure ?"
+                            ng-show="isOnline">Be Offline
+                    </button>
                 </div>
             </div>
         </div>

@@ -10,10 +10,12 @@ angular.module('BeConve')
 
                 if($scope.status  == 'online'){
                     $scope.info = 'You are now online';
-                    $scope.show = true;
+                    $scope.alert = false;
+                    $scope.isOnline = true;
                 }else{
-                    $scope.info = 'You are now offline';
-                    $scope.show = false;
+                    $scope.alert = 'You are now offline';
+                    $scope.info = false;
+                    $scope.isOnline = false;
                 }
             });
 
@@ -25,7 +27,8 @@ angular.module('BeConve')
                     tech.$update({id: Auth._currentUser.id}, function(res){
                         if(res.status === 'success'){
                             $scope.info = 'You are now online';
-                            $scope.show = true;
+                            $scope.alert = false;
+                            $scope.isOnline = true;
                             $location.path('/host_services')
                         }else{
                             $scope.info = 'Something went wrong. Please try again'
@@ -35,8 +38,9 @@ angular.module('BeConve')
                     tech.user.status = 'offline';
                     tech.$update({id: Auth._currentUser.id}, function(res){
                         if(res.status === 'success'){
-                            $scope.info = 'You are now offline';
-                            $scope.show = false;
+                            $scope.alert = 'You are now offline';
+                            $scope.info = false;
+                            $scope.isOnline = false;
                             $location.path('/host_services')
                         }else{
                             $scope.info = 'Something went wrong. Please try again'
