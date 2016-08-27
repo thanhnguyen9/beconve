@@ -10,11 +10,12 @@
           <div class="row">
             <div class="col-md-12">
               <div class="col-md-6 col-md-offset-3">
-                <form action="">
+
+                <form name="locationForm">
                   <div class="input-group">
-                    <input name="locationInput" type="text" class="form-control input-lg" id="work-flow-location" ng-model="location" ng-model="location" ng-autocomplete="location" placeholder="Tell us where to meet"><br>
+                    <input type="text" ng-model="location" id="Autocomplete" class="form-control input-lg" ng-autocomplete="location" details="details1" options="options1"/>
                     <span class="input-group-btn">
-                      <button type="submit" class="btn btn-danger btn-lg pull-right" ng-disabled="location.$invalid" ng-click="next()">Search</button>
+                      <button type="submit" class="btn btn-danger btn-lg pull-right" ng-click="next()">Get Started</button>
                     </span>
                   </div>
                 </form>
@@ -45,19 +46,19 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <img src="http://i.imgur.com/sBMwRWu.jpg" class="center-block img-circle img-responsive work-flow">
+          <img src="https://i.imgur.com/sBMwRWu.jpg" class="center-block img-circle img-responsive work-flow">
           <h4 class="text-center">Tell us where to meet</h4>
         </div>
         <div class="col-md-3">
-          <img src="http://i.imgur.com/8Nz0gEb.png" class="center-block img-circle img-responsive work-flow">
+          <img src="https://i.imgur.com/8Nz0gEb.png" class="center-block img-circle img-responsive work-flow">
           <h4 class="text-center">Tell us what is the device and issue</h4>
         </div>
         <div class="col-md-3">
-          <img src="http://i.imgur.com/M6KEzzu.png" class="center-block img-circle img-responsive work-flow">
+          <img src="https://i.imgur.com/M6KEzzu.png" class="center-block img-circle img-responsive work-flow">
           <h4 class="text-center">Pick your favourite shop</h4>
         </div>
         <div class="col-md-3">
-          <img src="http://i.imgur.com/vL9bDtW.jpg" class="center-block img-circle img-responsive work-flow">
+          <img src="https://i.imgur.com/vL9bDtW.jpg" class="center-block img-circle img-responsive work-flow">
           <h4 class="text-center">Make a reservation</h4>
         </div>
       </div>

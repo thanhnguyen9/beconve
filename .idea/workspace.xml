@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="47b03c1c-5747-4577-96a7-3f7fe1c1132f" name="Default" comment="Fix google url">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/app.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/homeController.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/homeController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/home.html.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/home.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/workflow/device.html" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/workflow/device.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/device.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/device.scss" />
@@ -47,8 +45,8 @@
       <file leaf-file-name="home.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/home.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2821997">
-              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.82489145">
+              <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -58,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/homeController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -639,12 +637,6 @@
       <option name="number" value="Default" />
       <updated>1469243953120</updated>
     </task>
-    <task id="LOCAL-00023" summary="Display summary on reservation page">
-      <created>1469856839593</created>
-      <option name="number" value="00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1469856839593</updated>
-    </task>
     <task id="LOCAL-00024" summary="Hot fix - Device selecting mess up.">
       <created>1469857150703</created>
       <option name="number" value="00024" />
@@ -933,7 +925,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472185969405</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Fix auto complete address">
+      <created>1472262708769</created>
+      <option name="number" value="00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1472262708769</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -972,7 +970,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix google api" />
     <MESSAGE value="Style reservation page" />
     <MESSAGE value="Finish STRIPE host account setup" />
     <MESSAGE value="Finish STRIPE Connect" />
@@ -997,7 +994,8 @@
     <MESSAGE value="Check if user have already set up STRIPE or not" />
     <MESSAGE value="Redesign the whole process" />
     <MESSAGE value="Fix google url" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix google url" />
+    <MESSAGE value="Fix auto complete address" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix auto complete address" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1409,7 +1407,7 @@
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/homeController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -1424,8 +1422,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/home.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2821997">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.82489145">
+          <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
           <folding />
         </state>
       </provider>
