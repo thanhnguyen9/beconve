@@ -1,31 +1,24 @@
 <div>
     <div class="section location-section">
-        <div class="container nomapping">
+        <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-block">
-                            <div id="exTab2" class="container text-center">
+                <div class="col-md-12 text-center">
+                    <br>
+                    <div ng-hide="stripe_setup">
+                        <h4>We are using <a href="https://stripe.com/">STRIPE</a> for payment process. They are one of the best company that provide payment process service.</h4>
+                        <h4>Please create a STRIPE account, so that the money will be transfer directly to your bank account</h4>
+                        <div class="row">
+                            <br>
+                            <a href="/users/auth/stripe_connect"><img class="stripe-connect-icon img-responsive" style="text-align: center" src="http://i.imgur.com/2uQi6sp.png" alt=""></a>
+                        </div>
+                    </div>
 
-                                <div ng-hide="stripe_setup">
-                                    <h4>We are using <a href="https://stripe.com/">STRIPE</a> for payment process. They are one of the best company that provide payment process service.</h4>
-                                    <h4>Please create a STRIPE account, so that the money will be transfer directly to your bank account</h4>
-                                    <div class="row">
-                                        <br>
-                                        <a href="/users/auth/stripe_connect"><img class="stripe-connect-icon img-responsive" style="text-align: center" src="http://i.imgur.com/2uQi6sp.png" alt=""></a>
-                                    </div>
-                                </div>
-
-                                <div ng-show="stripe_setup">
-                                    <h4>You have successfully set up STRIPE with our website</h4>
-                                    <h4>But you are able to update your information anytime </h4>
-                                    <div class="row">
-                                        <br>
-                                        <a href="https://dashboard.stripe.com"><img class="stripe-connect-icon img-responsive" style="text-align: center" src="http://i.imgur.com/2uQi6sp.png" alt=""></a>
-                                    </div>
-                                </div>
-
-                            </div>
+                    <div ng-show="stripe_setup">
+                        <h4>You have successfully set up STRIPE with our website</h4>
+                        <h4>But you are able to update your information anytime </h4>
+                        <div class="row">
+                            <br>
+                            <a href="https://dashboard.stripe.com"><img class="stripe-connect-icon img-responsive" style="text-align: center" src="http://i.imgur.com/2uQi6sp.png" alt=""></a>
                         </div>
                     </div>
                 </div>

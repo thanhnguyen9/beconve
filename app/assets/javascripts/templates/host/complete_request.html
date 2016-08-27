@@ -1,37 +1,39 @@
 <div>
     <div class="section location-section">
-        <div class="container nomapping">
+        <h1 class="text-center">Complete Your Request</h1><br>
+        <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-block">
-                            <div id="exTab2" class="container text-center">
-                                <div class="table-responsive">
+                <div class="col-md-12 text-center">
 
-                                    <p class="alert alert-success" ng-show="info_message">{{ info_message }}</p>
-
-                                    <div class="col-md-4">
-                                        <label>Location</label>
-                                        <p>{{ order.location }}</p>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label>Device</label>
-                                        <p>{{ order.model }} - {{ order.color }} - {{ order.issue }} - ${{ order.price }}</p>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <label>Complete</label><br>
-                                        <button
-                                                class="btn btn-danger btn-lg"
-                                                confirmed-click="complete()"
-                                                ng-confirm-click="Are you sure ?"
-                                                ng-hide="info_message">Complete
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-md-3">
+                        <label>Location</label>
+                        <p class="request-flow">{{ order.location }}</p>
                     </div>
+                    <div class="col-md-3">
+                        <label>Device</label>
+                        <p class="request-flow">{{ order.model }} - {{ order.color }} - {{ order.issue }} - ${{ order.price }}</p>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label>Complete</label><br>
+                        <button
+                                class="btn btn-success btn-lg"
+                                confirmed-click="actionOnRequest('complete')"
+                                ng-confirm-click="Are you sure ?"
+                                ng-hide="info_message">Complete
+                        </button>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label>Cancel</label><br>
+                        <button
+                                class="btn btn-danger btn-lg"
+                                confirmed-click="actionOnRequest('cancel')"
+                                ng-confirm-click="Are you sure ?"
+                                ng-hide="info_message">Cancel
+                        </button>
+                    </div>
+
                 </div>
             </div>
         </div>
