@@ -24,7 +24,7 @@ angular.module('BeConve')
 
         $scope.info = {
             //tech_id: $scope.tech_id,
-            tech_id: 3,
+            tech_id: 1,
             customer_email: $scope.customer_email,
             phone: $scope.phone,
             location: $scope.location,
@@ -33,20 +33,18 @@ angular.module('BeConve')
             color: $scope.color,
             issue: $scope.issue,
             price: '110',
-            warranty: $scope.warranty,
-            nonce: $scope.nonce
+            warranty: $scope.warranty
         };
 
-        $scope.pay = function(){
-            // Stripe Response Handler
-            $scope.stripeCallback = function (code, result) {
-                $scope.paying = true;
-                if (result.error) {
-                    $scope.error = 'Something went wrong. Please check the card information';
-                    $scope.paying = false;
-                } else {
-                    $scope.info['stripeToken'] = result.id;
+        //Stripe.setPublishableKey('pk_test_8vy0svTHE9RNRs2uz4F1AnT9');
 
+        $scope.pay = function(){
+            var handler = StripeCheckout.configure({
+                key: 'pk_test_8kPHFFUZjXxX2TmqALPXWpM4',
+                image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+                locale: 'auto',
+                token: function(token) {
+                    $scope.info['stripeToken'] = token.id;
                     $http({
                         method: 'POST',
                         url: '/checkouts',
@@ -55,15 +53,21 @@ angular.module('BeConve')
                         if (response.data.result === 'success'){
                             $location.path('/thank_you');
                         } else{
-                            $scope.error = response.data.message;
-                            $scope.paying = false;
+                            $scope.error = response.data.result;
                         }
                     }, function errorCallback(response) {
-                        $scope.error = 'Something went wrong. Please try after sometimes';
-                        $scope.paying = false;
+                        $scope.error = 'Something went wrong. Please refresh and try again';
                     });
                 }
-            };
+            });
+
+            // Open Checkout with further options:
+            handler.open({
+                name: 'BECONVE',
+                amount: $scope.price * 100,
+                zipCode: true
+            });
+
         };
     }])
 ;

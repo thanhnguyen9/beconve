@@ -20,21 +20,11 @@
         <th>Phone</th>
       </tr>
       <tr>
-        <td><%= order.lation %></td>
+        <td><%= order.location %></td>
         <td><%= order.model %> - <%= order.color %></td>
         <td><%= order.issue %></td>
-        <td><%= order.lation %></td>
+        <td><%= order.phone %></td>
       </tr>
     </table>
   </body>
 </html>
-
-location: params[:location],
-device: params[:device],
-model: params[:model],
-color: params[:color],
-issue: params[:issue],
-price: params[:price],
-customer_id: customer.id,
-tech_id: params[:tech_id],
-request_status: 'open'
