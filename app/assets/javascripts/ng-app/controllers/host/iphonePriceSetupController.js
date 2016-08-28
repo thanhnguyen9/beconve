@@ -8,7 +8,7 @@ angular.module('BeConve')
         });
 
 
-        $scope.iphoneScreens = [
+        $scope.iphoneModels = [
             {
                 name: 'iphone 4',
                 price: 0
@@ -51,159 +51,10 @@ angular.module('BeConve')
             }
 
         ];
-
-        $scope.iphoneBatteries = [
-            {
-                name: 'iphone 4',
-                price: 0
-            },
-            {
-                name: 'iphone 4S',
-                price: 0
-            },
-            {
-                name: 'iphone 5',
-                price: 0
-            },
-            {
-                name: 'iphone 5C',
-                price: 0
-            },
-            {
-                name: 'iphone 5S',
-                price: 0
-            },
-            {
-                name: 'iphone 6',
-                price: 0
-            },
-            {
-                name: 'iphone 6 Plus',
-                price: 0
-            },
-            {
-                name: 'iphone 6S',
-                price: 0
-            },
-            {
-                name: 'iphone 6S Plus',
-                price: 0
-            },
-            {
-                name: 'iphone SE',
-                price: 0
-            }
-
-        ];
-
-        $scope.iphoneNotOns = [
-            {
-                name: 'iphone 4',
-                price: 0
-            },
-            {
-                name: 'iphone 4S',
-                price: 0
-            },
-            {
-                name: 'iphone 5',
-                price: 0
-            },
-            {
-                name: 'iphone 5C',
-                price: 0
-            },
-            {
-                name: 'iphone 5S',
-                price: 0
-            },
-            {
-                name: 'iphone 6',
-                price: 0
-            },
-            {
-                name: 'iphone 6 Plus',
-                price: 0
-            },
-            {
-                name: 'iphone 6S',
-                price: 0
-            },
-            {
-                name: 'iphone 6S Plus',
-                price: 0
-            },
-            {
-                name: 'iphone SE',
-                price: 0
-            }
-
-        ];
-
-        $scope.iphoneLiquids = [
-            {
-                name: 'iphone 4',
-                price: 0
-            },
-            {
-                name: 'iphone 4S',
-                price: 0
-            },
-            {
-                name: 'iphone 5',
-                price: 0
-            },
-            {
-                name: 'iphone 5C',
-                price: 0
-            },
-            {
-                name: 'iphone 5S',
-                price: 0
-            },
-            {
-                name: 'iphone 6',
-                price: 0
-            },
-            {
-                name: 'iphone 6 Plus',
-                price: 0
-            },
-            {
-                name: 'iphone 6S',
-                price: 0
-            },
-            {
-                name: 'iphone 6S Plus',
-                price: 0
-            },
-            {
-                name: 'iphone SE',
-                price: 0
-            }
-
-        ];
-
 
         //IPHONE
-        $scope.iphoneBrokenScreenSubmit = function(model){
-            console.log('Inside iphone broken screen submit');
-            console.log(model.name);
-            console.log(model.price);
-        };
-
-        $scope.iphoneFaultyBatterySubmit = function(model){
-            console.log('Inside iphone faulty battery submit');
-            console.log(model.name);
-            console.log(model.price);
-        };
-        $scope.iphoneNotTurnOnSubmit = function(model){
-            console.log('Inside iphone not on submit');
-            console.log(model.name);
-            console.log(model.price);
-        };
-        $scope.iphoneLiquidDamageSubmit = function(model){
-            console.log('Inside liquid damage submit');
+        $scope.iphonePriceSubmit = function(model, type){
+            console.log('Inside iphone' + type +  'submit');
             console.log(model.name);
             console.log(model.price);
         };
