@@ -21,95 +21,122 @@
 
                                 <!--IPHONE-->
                                 <div class="text-center" ng-show="issue == 'brokenScreen'">
-                                    <h1>Broken Screen</h1>
-                                    <form name="notOnPriceForm">
+                                    <h1>IPAD Broken Screen</h1>
 
-                                        <div class="col-md-2" ng-repeat="model in ipadScreens">
-                                            <div class="form-group f-spacing">
-                                                <label class="form-span-color">{{ model.name }}</label>
-                                                <input type="number"
-                                                       class="form-control"
-                                                       id="work-flow-location"
-                                                       placeholder="110"
-                                                       ng-model="model.price"
-                                                       required>
-                                            </div>
-                                        </div>
+                                    <ul class="list-inline text-center" >
+                                        <li class="device-workflow" ng-repeat="model in ipadModels">
+                                            <form>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-10 col-sm-offset-1">
+                                                        <div class="form-group f-spacing">
+                                                            <label class="form-span-color">{{ model.name }}</label>
+                                                            <input type="number"
+                                                                   class="form-control text-center"
+                                                                   id="work-flow-location"
+                                                                   placeholder="110"
+                                                                   ng-model="model.price"
+                                                                   required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-12 text-center">
+                                                        <button type="submit" class="btn btn-danger" ng-click="ipadPriceSubmit(model, 'broken screen')">Update</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </li>
+                                    </ul>
 
-                                        <div>
-                                            <button type="submit" class="btn btn-danger btn-lg" ng-click="ipadBrokenScreenSubmit()">Save price</button>
-                                        </div>
-
-                                    </form>
                                 </div>
 
                                 <div class="text-center" ng-show="issue == 'faultyBattery'">
-                                    <h1>Faulty Battery</h1>
-                                    <form name="faultyBatteryPriceForm">
+                                    <h1> IPAD Faulty Battery</h1>
 
-                                        <div class="col-md-2" ng-repeat="model in ipadBatteries">
-                                            <div class="form-group f-spacing">
-                                                <label class="form-span-color">{{ model.name }}</label>
-                                                <input type="number"
-                                                       class="form-control"
-                                                       id="work-flow-location"
-                                                       placeholder="110"
-                                                       ng-model="model.price"
-                                                       required>
-                                            </div>
-                                        </div>
+                                    <ul class="list-inline text-center" >
+                                        <li class="device-workflow" ng-repeat="model in ipadModels">
+                                            <form>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-10 col-sm-offset-1">
+                                                        <div class="form-group f-spacing">
+                                                            <label class="form-span-color">{{ model.name }}</label>
+                                                            <input type="number"
+                                                                   class="form-control text-center"
+                                                                   id="work-flow-location"
+                                                                   placeholder="110"
+                                                                   ng-model="model.price"
+                                                                   required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-12 text-center">
+                                                        <button type="submit" class="btn btn-danger" ng-click="ipadPriceSubmit(model, 'faulty battery')">Update</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </li>
+                                    </ul>
 
-                                        <div>
-                                            <button type="submit" class="btn btn-danger btn-lg" ng-click="ipadFaultyBatterySubmit()">Save price</button>
-                                        </div>
-
-                                    </form>
                                 </div>
 
                                 <div class="text-center" ng-show="issue == 'notOn'">
-                                    <h1>Won't Turn on</h1>
-                                    <form name="notOnPriceForm">
+                                    <h1>IPAD Won't Turn on</h1>
 
-                                        <div class="col-md-2" ng-repeat="model in ipadNotOns">
-                                            <div class="form-group f-spacing">
-                                                <label class="form-span-color">{{ model.name }}</label>
-                                                <input type="number"
-                                                       class="form-control"
-                                                       id="work-flow-location"
-                                                       placeholder="110"
-                                                       ng-model="model.price"
-                                                       required>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <button type="submit" class="btn btn-danger btn-lg" ng-click="ipadNotTurnOnSubmit()">Save price</button>
-                                        </div>
-
-                                    </form>
+                                    <ul class="list-inline text-center" >
+                                        <li class="device-workflow" ng-repeat="model in ipadModels">
+                                            <form>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-10 col-sm-offset-1">
+                                                        <div class="form-group f-spacing">
+                                                            <label class="form-span-color">{{ model.name }}</label>
+                                                            <input type="number"
+                                                                   class="form-control text-center"
+                                                                   id="work-flow-location"
+                                                                   placeholder="110"
+                                                                   ng-model="model.price"
+                                                                   required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-12 text-center">
+                                                        <button type="submit" class="btn btn-danger" ng-click="ipadPriceSubmit(model, 'not on')">Update</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </li>
+                                    </ul>
                                 </div>
 
                                 <div class="text-center" ng-show="issue == 'liquidDamage'">
-                                    <h1>Liquid Damge</h1>
-                                    <form name="liquidDamagePriceForm">
+                                    <h1>IPAD Liquid Damge</h1>
 
-                                        <div class="col-md-2" ng-repeat="model in ipadLiquids">
-                                            <div class="form-group f-spacing">
-                                                <label class="form-span-color">{{ model.name }}</label>
-                                                <input type="number"
-                                                       class="form-control"
-                                                       id="work-flow-location"
-                                                       placeholder="110"
-                                                       ng-model="model.price"
-                                                       required>
-                                            </div>
-                                        </div>
+                                    <ul class="list-inline text-center" >
+                                        <li class="device-workflow" ng-repeat="model in ipadModels">
+                                            <form>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-10 col-sm-offset-1">
+                                                        <div class="form-group f-spacing">
+                                                            <label class="form-span-color">{{ model.name }}</label>
+                                                            <input type="number"
+                                                                   class="form-control"
+                                                                   id="work-flow-location"
+                                                                   placeholder="110"
+                                                                   ng-model="model.price"
+                                                                   required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-12 text-center">
+                                                        <button type="submit" class="btn btn-danger" ng-click="ipadPriceSubmit(model, 'liquid damage')">Update</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </li>
+                                    </ul>
 
-                                        <div>
-                                            <button type="submit" class="btn btn-danger btn-lg" ng-click="ipadLiquidDamageSubmit()">Save price</button>
-                                        </div>
-
-                                    </form>
                                 </div>
                             </div>
                         </div>
