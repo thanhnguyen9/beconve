@@ -186,22 +186,26 @@ angular.module('BeConve')
 
 
         //IPHONE
-        $scope.iphoneBrokenScreenSubmit = function(){
+        $scope.iphoneBrokenScreenSubmit = function(model){
             console.log('Inside iphone broken screen submit');
-            console.log($scope.iphoneScreens);
+            console.log(model.name);
+            console.log(model.price);
         };
 
-        $scope.iphoneFaultyBatterySubmit = function(){
+        $scope.iphoneFaultyBatterySubmit = function(model){
             console.log('Inside iphone faulty battery submit');
-            console.log($scope.iphoneBatteries);
+            console.log(model.name);
+            console.log(model.price);
         };
-        $scope.iphoneNotTurnOnSubmit = function(){
+        $scope.iphoneNotTurnOnSubmit = function(model){
             console.log('Inside iphone not on submit');
-            console.log($scope.iphoneNotOns);
+            console.log(model.name);
+            console.log(model.price);
         };
-        $scope.iphoneLiquidDamageSubmit = function(){
+        $scope.iphoneLiquidDamageSubmit = function(model){
             console.log('Inside liquid damage submit');
-            console.log( $scope.iphoneLiquids);
+            console.log(model.name);
+            console.log(model.price);
         };
 
     }]);
