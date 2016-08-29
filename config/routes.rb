@@ -4,11 +4,10 @@ Rails.application.routes.draw do
 
   root 'application#index'
 
-  resources :checkouts,  only: [:new, :create, :show]
-
   namespace :api, defaults: {format: 'json'} do
     namespace :v1 do
       resources :technicians
+      resources :checkouts,  only: [:new, :create, :show]
 
       get '/technicians/complete_request' => 'technicians#complete_request'
       put '/technicians/repair_request/approve' => 'technicians#approve'

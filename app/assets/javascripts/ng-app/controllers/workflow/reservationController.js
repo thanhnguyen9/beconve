@@ -1,6 +1,6 @@
 angular.module('BeConve')
-    .controller('reservationController', ['$scope', '$location', '$sessionStorage', '$http', 'Auth', '$window',
-        function($scope, $location, $sessionStorage, $http, Auth, $window) {
+    .controller('reservationController', ['$scope', '$location', '$sessionStorage', '$http', 'Auth', '$window', 'Order',
+        function($scope, $location, $sessionStorage, $http, Auth, $window, Order) {
 
         if (angular.isUndefined($sessionStorage.techId) || $sessionStorage.techId === ''){
             $location.url('/availability');
@@ -22,18 +22,8 @@ angular.module('BeConve')
         $scope.price = $sessionStorage.price;
         $scope.warranty = $sessionStorage.warranty;
 
-        $scope.info = {
-            //tech_id: $scope.tech_id,
-            tech_id: 1,
-            customer_email: $scope.customer_email,
-            phone: $scope.phone,
-            location: $scope.location,
-            device: $scope.device,
-            model: $scope.model,
-            color: $scope.color,
-            issue: $scope.issue,
-            price: '110',
-            warranty: $scope.warranty
+        $scope.order = {
+
         };
 
         //Stripe.setPublishableKey('pk_test_8vy0svTHE9RNRs2uz4F1AnT9');
@@ -44,19 +34,30 @@ angular.module('BeConve')
                 image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
                 locale: 'auto',
                 token: function(token) {
-                    $scope.info['stripeToken'] = token.id;
-                    $http({
-                        method: 'POST',
-                        url: '/checkouts',
-                        data: $scope.info
-                    }).then(function successCallback(response) {
-                        if (response.data.result === 'success'){
+                    $scope.order['stripeToken'] = token.id;
+
+                    $scope.order = new Order(); //You can instantiate resource class
+
+                    $scope.order.order = {};
+
+                    //tech_id: $scope.tech_id,
+                    $scope.order.order.tech_id = 1;
+                    $scope.order.order.customer_email = $scope.customer_email;
+                    $scope.order.order.phone = $scope.phone;
+                    $scope.order.order.location = $scope.location;
+                    $scope.order.order.device = $scope.device;
+                    $scope.order.order.model = $scope.model;
+                    $scope.order.order.color = $scope.color;
+                    $scope.order.order.issue = $scope.issue;
+                    $scope.order.order.price = '110';
+                    $scope.order.order.warranty = $scope.warranty;
+
+                    $scope.order.$save(function(response) {
+                        if (response.result === 'success'){
                             $location.path('/thank_you');
                         } else{
-                            $scope.error = response.data.result;
+                            $scope.error = response.result;
                         }
-                    }, function errorCallback(response) {
-                        $scope.error = 'Something went wrong. Please refresh and try again';
                     });
                 }
             });
