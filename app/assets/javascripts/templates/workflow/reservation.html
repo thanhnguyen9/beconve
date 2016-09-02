@@ -27,7 +27,7 @@
                                                 <form stripe-form="stripeCallback" name="checkoutForm">
 
                                                     <label>Phone number</label><br>
-                                                    <input class="form-control input-phone" type='text' name="phone" phone-input ng-model="phoneVal" placeholder="(123) 456-6789" ng-minlength="15" ng-maxlength="15" required/><br>
+                                                    <input class="form-control input-phone" type='text' name="phone" phone-input ng-model="phoneVal" placeholder="(123) 456-6789" ng-minlength="14" ng-maxlength="14" required/><br>
 
                                                     <div ng-messages="checkoutForm.phone.$error" style="color:maroon" role="alert">
                                                         <div ng-message="required">Please input phone number</div>
