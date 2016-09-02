@@ -2,8 +2,8 @@ class AddMoreInfoToUsers < ActiveRecord::Migration
   def change
     add_column :users, :name, :text
     add_column :users, :address, :string
-    add_column :users, :latitude, :string
-    add_column :users, :longitude, :string
+    add_column :users, :latitude, :float
+    add_column :users, :longitude, :float
     add_column :users, :warranty, :text
     add_column :users, :response_time, :text
     add_column :users, :rating, :float
