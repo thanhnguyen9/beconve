@@ -56,8 +56,6 @@ angular
                 }
             };
 
-            //$scope.map.control.getGMap();
-            //debugger;
             $scope.pick = function(techId, techName){
                 $sessionStorage['techId'] = techId;
                 $sessionStorage['techName'] = techName;
