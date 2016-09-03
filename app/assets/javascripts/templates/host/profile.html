@@ -10,63 +10,98 @@
 
                                 <p class="alert alert-success" ng-show="info">{{ info }}</p>
 
-                                <div class="col-md-4"></div>
+                                <form name="updateProfile" novalidate>
 
-                                <div class="col-md-4">
-                                    <form name="updateProfile" novalidate>
-
+                                    <div class="col-sm-6">
                                         <div class="form-group f-spacing">
                                             <label class="form-span-color">Shop Name</label>
                                             <input type="text"
-                                                   class="form-control"
+                                                   class="form-control input-lg"
                                                    placeholder=""
                                                    ng-model="name"
                                                    name="name"
                                                    required>
                                             <div ng-show="updateProfile.$submitted || updateProfile.name.$touched">
-                                                <div ng-show="updateProfile.name.$error.required">Please input shop name.</div>
+                                                <div style="color: red" ng-show="updateProfile.name.$error.required">Please input shop name.</div>
                                             </div>
 
                                             <label class="form-span-color">Address</label>
                                             <input type="text"
-                                                   class="form-control"
+                                                   class="form-control input-lg"
                                                    placeholder=""
                                                    ng-model="address"
                                                    name="address"
                                                    required>
                                             <div ng-show="updateProfile.$submitted || updateProfile.address.$touched">
-                                                <div ng-show="updateProfile.address.$error.required">Please input address.</div>
+                                                <div style="color: red" ng-show="updateProfile.address.$error.required">Please input address.</div>
+                                            </div>
+
+                                            <label class="form-span-color">Rating</label>
+                                            <input type="text"
+                                                   class="form-control input-lg"
+                                                   placeholder="4.9"
+                                                   ng-model="rating"
+                                                   name="rating"
+                                                   required>
+                                            <div ng-show="updateProfile.$submitted || updateProfile.rating.$touched">
+                                                <div style="color: red" ng-show="updateProfile.rating.$error.required">Please input rating.</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="form-group f-spacing">
+                                            <label class="form-span-color">Reviews</label>
+                                            <input type="text"
+                                                   class="form-control input-lg"
+                                                   placeholder="26"
+                                                   ng-model="reviews"
+                                                   name="reviews"
+                                                   required>
+                                            <div ng-show="updateProfile.$submitted || updateProfile.reviews.$touched">
+                                                <div style="color: red" ng-show="updateProfile.reviews.$error.required">Please input reviews.</div>
+                                            </div>
+
+                                            <label class="form-span-color">Reviews Google Link</label>
+                                            <input type="text"
+                                                   class="form-control input-lg"
+                                                   placeholder="https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=shop phone repair&tbs=lf:1,lf_ui:3&rflfq=1&rlha=0&rllag=32910342,-96882988,13846&tbm=lcl&rldimm=16317440246834225274&lrd=0x864c2eee6345cc25:0xe27331737437607a,1,"
+                                                   ng-model="reviews_link"
+                                                   name="reviews_link"
+                                                   required>
+                                            <div ng-show="updateProfile.$submitted || updateProfile.reviews_link.$touched">
+                                                <div style="color: red" ng-show="updateProfile.reviews_link.$error.required">Please input rating.</div>
                                             </div>
 
                                             <label class="form-span-color">Warranty</label>
                                             <input type="text"
-                                                   class="form-control"
+                                                   class="form-control input-lg"
                                                    placeholder=""
                                                    ng-model="warranty"
                                                    name="warranty"
                                                    required>
                                             <div ng-show="updateProfile.$submitted || updateProfile.warranty.$touched">
-                                                <div ng-show="updateProfile.warranty.$error.required">Please input warranty.</div>
+                                                <div style="color: red" ng-show="updateProfile.warranty.$error.required">Please input warranty.</div>
                                             </div>
 
-                                            <label class="form-span-color">Image</label>
-                                            <input type="text"
-                                                   class="form-control"
-                                                   placeholder=""
-                                                   ng-model="image"
-                                                   required>
-                                            <div ng-show="updateProfile.$submitted || updateProfile.image.$touched">
-                                                <div ng-show="updateProfile.image.$error.required">Tell us your name.</div>
-                                            </div>
                                         </div>
+                                    </div>
 
-                                        <div>
-                                            <button type="submit" class="btn btn-danger btn-lg" ng-click="updateProfile.$valid && submit()">Save profile</button>
-                                        </div>
-                                    </form>
-
-                                </div>
-                                <div class="col-md-4"></div>
+                                    <label class="form-span-color">Image</label>
+                                    <input type="text"
+                                           class="form-control input-lg"
+                                           placeholder=""
+                                           ng-model="image"
+                                           required>
+                                    <div ng-show="updateProfile.$submitted || updateProfile.image.$touched">
+                                        <div style="color: red" ng-show="updateProfile.image.$error.required">Tell us your name.</div>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <button type="submit" class="btn btn-danger btn-lg" ng-click="updateProfile.$valid && submit()">Save profile</button>
+                                    </div>
+                                </form>
 
 
                             </div>
