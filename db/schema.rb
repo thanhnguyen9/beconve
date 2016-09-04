@@ -24,10 +24,10 @@ ActiveRecord::Schema.define(version: 20160829013714) do
     t.text     "issue"
     t.integer  "price"
     t.string   "customer_id"
+    t.string   "charge_id"
     t.integer  "user_id"
     t.text     "request_status"
     t.string   "info"
-    t.text     "phone"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end

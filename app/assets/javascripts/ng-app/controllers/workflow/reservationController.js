@@ -34,13 +34,13 @@ angular.module('BeConve')
                 image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
                 locale: 'auto',
                 token: function(token) {
-                    $scope.order['stripeToken'] = token.id;
 
                     $scope.order = new Order(); //You can instantiate resource class
 
                     $scope.order.order = {};
 
                     //tech_id: $scope.tech_id,
+                    $scope.order.order.stripeToken = token.id;
                     $scope.order.order.tech_id = 1;
                     $scope.order.order.customer_email = $scope.customer_email;
                     $scope.order.order.phone = $scope.phone;
@@ -55,9 +55,15 @@ angular.module('BeConve')
                     $scope.order.$save(function(response) {
                         if (response.result === 'success'){
                             $location.path('/thank_you');
-                        } else{
+                        } else if (response.result === 'Shop is no longer available. Please select another shop'){
                             $scope.error = response.result;
+                            $scope.goBackAvailability = true;
+                        } else {
+                            $scope.error = response.result + 'Please refresh and try again';
                         }
+                    }, function(data,headers) {
+                        debugger;
+                        $scope.error = 'Something went wrong. Please refresh and try again';
                     });
                 }
             });

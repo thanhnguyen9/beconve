@@ -23,6 +23,7 @@
                                                 <h1 class="text-center">You are almost done!</h1>
 
                                                 <span style="color: red" ng-show="error" ng-cloak> {{error}}</span><br>
+                                                <div ng-show="goBackAvailability"><a ng-href="#availability" class="btn btn-danger">Pick another Shop</a></div>
 
                                                 <form stripe-form="stripeCallback" name="checkoutForm">
 

@@ -6,25 +6,14 @@
   <body>
     <p>Hi,</p><br>
 
-    <p>A customer have requested you to repair his devise. Please ACCEPT or DECLINE the quest.</p><br>
+    <p>A customer have requested you to repair his devise. Please <a href="http://beconve.herokuapp.com#iphone_price_setup" style="color: blue">ACCEPT</a> or <a href="http://beconve.herokuapp.com#iphone_price_setup" style="color: red">DECLINE</a> the quest.</p><br>
 
-    <p>The request will be declined automaticaly after 2 minutes.</p>
+    <p>The request will be declined automaticaly after 5 minutes.</p>
 
-    <h4>More info:</h4>
+    <h4>Location</h4>: <%= @order.location %>
+    <h4>Deivce</h4>: <%= @order.device %> - <%= @order.model %> - <%= @order.color %>
+    <h4>Issue</h4>: <%= @order.issue %>
+    <h4>Price</h4>: $<%= @order.price %>
 
-    <table style="width:100%">
-      <tr>
-        <th>Location</th>
-        <th>Device</th>
-        <th>Issue</th>
-        <th>Phone</th>
-      </tr>
-      <tr>
-        <td><%= @order.location %></td>
-        <td><%= @order.model %> - <%= @order.color %></td>
-        <td><%= @order.issue %></td>
-        <td><%= @order.phone %></td>
-      </tr>
-    </table>
   </body>
 </html>
