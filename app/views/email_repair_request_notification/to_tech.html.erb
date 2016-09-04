@@ -10,10 +10,13 @@
 
     <p>The request will be declined automaticaly after 5 minutes.</p>
 
-    <h4>Location</h4>: <%= @order.location %>
-    <h4>Deivce</h4>: <%= @order.device %> - <%= @order.model %> - <%= @order.color %>
-    <h4>Issue</h4>: <%= @order.issue %>
-    <h4>Price</h4>: $<%= @order.price %>
+    <% phone = @order.customer_phone.scan(/.../).join('-') %>
+    <p><span style="font-weight: bold;">Customer phone number: </span><a href="tel:+1-<%= phone + @order.customer_phone.split('').last%>"><%= @order.customer_phone %></a></p>
+    <p><span style="font-weight: bold;">Customer Email: </span><a href="mailto:<%= @order.customer_email %>" target="_top"><%= @order.customer_email %></a></p>
+    <p><span style="font-weight: bold;">Location: </span><a href="http://maps.google.com/?q=<%= @order.location %>"><%= @order.location %></a></p>
+    <p><span style="font-weight: bold;">Deivce: </span><%= @order.device %> - <%= @order.model %> - <%= @order.color %></p>
+    <p><span style="font-weight: bold;">Issue: </span><%= @order.issue %></p>
+    <p><span style="font-weight: bold;">Price: $</span><%= @order.price %></p>
 
   </body>
 </html>

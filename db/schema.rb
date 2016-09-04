@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20160829013714) do
     t.text     "issue"
     t.integer  "price"
     t.string   "customer_id"
+    t.text     "customer_phone"
+    t.text     "customer_email"
     t.string   "charge_id"
     t.integer  "user_id"
     t.text     "request_status"

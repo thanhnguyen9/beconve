@@ -32,6 +32,7 @@ module Api
           # @order.customer_id = customer.id
           @order.user_id = tech.id
           @order.charge_id = charge.id
+          @order.customer_email = charge.source.name
 
           if @order.save
             EmailRepairRequestNotification.to_tech(tech, @order).deliver_now
@@ -58,7 +59,7 @@ module Api
       private
 
       def params_order
-        params.require(:order).permit(:location,  :device, :model, :color ,:issue, :price, :customer_id, :charge_id, :user_id, :request_status, :info, :phone)
+        params.require(:order).permit(:location,  :device, :model, :color ,:issue, :price, :customer_id, :customer_phone, :customer_email, :charge_id, :user_id, :request_status, :info, :phone)
       end
 
     end

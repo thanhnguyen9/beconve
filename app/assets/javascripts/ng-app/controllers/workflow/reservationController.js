@@ -42,8 +42,7 @@ angular.module('BeConve')
                     //tech_id: $scope.tech_id,
                     $scope.order.order.stripeToken = token.id;
                     $scope.order.order.tech_id = 1;
-                    $scope.order.order.customer_email = $scope.customer_email;
-                    $scope.order.order.phone = $scope.phone;
+                    $scope.order.order.customer_phone = $scope.phoneVal;
                     $scope.order.order.location = $scope.location;
                     $scope.order.order.device = $scope.device;
                     $scope.order.order.model = $scope.model;
