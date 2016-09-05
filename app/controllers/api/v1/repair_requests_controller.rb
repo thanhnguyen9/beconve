@@ -3,52 +3,80 @@ module Api
     class RepairRequestsController < ApplicationController
 
       def requests
-        order = [{
-            location: '6632 Deseo, Irving, TX 75039',
-            device: 'Iphone',
-            model: 'Iphone 6',
-            color: 'White',
-            issue: 'Broken Screen',
-            price: '110',
-            customer_id: 1,
-            tech_id: params[:tech_id],
-            request_status: 'open'
-        }]
-        render json: order
+        order = Order.where(user_id: current_user.id, request_status: 'open').first
+        render json: {response: order}
       end
 
       def approve_request
-        # Update tech status
-        # Update order status
-        render json: {response: 'success'}
+        tech = User.find(params[:user_id])
+        tech.status = 'offline'
+
+        if tech.save
+          order = Order.find(params[:id])
+          order.request_status = 'approved'
+          if order.save
+            render json: {response: 'success'}
+          else
+            render json: {response: 'failed'}
+          end
+        else
+          render json: {response: 'failed'}
+        end
       end
 
       def decline_request
+        order = Order.find(params[:id])
+        order.request_status = 'declined'
+
+        if order.save
+          render json: {response: 'success'}
+        else
+          render json: {response: 'failed'}
+        end
         # Update tech status
         # Update order status
         # Send email to BECONVE
-        render json: {response: 'success'}
       end
 
       def complete_request
-        # Update tech status
-        # Update order status
+        order = Order.where(user_id: current_user.id, request_status: 'approved').first
+        render json: {response: order}
+      end
 
+      def complete_action
+        tech = User.find(params[:user_id])
+        tech.status = 'online'
 
-        # # Charge the Customer instead of the card
-        # Stripe::Charge.create(
-        #     :amount => params[:price].to_i * 100, # in cents
-        #     :currency => "usd",
-        #     :customer => customer.id,
-        #     :destination => "#{tech.uid}"
-        # )
+        if tech.save
+          order = Order.find(params[:id])
+          order.request_status = 'completed'
 
-        render json: {result: 'success'}
-      rescue Stripe::CardError => e
-        render json: { result: 'failed', message: "#{e.message}"}
+          if order.save
+            render json: {response: 'success'}
+          else
+            render json: {response: 'failed'}
+          end
+        else
+          render json: {response: 'failed'}
+        end
+      end
 
-      rescue Stripe::StripeError => e
-        render :json => { result: 'failed', message: "#{e.message}"}
+      def cancel_action
+        tech = User.find(params[:user_id])
+        tech.status = 'online'
+
+        if tech.save
+          order = Order.find(params[:id])
+          order.request_status = 'cancel'
+
+          if order.save
+            render json: {response: 'success'}
+          else
+            render json: {response: 'failed'}
+          end
+        else
+          render json: {response: 'failed'}
+        end
       end
 
       def update

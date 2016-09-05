@@ -15,7 +15,9 @@ Rails.application.routes.draw do
       get '/repair_requests/requests' => 'repair_requests#requests'
       put '/repair_requests/approve_request' => 'repair_requests#approve_request'
       put '/repair_requests/decline_request' => 'repair_requests#decline_request'
-      put '/repair_requests/complete_request' => 'repair_requests#complete_request'
+      get '/repair_requests/complete_request' => 'repair_requests#complete_request'
+      put '/repair_requests/complete_action' => 'repair_requests#complete_action'
+      put '/repair_requests/cancel_action' => 'repair_requests#cancel_action'
     end
   end
 

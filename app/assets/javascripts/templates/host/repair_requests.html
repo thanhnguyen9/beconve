@@ -6,6 +6,7 @@
                 <div class="col-md-12 text-center">
 
                     <p class="alert alert-success" ng-show="info_message">{{ info_message }}</p>
+                    <p class="alert alert-danger" ng-show="alert">{{ alert }}</p>
 
                     <div class="col-md-3">
                         <label>Location</label>
@@ -17,24 +18,60 @@
                     </div>
                     <div class="col-md-3">
                         <label>Approve</label><br>
-                        <button
-                                class="btn btn-success btn-lg"
-                                confirmed-click="actionOnRequest('approved')"
-                                ng-confirm-click="Are you sure ?"
-                                ng-hide="info_message">Approve
+                        <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#approved" ng-hide="info_message">
+                            Approve
                         </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="approved" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Approve</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Please click approve button to approve the request</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-success" data-dismiss="modal"  ng-click="actionOnRequest('approved')">Approve</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-3">
                         <label>Decline</label><br>
-                        <button
-                                class="btn btn-danger btn-lg"
-                                confirmed-click="actionOnRequest('declined')"
-                                ng-confirm-click="Are you sure ?"
-                                ng-hide="info_message"  >Decline
+                        <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#declined" ng-hide="info_message">
+                            Decline
                         </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="declined" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Decline</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Please click decline button to decline the request</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal" ng-click="actionOnRequest('declined')">Decline</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+        </div

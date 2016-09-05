@@ -28,10 +28,10 @@ ActiveRecord::Schema.define(version: 20160829013714) do
     t.text     "customer_email"
     t.string   "charge_id"
     t.integer  "user_id"
-    t.text     "request_status"
+    t.text     "request_status", default: "open"
     t.string   "info"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   create_table "users", force: :cascade do |t|
