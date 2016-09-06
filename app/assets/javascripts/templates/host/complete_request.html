@@ -34,7 +34,7 @@
                                         <h4 class="modal-title">Complete</h4>
                                     </div>
                                     <div class="modal-body">
-                                        <p>Please click approve button to approve the request</p>
+                                        <p>Please click complete button to complete the request</p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -63,11 +63,19 @@
                                         <h4 class="modal-title">Cancel</h4>
                                     </div>
                                     <div class="modal-body">
-                                        <p>Please click approve button to approve the request</p>
+                                        <p>Please fill out the reason and click cancel button to cancel the request</p>
+                                        <form name="declineForm">
+                                            <input type="text"
+                                                   class="form-control input-lg"
+                                                   id="work-flow-location"
+                                                   placeholder="Reason"
+                                                   ng-model="reason"
+                                                   required><br>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal" ng-click="actionOnRequest('cancel')">Cancel</button>
+                                        </form>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-danger" data-dismiss="modal" ng-click="actionOnRequest('cancel')">Cancel</button>
                                     </div>
                                 </div>
 

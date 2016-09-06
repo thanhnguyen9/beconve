@@ -35,19 +35,24 @@ angular.module('BeConve')
                         $scope.alert = 'Something went wrong. Please refresh and try again'
                     });
                 }else{
-                    $http({
-                        method: 'PUT',
-                        url: '/api/v1/repair_requests/decline_request',
-                        data: $scope.order
-                    }).then(function successCallback(response) {
-                        if(response.data.response === 'success'){
-                            $scope.info_message = 'You have successfully declined the request';
-                        }else{
+                    if(angular.isUndefined($scope.reason) || $scope.location === ''){
+                        $scope.alert = 'Please input reason why you would like to decline the request.'
+                    }else{
+                        $http({
+                            method: 'PUT',
+                            url: '/api/v1/repair_requests/decline_request',
+                            data: $scope.order
+                        }).then(function successCallback(response) {
+                            if(response.data.response === 'success'){
+                                $scope.info_message = 'You have successfully declined the request';
+                                $scope.alert = false;
+                            }else{
+                                $scope.alert = 'Something went wrong. Please refresh and try again'
+                            }
+                        }, function errorCallback(response) {
                             $scope.alert = 'Something went wrong. Please refresh and try again'
-                        }
-                    }, function errorCallback(response) {
-                        $scope.alert = 'Something went wrong. Please refresh and try again'
-                    });
+                        });
+                    }
                 }
             }
 
