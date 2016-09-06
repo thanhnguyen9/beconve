@@ -80,7 +80,7 @@ module Api
       end
 
       def update
-        render json: {result: 'success'}
+        render json: {response: 'success'}
       end
 
     end

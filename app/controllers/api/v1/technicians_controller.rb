@@ -40,8 +40,6 @@ module Api
 
       private
 
-      private
-
       def account_update_params
         params.require(:user).permit(:name, :address, :warranty, :response_time, :rating, :reviews, :reviews_link, :device_count, :image, :status)
       end

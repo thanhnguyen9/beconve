@@ -34,13 +34,12 @@ angular.module('BeConve')
                             $scope.alert = 'Something went wrong. Please refresh and try again'
                         })
                     }else{
-                        debugger;
                         $http({
                             method: 'PUT',
                             url: '/api/v1/repair_requests/cancel_action',
                             data: $scope.order
                         }).then(function successCallback(response) {
-                            if(response.data.result === 'success'){
+                            if(response.data.response === 'success'){
                                 if(response.data.response === 'success'){
                                     $scope.info_message = 'You have successfully declined the request. You are now online';
                                 }else{

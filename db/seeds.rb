@@ -22,7 +22,7 @@ a.name = 'Cellular Parts USA'
 a.address = '11532 Harry Hines Blvd #212, Dallas, TX 75229'
 a.rating = 2.8
 a.reviews = 29
-a.reviews_link = 'https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=shop phone repair&tbs=lf:1,lf_ui:3&rflfq=1&rlha=0&rllag=32910342,-96882988,13846&tbm=lcl&rldimm=16317440246834225274&fll=32.946879726245044,-96.90843311826171&fspn=0.39478672194439923,0.690216616011412&fz=11&oll=33.00131535,-96.90740315&ospn=0.417011244115983,0.4450402363012813&oz=10&lrd=0x864e83b2d99312c9:0xd6238ff9a7fca95,1,&qop=1&rlfi=hd:;si:964395940670589589'
+a.reviews_link = 'https://www.google.com/search?q=CELL+PHONE+REPAIR+TX&oq=CELL+PHONE+REPAIR+TX&aqs=chrome..69i57j69i60l3.152j0j7&sourceid=chrome&ie=UTF-8#lrd=0x864c278f0a4ba7a7:0xfb0d7e19b5dc8f1f,1,'
 a.phone = '(972) 325-5253'
 a.warranty = '6 months'
 a.image = 'http://images.cellphonerepair.com/dallas-north-tx/wp-content/uploads/sites/83/2014/08/cell-phone-repair-tx-dallas-uptown.jpg'
