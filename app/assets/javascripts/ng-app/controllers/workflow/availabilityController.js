@@ -17,6 +17,7 @@ angular
                     for( i = 0; i < $scope.techs.length; i++){
                         arr.push({
                             id: $scope.techs[i].id,
+                            tech: $scope.techs[i],
                             latitude: $scope.techs[i].latitude,
                             longitude: $scope.techs[i].longitude
                         });
@@ -56,13 +57,24 @@ angular
                 }
             };
 
-            $scope.pick = function(techId, techName){
+            $scope.pick = function(techId, techName, warranty){
                 $sessionStorage['techId'] = techId;
                 $sessionStorage['techName'] = techName;
-                $sessionStorage['name'] = 'Geek fix';
                 $sessionStorage['price'] = '110';
-                $sessionStorage['warranty'] = '3 months';
+                $sessionStorage['warranty'] = warranty;
 
                 $location.path('/reservation');
             }
-}]);
+}])
+    .controller('templateController',[ '$scope', '$http', '$sessionStorage', '$location', function($scope, $http, $sessionStorage, $location){
+
+        $scope.pick = function(techId, techName, price, warranty){
+            $sessionStorage['techId'] = techId;
+            $sessionStorage['techName'] = techName;
+            $sessionStorage['price'] = price;
+            $sessionStorage['warranty'] = warranty;
+
+            $location.path('/reservation');
+        };
+    }])
+;

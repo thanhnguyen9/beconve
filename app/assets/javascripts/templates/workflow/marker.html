@@ -1,1 +1,13 @@
-<h1>Hi</h1>
+<div ng-controller="templateController">
+    <p style="color: red" ng-show="alert">{{ alert }}</p>
+    <h4>{{ parameter.tech.name }}</h4>
+    <p>
+        <i class="fa fa-fw fa-map-marker text-inverse" aria-hidden="true"></i>{{ parameter.tech.distance | limitTo: 3 }} mile -
+        <span class="star-icon full">☆</span>{{ parameter.tech.rating }} - <a ng-href="{{ parameter.tech.reviews_link }}">Reviews: {{ parameter.tech.reviews }}</a>
+    </p>
+    <p>
+        <i class="fa fa-fw fa-usd text-inverse" aria-hidden="true"></i>110 -
+        Warranty: {{ parameter.tech.warranty }}
+        <button ng-click="pick(parameter.tech.id, parameter.tech.name, '110', parameter.tech.warranty)" class="btn btn-danger">Pick</button>
+    </p>
+</div>

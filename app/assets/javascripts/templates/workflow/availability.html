@@ -23,7 +23,7 @@
                             <span class="star-icon full">☆</span>{{ tech.rating }} -
                             <span class="availability-icon"><a ng-href = "{{ tech.reviews_link }}">Reviews: {{ tech.reviews }}</a></span>
                             <span class="availability-icon">Warranty: {{ tech.warranty}}</span>
-                            <span><button ng-click="pick(tech.id, tech.name)" class="btn btn-danger">Pick</button></span>
+                            <span><button ng-click="pick(tech.id, tech.name, tech.warranty)" class="btn btn-danger">Pick</button></span>
                         </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                             options="map.window.options"
                             closeClick="map.window.closeClick()"
                             templateUrl="'workflow/marker.html'"
-                            templateParameter="map.window">
+                            templateParameter="map.window.model">
                     </ui-gmap-window>
 
                     <ui-gmap-markers
