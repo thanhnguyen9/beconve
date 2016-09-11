@@ -7,6 +7,7 @@ angular.module('BeConve')
             delete: {method: 'DELETE'}
         })
     }])
+
     .factory('Order',['$resource', function($resource) {
         return $resource('/api/v1/checkouts/:id', { id: '@id' }, {
             update: {method: 'PUT'},
@@ -16,4 +17,11 @@ angular.module('BeConve')
         })
     }])
 
+    .factory('Price',['$resource', function($resource) {
+        return $resource('/api/v1/prices/:id', { id: '@id' }, {
+            get: {method: 'GET'},
+            update: {method: 'PUT'},
+            query: {method: 'GET', isArray: true}
+        })
+    }])
 ;

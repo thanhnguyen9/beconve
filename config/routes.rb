@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :technicians
       resources :checkouts,  only: [:new, :create, :show]
+      resources :prices, only: [:index, :create, :update, :show]
 
       get '/technicians/complete_request' => 'technicians#complete_request'
       put '/technicians/repair_request/approve' => 'technicians#approve'

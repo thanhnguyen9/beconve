@@ -38,3 +38,36 @@ a.phone = '(972) 325-5253'
 a.warranty = '9 months'
 a.image = 'http://images.cellphonerepair.com/dallas-north-tx/wp-content/uploads/sites/83/2014/08/ipad-repair-north-fitzhugh-TX.jpg'
 a.save
+
+
+Price.create(device_type: 'ipad', name: 'ipad 2', issue: 'broken screen', price: '90', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad 3', issue: 'broken screen', price: '91', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad 4', issue: 'broken screen', price: '92', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad mini', issue: 'broken screen', price: '93', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad mini 2', issue: 'broken screen', price: '94', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad mini 3', issue: 'broken screen', price: '95', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad pro', issue: 'broken screen', price: '96', user_id: 1)
+
+Price.create(device_type: 'ipad', name: 'ipad 2', issue: 'faulty battery', price: '80', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad 3', issue: 'faulty battery', price: '81', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad 4', issue: 'faulty battery', price: '82', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad mini', issue: 'faulty battery', price: '83', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad mini 2', issue: 'faulty battery', price: '84', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad mini 3', issue: 'faulty battery', price: '85', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad pro', issue: 'faulty battery', price: '86', user_id: 1)
+
+Price.create(device_type: 'ipad', name: 'ipad 2', issue: 'not on', price: '70', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad 3', issue: 'not on', price: '71', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad 4', issue: 'not on', price: '72', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad mini', issue: 'not on', price: '73', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad mini 2', issue: 'not on', price: '74', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad mini 3', issue: 'not on', price: '75', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad pro', issue: 'not on', price: '76', user_id: 1)
+
+Price.create(device_type: 'ipad', name: 'ipad 2', issue: 'liquid damage', price: '60', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad 3', issue: 'liquid damage', price: '61', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad 4', issue: 'liquid damage', price: '62', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad mini', issue: 'liquid damage', price: '63', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad mini 2', issue: 'liquid damage', price: '64', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad mini 3', issue: 'liquid damage', price: '65', user_id: 1)
+Price.create(device_type: 'ipad', name: 'ipad pro', issue: 'liquid damage', price: '66', user_id: 1)
