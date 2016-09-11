@@ -1,62 +1,46 @@
 angular.module('BeConve')
-    .controller('iphonePriceSetupController', ['$scope', '$location', 'Auth', function($scope, $location, Auth) {
+    .controller('iphonePriceSetupController', ['$scope', '$location', 'Auth', '$http', 'Price',
+        function($scope, $location, Auth, $http, Price) {
 
         Auth.currentUser().then(function(user) {
-            console.log(Auth._currentUser);
+            $scope.newIssue = function(issue) {
+                $scope.prices = {};
+                $scope.prices.type = 'iphone';
+                $scope.prices.issue = issue;
+
+                $http({
+                    method: 'GET',
+                    url: '/api/v1/prices/',
+                    params: $scope.prices
+                }).then(function successCallback(response) {
+                    if(response.data.response.status === 'success'){
+                        $scope.models = response.data.response.prices;
+                    }else{
+                        $scope.error = 'Something went wrong. Please refresh the page'
+                    }
+                }, function errorCallback(response) {
+                    $scope.error = 'Something went wrong. Please refresh the page'
+                });
+            };
+
         }, function(error) {
             $location.path('/')
         });
 
-
-        $scope.iphoneModels = [
-            {
-                name: 'iphone 4',
-                price: 0
-            },
-            {
-                name: 'iphone 4S',
-                price: 0
-            },
-            {
-                name: 'iphone 5',
-                price: 0
-            },
-            {
-                name: 'iphone 5C',
-                price: 0
-            },
-            {
-                name: 'iphone 5S',
-                price: 0
-            },
-            {
-                name: 'iphone 6',
-                price: 0
-            },
-            {
-                name: 'iphone 6 Plus',
-                price: 0
-            },
-            {
-                name: 'iphone 6S',
-                price: 0
-            },
-            {
-                name: 'iphone 6S Plus',
-                price: 0
-            },
-            {
-                name: 'iphone SE',
-                price: 0
-            }
-
-        ];
-
         //IPHONE
-        $scope.iphonePriceSubmit = function(model, type){
-            console.log('Inside iphone' + type +  'submit');
-            console.log(model.name);
-            console.log(model.price);
+        $scope.iphonePriceSubmit = function(model, issue){
+            $scope.price = Price.get({ id: model.id }, function() {
+                // $scope.entry is fetched from server and is an instance of Entry
+                $scope.price.price = {};
+                $scope.price.price.price = parseInt(model.price);
+                $scope.price.$update({id: model.id}, function(res) {
+                    if(res.response === 'success'){
+                        $scope.info_message = 'Success'
+                    }else{
+                        $scope.error = 'Something went wrong. Please try again'
+                    }
+                });
+            });
         };
 
     }]);

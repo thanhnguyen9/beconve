@@ -5,24 +5,39 @@ module Api
       def index
         prices = Price.where(device_type: params[:type], issue: params[:issue], user_id: current_user.id)
 
-        models = ['ipad 2', 'ipad 3', 'ipad 4', 'ipad mini', 'ipad mini 2', 'ipad mini 3', 'ipad air']
-        models_in_db = []
-        prices.each {|i| models_in_db << i.name }
-        missing_models = models - models_in_db
-        missing_models.each do |model_name|
-          Price.create(device_type: params[:type], issue: params[:issue], user_id: current_user.id, name: model_name)
+        if params[:type] == 'iphone'
+          models = ['iphone 4', 'iphone 4s', 'iphone 5', 'iphone 5C', 'iphone 5S', 'iphone 6', 'iphone 6 plus', 'iphone 6S', 'iphone 6S plus', 'iphone SE']
+        elsif params[:type] == 'ipad'
+          models = ['ipad 2', 'ipad 3', 'ipad 4', 'ipad mini', 'ipad mini 2', 'ipad mini 3', 'ipad air']
+        elsif params[:type] == 'samsung'
+          models = ['note', 'note 2', 'note 3', 'S3', 'S4', 'S5']
+        else
+          models = 'Unknown'
         end
-        prices = Price.where(device_type: params[:type], issue: params[:issue], user_id: current_user.id).order(:id)
 
-        response = {
-            status: 'success',
-            prices: prices
-        }
+        if models == 'Unknown'
+          response = {
+              status: 'failed'
+          }
+        else
+          models_in_db = []
+          prices.each {|i| models_in_db << i.name }
+          missing_models = models - models_in_db
+          missing_models.each do |model_name|
+            Price.create(device_type: params[:type], issue: params[:issue], user_id: current_user.id, name: model_name)
+          end
+          prices = Price.where(device_type: params[:type], issue: params[:issue], user_id: current_user.id).order(:id)
+
+          response = {
+              status: 'success',
+              prices: prices
+          }
+        end
+
         render json: {response: response}
       end
 
       def create
-        binding.pry
         price = Price.new(params_price)
         if price.save
           response = {

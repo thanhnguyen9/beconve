@@ -7,10 +7,10 @@
                     <form>
 
                         <div class="form-group">
-                            <label class="radio-inline"><input type="radio" name="issue" value="brokenScreen" ng-model="issue">Broken Screen</label>
-                            <label class="radio-inline"><input type="radio" name="issue" value="faultyBattery" ng-model="issue">Faulty Battery</label>
-                            <label class="radio-inline"><input type="radio" name="issue" value="notOn" ng-model="issue">Won't Turn On</label>
-                            <label class="radio-inline"><input type="radio" name="issue" value="liquidDamage" ng-model="issue">Liquid Damage</label>
+                            <label class="radio-inline"><input type="radio" name="issue" value="broken screen" ng-model="issue" ng-change='newIssue(issue)'>Broken Screen</label>
+                            <label class="radio-inline"><input type="radio" name="issue" value="faulty battery" ng-model="issue" ng-change='newIssue(issue)'>Faulty Battery</label>
+                            <label class="radio-inline"><input type="radio" name="issue" value="not on" ng-model="issue" ng-change='newIssue(issue)'>Won't Turn On</label>
+                            <label class="radio-inline"><input type="radio" name="issue" value="liquid damage" ng-model="issue" ng-change='newIssue(issue)'>Liquid Damage</label>
                         </div>
 
                     </form>
@@ -18,13 +18,15 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <br>
+                                <p class="alert alert-success" ng-show="info_message">{{ info_message }}</p>
+                                <p class="alert alert-danger" ng-show="error">{{ error }}</p>
 
                                 <!--IPHONE-->
-                                <div class="text-center" ng-show="issue == 'brokenScreen'">
+                                <div class="text-center" ng-show="issue == 'broken screen'">
                                     <h1>Broken Screen</h1>
 
                                         <ul class="list-inline text-center" >
-                                            <li class="device-workflow" ng-repeat="model in iphoneModels">
+                                            <li class="device-workflow" ng-repeat="model in models">
                                                 <form>
                                                     <div class="form-group row">
                                                         <div class="col-sm-10 col-sm-offset-1">
@@ -50,11 +52,11 @@
                                         </ul>
                                 </div>
 
-                                <div class="text-center" ng-show="issue == 'faultyBattery'">
+                                <div class="text-center" ng-show="issue == 'faulty battery'">
                                     <h1>Faulty Battery</h1>
 
                                     <ul class="list-inline text-center" >
-                                        <li class="device-workflow" ng-repeat="model in iphoneModels">
+                                        <li class="device-workflow" ng-repeat="model in models">
                                             <form>
                                                 <div class="form-group row">
                                                     <div class="col-sm-10 col-sm-offset-1">
@@ -81,11 +83,11 @@
 
                                 </div>
 
-                                <div class="text-center" ng-show="issue == 'notOn'">
+                                <div class="text-center" ng-show="issue == 'not on'">
                                     <h1>Won't Turn on</h1>
 
                                     <ul class="list-inline text-center" >
-                                        <li class="device-workflow" ng-repeat="model in iphoneModels">
+                                        <li class="device-workflow" ng-repeat="model in models">
                                             <form>
                                                 <div class="form-group row">
                                                     <div class="col-sm-10 col-sm-offset-1">
@@ -112,11 +114,11 @@
 
                                 </div>
 
-                                <div class="text-center" ng-show="issue == 'liquidDamage'">
-                                    <h1>Liquid Damge</h1>
+                                <div class="text-center" ng-show="issue == 'liquid damage'">
+                                    <h1>Liquid Damage</h1>
 
                                     <ul class="list-inline text-center" >
-                                        <li class="device-workflow" ng-repeat="model in iphoneModels">
+                                        <li class="device-workflow" ng-repeat="model in models">
                                             <form>
                                                 <div class="form-group row">
                                                     <div class="col-sm-10 col-sm-offset-1">
