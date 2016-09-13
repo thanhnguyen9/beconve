@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="47b03c1c-5747-4577-96a7-3f7fe1c1132f" name="Default" comment="f">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/home.html.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/home.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availabilityController.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availabilityController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/technicians_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/technicians_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
     </list>
     <ignored path="beconve.iws" />
@@ -31,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="technicians_controller.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="technicians_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/technicians_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.105337076">
+              <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -45,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availabilityController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -65,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="19" selection-start-line="35" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="39" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -91,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/home.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3270349">
-              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.375">
+              <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
@@ -176,7 +177,6 @@
         <option value="$PROJECT_DIR$/app/controllers/api/v1/repair_requests_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/completeRequestController.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/workflow/device.html" />
-        <option value="$PROJECT_DIR$/app/controllers/api/v1/technicians_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_navbar.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/workflow/marker.html" />
         <option value="$PROJECT_DIR$/db/migrate/20160909025941_create_prices.rb" />
@@ -196,7 +196,6 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/coming.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availabilityController.js" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/model.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/workflow/model.html" />
@@ -205,6 +204,8 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/workflow/reservation.html" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/home.scss" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/home.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availabilityController.js" />
+        <option value="$PROJECT_DIR$/app/controllers/api/v1/technicians_controller.rb" />
       </list>
     </option>
   </component>
@@ -813,24 +814,6 @@
       <option name="number" value="Default" />
       <updated>1469243953120</updated>
     </task>
-    <task id="LOCAL-00071" summary="Fix google url">
-      <created>1472185969404</created>
-      <option name="number" value="00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1472185969405</updated>
-    </task>
-    <task id="LOCAL-00072" summary="Fix auto complete address">
-      <created>1472262708769</created>
-      <option name="number" value="00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1472262708769</updated>
-    </task>
-    <task id="LOCAL-00073" summary="Fix auto complete address">
-      <created>1472262890145</created>
-      <option name="number" value="00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1472262890145</updated>
-    </task>
     <task id="LOCAL-00074" summary="- Redesign host process&#10;- Fullsreen footer">
       <created>1472269250401</created>
       <option name="number" value="00074" />
@@ -1107,7 +1090,25 @@
       <option name="project" value="LOCAL" />
       <updated>1473735926109</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="f">
+      <created>1473737472889</created>
+      <option name="number" value="00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1473737472889</updated>
+    </task>
+    <task id="LOCAL-00121" summary="f">
+      <created>1473737528824</created>
+      <option name="number" value="00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1473737528824</updated>
+    </task>
+    <task id="LOCAL-00122" summary="f">
+      <created>1473740466677</created>
+      <option name="number" value="00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1473740466677</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1146,7 +1147,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add rating, reviews and reviews link to availability page" />
     <MESSAGE value="Adding new google API key" />
     <MESSAGE value="Hot fix for type: number on mobile" />
     <MESSAGE value="Add google api key" />
@@ -1171,7 +1171,8 @@
     <MESSAGE value="Display desc of model on reservation page" />
     <MESSAGE value="increase the size of phone number form" />
     <MESSAGE value="Change background image of main page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change background image of main page" />
+    <MESSAGE value="f" />
+    <option name="LAST_COMMIT_MESSAGE" value="f" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1475,14 +1476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/technicians_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.75">
@@ -1523,26 +1516,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availabilityController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/reservationController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="19" selection-start-line="35" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1565,12 +1542,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/home.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3270349">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state vertical-scroll-proportion="-4.375">
+          <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
           <folding>
             <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="39" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availabilityController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/technicians_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.105337076">
+          <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>

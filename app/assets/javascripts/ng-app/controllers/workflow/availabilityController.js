@@ -8,8 +8,6 @@ angular
                 $location.url('/issue');
             }
 
-            $sessionStorage.location = '6632 Deseo, Irving TX 75039';
-
             Technician.query({'address':$sessionStorage.location}, function(res){
 
                 if(res.status === 'success'){
