@@ -13,21 +13,25 @@ angular
                 if(res.status === 'success'){
                     $scope.techs = res.users;
 
-                    var arr = [];
-                    for( i = 0; i < $scope.techs.length; i++){
-                        arr.push({
-                            id: $scope.techs[i].id,
-                            tech: $scope.techs[i],
-                            latitude: $scope.techs[i].latitude,
-                            longitude: $scope.techs[i].longitude
-                        });
-                    }
-                    $scope.map.center = {
-                        latitude: res.customer_lat_log[0],
-                        longitude: res.customer_lat_log[1]
-                    };
+                    if ($scope.techs.length > 0){
+                        var arr = [];
+                        for( i = 0; i < $scope.techs.length; i++){
+                            arr.push({
+                                id: $scope.techs[i].id,
+                                tech: $scope.techs[i],
+                                latitude: $scope.techs[i].latitude,
+                                longitude: $scope.techs[i].longitude
+                            });
+                        }
+                        $scope.map.center = {
+                            latitude: res.customer_lat_log[0],
+                            longitude: res.customer_lat_log[1]
+                        };
 
-                    $scope.map.markers = arr;
+                        $scope.map.markers = arr;
+                    }else{
+                        $scope.notAvailable = true;
+                    }
                 }
 
             });
@@ -65,7 +69,7 @@ angular
 
                 $location.path('/reservation');
             }
-}])
+        }])
     .controller('templateController',[ '$scope', '$http', '$sessionStorage', '$location', function($scope, $http, $sessionStorage, $location){
 
         $scope.pick = function(techId, techName, price, warranty){

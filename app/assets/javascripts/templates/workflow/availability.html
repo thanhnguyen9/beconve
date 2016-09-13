@@ -5,6 +5,17 @@
         <div class="col-lg-12">
 
             <div class="col-md-12 col-lg-6  availability-tech" id="left">
+                <div ng-show="notAvailable">
+                    <h4>There is no available shop in this area at this moment.</h4>
+                    <h4>Please subscribe, we will notify you as soon as any shop is available.</h4>
+                    <form>
+                        <div class="form-group input-lg">
+                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                        </div>
+                        <button type="submit" class="btn btn-success">Subscribe</button>
+                    </form>
+                </div>
+
                 <div class="col-md-6 availability-card" ng-repeat-start="tech in techs">
                     <div class="card availability-card ">
 
