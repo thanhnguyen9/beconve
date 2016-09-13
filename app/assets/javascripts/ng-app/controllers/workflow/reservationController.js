@@ -16,7 +16,7 @@ angular.module('BeConve')
         $scope.techName = $sessionStorage.techName;
         $scope.location = $sessionStorage.location;
         $scope.device = $sessionStorage.device;
-        $scope.model = $sessionStorage.model;
+        $scope.model = $sessionStorage.model.desc;
         $scope.color = $sessionStorage.color;
         $scope.issue = $sessionStorage.issue;
         $scope.price = $sessionStorage.price;
