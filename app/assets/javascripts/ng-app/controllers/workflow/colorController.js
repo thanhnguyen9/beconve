@@ -1,15 +1,15 @@
 angular.module('BeConve')
     .controller('colorController', ['$scope', '$location', '$sessionStorage', function($scope, $location, $sessionStorage) {
 
-        if (angular.isUndefined($sessionStorage.model) || $sessionStorage.model === ''){
+        if (angular.isUndefined($sessionStorage.model.desc) || $sessionStorage.model.desc === ''){
             $location.url('/model');
         }
 
-        var model = $sessionStorage.model;
+        var model_desc = $sessionStorage.model.desc;
 
-        if (model === 'Iphone 4' || model === 'Iphone 4S' || model === 'Iphone 5' || model === 'Iphone 5C' ||
-            model === 'Iphone 5S' || model === 'Note 3' || model === 'Ipad 2' || model === 'Ipad 3' || model === 'Ipad 4' ||
-            model === 'Ipad Mini'){
+        if (model_desc === 'iphone 4' || model_desc === 'iphone 4S' || model_desc === 'iphone 5' || model_desc === 'iphone 5C' ||
+            model_desc === 'iphone 5S' || model_desc === 'note 3' || model_desc === 'ipad 2' || model_desc === 'ipad 3' || model_desc === 'ipad 4' ||
+            model_desc === 'ipad mini'){
             $scope.colorNames = [
                 {
                     name: 'White'
@@ -17,7 +17,7 @@ angular.module('BeConve')
                     name: 'Black'
                 }
             ];
-        }else if (model === 'Iphone 6' || model === 'Iphone 6 Plus'){
+        }else if (model_desc === 'iphone 6' || model_desc === 'iphone 6+'){
             $scope.colorNames = [
                 {
                     name: 'White'
@@ -27,7 +27,7 @@ angular.module('BeConve')
                     name: 'Gold'
                 }
             ];
-        }else if (model === 'Iphone 6S' || model === 'Iphone 6S Plus' || model === 'Iphone SE'){
+        }else if (model_desc === 'iphone 6S' || model_desc === 'iphone 6S+' || model_desc === 'iphone SE'){
             $scope.colorNames = [
                 {
                     name: 'White'
@@ -39,7 +39,7 @@ angular.module('BeConve')
                     name: 'Rose Gold'
                 }
             ];
-        }else if (model === 'Note'){
+        }else if (model_desc === 'note'){
             $scope.colorNames = [
                 {
                     name: 'White'
@@ -51,7 +51,7 @@ angular.module('BeConve')
                     name: 'Blue'
                 }
             ];
-        }else if (model === 'Note 2'){
+        }else if (model_desc === 'note 2'){
             $scope.colorNames = [
                 {
                     name: 'White'
@@ -65,7 +65,7 @@ angular.module('BeConve')
                     name: 'Grey'
                 }
             ];
-        }else if (model === 'S3'){
+        }else if (model_desc === 'S3'){
             $scope.colorNames = [
                 {
                     name: 'White'
@@ -77,12 +77,10 @@ angular.module('BeConve')
                     name: 'Red'
                 }
             ];
-        }else if (model === 'S4'){
+        }else if (model_desc === 'S4'){
             $scope.colorNames = [
                 {
                     name: 'White'
-                }, {
-                    name: 'Blue'
                 }, {
                     name: 'Blue'
                 }, {
@@ -93,7 +91,7 @@ angular.module('BeConve')
                     name: 'Grey'
                 }
             ];
-        }else if (model === 'S5'){
+        }else if (model_desc === 'S5'){
             $scope.colorNames = [
                 {
                     name: 'White'
@@ -107,7 +105,7 @@ angular.module('BeConve')
                     name: 'Grey'
                 }
             ];
-        }else if (model === 'Ipad Mini 2'){
+        }else if (model_desc === 'ipad mini 2'){
             $scope.colorNames = [
                 {
                     name: 'Silver'
@@ -115,14 +113,14 @@ angular.module('BeConve')
                     name: 'Space Gray'
                 }
             ];
-        }else if (model === 'Ipad Mini 3'){
+        }else if (model_desc === 'ipad mini 3'){
             $scope.colorNames = [
                 {
-                    name: 'Silver'
+                    name: 'Space Gray'
                 }, {
                     name: 'Gold'
                 }, {
-                    name: 'Space Gray'
+                    name: 'Silver'
                 }
             ];
         }else{
