@@ -7,13 +7,17 @@ angular.module('BeConve')
 
         $scope.issueNames = [
             {
-                name: 'Broken Screen'
+                name: 'Broken Screen',
+                desc: 'broken screen'
             }, {
-                name: 'Faulty Battery'
+                name: 'Faulty Battery',
+                desc: 'faulty battery'
             }, {
-                name: "Won't turn on"
+                name: "Won't turn on",
+                desc: 'not on'
             }, {
-                name: "Liquid Damage"
+                name: "Liquid Damage",
+                desc: 'liquid damage'
             }
         ];
 
