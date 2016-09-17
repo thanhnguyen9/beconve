@@ -5,8 +5,8 @@ module Api
       def index
         params[:address] = '6632 Deseo, Irving TX 75039'
         customer_lat_log = Geocoder.coordinates(params[:address])
-        users = User.where(status: 'online').near(params[:address], 10)
-        render json: {status: 'success', users: users, customer_lat_log: customer_lat_log}
+
+        render json: {status: 'success', users: User.available(params[:address], params[:model], params[:issue]), customer_lat_log: customer_lat_log}
       end
 
       def show

@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20160909032457) do
 
   create_table "prices", force: :cascade do |t|
     t.text     "device_type"
-    t.text     "name"
+    t.text     "model"
     t.text     "issue"
     t.integer  "price",       default: 0
     t.integer  "user_id"

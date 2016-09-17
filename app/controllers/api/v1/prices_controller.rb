@@ -6,11 +6,11 @@ module Api
         prices = Price.where(device_type: params[:type], issue: params[:issue], user_id: current_user.id)
 
         if params[:type] == 'iphone'
-          models = ['iphone 4', 'iphone 4s', 'iphone 5', 'iphone 5C', 'iphone 5S', 'iphone 6', 'iphone 6 plus', 'iphone 6S', 'iphone 6S plus', 'iphone SE']
+          models = ['iphone 4', 'iphone 4s', 'iphone 5', 'iphone 5c', 'iphone 5s', 'iphone 6', 'iphone 6+', 'iphone 6s', 'iphone 6s+', 'iphone se']
         elsif params[:type] == 'ipad'
           models = ['ipad 2', 'ipad 3', 'ipad 4', 'ipad mini', 'ipad mini 2', 'ipad mini 3', 'ipad air']
         elsif params[:type] == 'samsung'
-          models = ['note', 'note 2', 'note 3', 'S3', 'S4', 'S5']
+          models = ['note', 'note 2', 'note 3', 's3', 's4', 's5']
         else
           models = 'Unknown'
         end
@@ -21,10 +21,10 @@ module Api
           }
         else
           models_in_db = []
-          prices.each {|i| models_in_db << i.name }
+          prices.each {|i| models_in_db << i.model }
           missing_models = models - models_in_db
           missing_models.each do |model_name|
-            Price.create(device_type: params[:type], issue: params[:issue], user_id: current_user.id, name: model_name)
+            Price.create(device_type: params[:type], issue: params[:issue], user_id: current_user.id, model: model_name)
           end
           prices = Price.where(device_type: params[:type], issue: params[:issue], user_id: current_user.id).order(:id)
 
@@ -71,7 +71,7 @@ module Api
       private
 
       def params_price
-        params.require(:price).permit(:device_type, :name, :issue, :price, :user_id)
+        params.require(:price).permit(:device_type, :model, :issue, :price, :user_id)
       end
 
     end

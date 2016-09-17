@@ -6,8 +6,8 @@
         <span class="star-icon full">☆</span>{{ parameter.tech.rating }} - <a ng-href="{{ parameter.tech.reviews_link }}">Reviews: {{ parameter.tech.reviews }}</a>
     </p>
     <p>
-        <i class="fa fa-fw fa-usd text-inverse" aria-hidden="true"></i>110 -
+        <i class="fa fa-fw fa-usd text-inverse" aria-hidden="true"></i>{{ parameter.tech.price }} -
         Warranty: {{ parameter.tech.warranty }}
-        <button ng-click="pick(parameter.tech.id, parameter.tech.name, '110', parameter.tech.warranty)" class="btn btn-danger">Pick</button>
+        <button ng-click="pick(parameter.tech.id, parameter.tech.name, parameter.tech.price, parameter.tech.warranty)" class="btn btn-danger">Pick</button>
     </p>
 </div>

@@ -9,4 +9,10 @@ class User < ActiveRecord::Base
   after_validation :geocode, :reverse_geocode, :if => :address_changed?
 
   has_many :prices
+
+  def self.available(add, model, issue)
+    price_select = Price.prices_search_for_model_and_issue(model, issue)
+    nearby = User.where(status: 'online').near(add, 10)
+    User.joins(:prices).select('prices.*, users.*').merge(nearby).merge(price_select)
+  end
 end

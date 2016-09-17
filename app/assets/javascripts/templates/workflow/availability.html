@@ -30,11 +30,11 @@
                             </h4>
 
                             <span class="availability-icon"><i class="fa fa-fw fa-map-marker text-inverse" aria-hidden="true"></i>{{ tech.distance | limitTo: 3 }} mile</span> -
-                            <span class="availability-icon"><i class="fa fa-fw fa-usd text-inverse" aria-hidden="true"></i>110</span> -
+                            <span class="availability-icon"><i class="fa fa-fw fa-usd text-inverse" aria-hidden="true"></i>{{ tech.price }}</span> -
                             <span class="star-icon full">☆</span>{{ tech.rating }} -
                             <span class="availability-icon"><a ng-href = "{{ tech.reviews_link }}">Reviews: {{ tech.reviews }}</a></span>
                             <span class="availability-icon">Warranty: {{ tech.warranty}}</span>
-                            <span><button ng-click="pick(tech.id, tech.name, tech.warranty)" class="btn btn-danger">Pick</button></span>
+                            <span><button ng-click="pick(tech.id, tech.name, tech.price, tech.warranty)" class="btn btn-danger">Pick</button></span>
                         </div>
                     </div>
                 </div>
