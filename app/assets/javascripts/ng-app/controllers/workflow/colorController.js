@@ -7,8 +7,8 @@ angular.module('BeConve')
 
         var model_desc = $sessionStorage.model.desc;
 
-        if (model_desc === 'iphone 4' || model_desc === 'iphone 4S' || model_desc === 'iphone 5' || model_desc === 'iphone 5C' ||
-            model_desc === 'iphone 5S' || model_desc === 'note 3' || model_desc === 'ipad 2' || model_desc === 'ipad 3' || model_desc === 'ipad 4' ||
+        if (model_desc === 'iphone 4' || model_desc === 'iphone 4s' || model_desc === 'iphone 5' || model_desc === 'iphone 5c' ||
+            model_desc === 'iphone 5s' || model_desc === 'note 3' || model_desc === 'ipad 2' || model_desc === 'ipad 3' || model_desc === 'ipad 4' ||
             model_desc === 'ipad mini'){
             $scope.colorNames = [
                 {
@@ -27,7 +27,7 @@ angular.module('BeConve')
                     name: 'Gold'
                 }
             ];
-        }else if (model_desc === 'iphone 6S' || model_desc === 'iphone 6S+' || model_desc === 'iphone SE'){
+        }else if (model_desc === 'iphone 6s' || model_desc === 'iphone 6s+' || model_desc === 'iphone se'){
             $scope.colorNames = [
                 {
                     name: 'White'
@@ -65,7 +65,7 @@ angular.module('BeConve')
                     name: 'Grey'
                 }
             ];
-        }else if (model_desc === 'S3'){
+        }else if (model_desc === 'galaxy s3'){
             $scope.colorNames = [
                 {
                     name: 'White'
@@ -77,7 +77,7 @@ angular.module('BeConve')
                     name: 'Red'
                 }
             ];
-        }else if (model_desc === 'S4'){
+        }else if (model_desc === 'galaxy s4'){
             $scope.colorNames = [
                 {
                     name: 'White'
@@ -91,7 +91,7 @@ angular.module('BeConve')
                     name: 'Grey'
                 }
             ];
-        }else if (model_desc === 'S5'){
+        }else if (model_desc === 'galaxy s5'){
             $scope.colorNames = [
                 {
                     name: 'White'

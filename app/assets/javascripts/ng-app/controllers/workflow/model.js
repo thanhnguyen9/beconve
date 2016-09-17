@@ -91,13 +91,13 @@ angular.module('BeConve')
                     desc: 'note 3'
                 }, {
                     name: 'S3',
-                    desc: 's3'
+                    desc: 'galaxy s3'
                 }, {
                     name: 'S4',
-                    desc: 's4'
+                    desc: 'galaxy s4'
                 }, {
                     name: 'S5',
-                    desc: 's5'
+                    desc: 'galaxy s5'
                 }
             ];
         }

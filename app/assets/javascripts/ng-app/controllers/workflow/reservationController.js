@@ -16,9 +16,9 @@ angular.module('BeConve')
         $scope.techName = $sessionStorage.techName;
         $scope.location = $sessionStorage.location;
         $scope.device = $sessionStorage.device;
-        $scope.model = $sessionStorage.model.desc;
+        $scope.model = $sessionStorage.model.name;
         $scope.color = $sessionStorage.color;
-        $scope.issue = $sessionStorage.issue;
+        $scope.issue = $sessionStorage.issue.name;
         $scope.price = $sessionStorage.price;
         $scope.warranty = $sessionStorage.warranty;
 
@@ -45,9 +45,9 @@ angular.module('BeConve')
                     $scope.order.order.customer_phone = $scope.phoneVal;
                     $scope.order.order.location = $scope.location;
                     $scope.order.order.device = $scope.device;
-                    $scope.order.order.model = $scope.model;
+                    $scope.order.order.model = $sessionStorage.model.desc;
                     $scope.order.order.color = $scope.color;
-                    $scope.order.order.issue = $scope.issue;
+                    $scope.order.order.issue = $sessionStorage.issue.desc;
                     $scope.order.order.price = '110';
                     $scope.order.order.warranty = $scope.warranty;
 

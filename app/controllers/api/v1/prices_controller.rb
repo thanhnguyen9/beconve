@@ -10,7 +10,7 @@ module Api
         elsif params[:type] == 'ipad'
           models = ['ipad 2', 'ipad 3', 'ipad 4', 'ipad mini', 'ipad mini 2', 'ipad mini 3', 'ipad air']
         elsif params[:type] == 'samsung'
-          models = ['note', 'note 2', 'note 3', 's3', 's4', 's5']
+          models = ['note', 'note 2', 'note 3', 'galaxy s3', 'galaxy s4', 'galaxy s5']
         else
           models = 'Unknown'
         end
