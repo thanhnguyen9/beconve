@@ -7,7 +7,7 @@ angular.module('BeConve')
                 $scope.prices = {};
                 $scope.prices.type = 'ipad';
                 $scope.prices.issue = issue;
-                console.log(issue);
+                $scope.loading = true;
 
                 $http({
                     method: 'GET',
@@ -16,11 +16,14 @@ angular.module('BeConve')
                 }).then(function successCallback(response) {
                     if(response.data.response.status === 'success'){
                         $scope.models = response.data.response.prices;
+                        $scope.loading = false;
                     }else{
-                       $scope.error = 'Something went wrong. Please refresh the page'
+                       $scope.error = 'Something went wrong. Please refresh the page';
+                        $scope.loading = false;
                     }
                 }, function errorCallback(response) {
-                    $scope.alert = 'Something went wrong. Please refresh the page'
+                    $scope.alert = 'Something went wrong. Please refresh the page';
+                    $scope.loading = false;
                 });
             };
 
