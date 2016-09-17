@@ -12,16 +12,16 @@ angular.module('BeConve')
                     desc: 'iphone 4'
                 }, {
                     name: '4S',
-                    desc: 'iphone 4S'
+                    desc: 'iphone 4s'
                 }, {
                     name: '5',
                     desc: 'iphone 5'
                 }, {
                     name: '5C',
-                    desc: 'iphone 5C'
+                    desc: 'iphone 5c'
                 }, {
                     name: '5S',
-                    desc: 'iphone 5S'
+                    desc: 'iphone 5s'
                 }, {
                     name: '6',
                     desc: 'iphone 6'
@@ -30,13 +30,13 @@ angular.module('BeConve')
                     desc: 'iphone 6+'
                 }, {
                     name: '6S',
-                    desc: 'iphone 6S'
+                    desc: 'iphone 6s'
                 }, {
                     name: '6S+',
-                    desc: 'iphone 6S+'
+                    desc: 'iphone 6s+'
                 }, {
                     name: 'SE',
-                    desc: 'iphone SE'
+                    desc: 'iphone se'
                 }
             ];
         }else if($sessionStorage.device === 'Ipad'){
@@ -91,13 +91,13 @@ angular.module('BeConve')
                     desc: 'note 3'
                 }, {
                     name: 'S3',
-                    desc: 'S3'
+                    desc: 's3'
                 }, {
                     name: 'S4',
-                    desc: 'S4'
+                    desc: 's4'
                 }, {
                     name: 'S5',
-                    desc: 'S5'
+                    desc: 's5'
                 }
             ];
         }

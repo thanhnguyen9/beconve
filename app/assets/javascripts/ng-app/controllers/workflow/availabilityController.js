@@ -8,7 +8,7 @@ angular
                 $location.url('/issue');
             }
 
-            Technician.query({'address':$sessionStorage.location}, function(res){
+            Technician.query({'address':$sessionStorage.location, 'model': $sessionStorage.model.desc, 'issue': $sessionStorage.issue.desc}, function(res){
 
                 if(res.status === 'success'){
                     $scope.techs = res.users;
@@ -61,10 +61,10 @@ angular
                 }
             };
 
-            $scope.pick = function(techId, techName, warranty){
+            $scope.pick = function(techId, techName, price, warranty){
                 $sessionStorage['techId'] = techId;
                 $sessionStorage['techName'] = techName;
-                $sessionStorage['price'] = '110';
+                $sessionStorage['price'] = price;
                 $sessionStorage['warranty'] = warranty;
 
                 $location.path('/reservation');
