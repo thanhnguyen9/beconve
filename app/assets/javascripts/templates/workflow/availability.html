@@ -4,6 +4,9 @@
       <div class="row">
         <div class="col-lg-12">
 
+            <div ng-show="loading" class="text-center"><img src="/assets/ajax-loader.gif" alt="edit" /></div>
+            <p class="text-center" style="color: red" ng-show="error">{{ error }}</p>
+
             <div class="col-md-12 col-lg-6  availability-tech" id="left">
                 <div ng-show="notAvailable">
                     <h4>There is no available shop in this area at this moment.</h4>

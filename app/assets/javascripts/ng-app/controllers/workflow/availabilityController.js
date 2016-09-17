@@ -7,7 +7,7 @@ angular
             if (angular.isUndefined($sessionStorage.issue) || $sessionStorage.issue === ''){
                 $location.url('/issue');
             }
-
+            $scope.loading = true;
             Technician.query({'address':$sessionStorage.location, 'model': $sessionStorage.model.desc, 'issue': $sessionStorage.issue.desc}, function(res){
 
                 if(res.status === 'success'){
@@ -32,8 +32,10 @@ angular
                     }else{
                         $scope.notAvailable = true;
                     }
+                }else{
+                    $scope.error = 'Something went wrong. Please refresh the page'
                 }
-
+                $scope.loading = false;
             });
 
             $scope.map = {
