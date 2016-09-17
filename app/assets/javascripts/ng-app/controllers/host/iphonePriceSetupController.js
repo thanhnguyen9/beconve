@@ -3,7 +3,12 @@ angular.module('BeConve')
         function($scope, $location, Auth, $http, Price) {
 
         Auth.currentUser().then(function(user) {
+
             $scope.newIssue = function(issue) {
+                //Hide the info of the request
+                $scope.error = false;
+                $scope.info_message = false;
+
                 $scope.prices = {};
                 $scope.prices.type = 'iphone';
                 $scope.prices.issue = issue;
