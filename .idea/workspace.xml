@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="47b03c1c-5747-4577-96a7-3f7fe1c1132f" name="Default" comment="D">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/host/ipad_price_setup.html" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/host/ipad_price_setup.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/host/iphone_price_setup.html" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/host/iphone_price_setup.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/host/samsung_price_setup.html" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/host/samsung_price_setup.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
     </list>
     <ignored path="beconve.iws" />
@@ -51,11 +53,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ipad_price_setup.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ipad_price_setup.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/host/ipad_price_setup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3997093">
-              <caret line="26" column="73" selection-start-line="26" selection-start-column="73" selection-end-line="26" selection-end-column="73" />
+            <state vertical-scroll-proportion="-27.416666">
+              <caret line="32" column="105" selection-start-line="32" selection-start-column="105" selection-end-line="32" selection-end-column="105" />
+              <caret line="63" column="105" selection-start-line="63" selection-start-column="105" selection-end-line="63" selection-end-column="105" />
+              <caret line="94" column="105" selection-start-line="94" selection-start-column="105" selection-end-line="94" selection-end-column="105" />
+              <caret line="124" column="105" selection-start-line="124" selection-start-column="105" selection-end-line="124" selection-end-column="105" />
               <folding />
             </state>
           </provider>
@@ -93,11 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="iphonePriceSetupController.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="iphonePriceSetupController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/iphonePriceSetupController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.46348315">
+              <caret line="22" column="70" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -106,8 +111,11 @@
       <file leaf-file-name="samsung_price_setup.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/host/samsung_price_setup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9583333">
-              <caret line="14" column="88" selection-start-line="14" selection-start-column="88" selection-end-line="14" selection-end-column="88" />
+            <state vertical-scroll-proportion="-27.416666">
+              <caret line="32" column="105" selection-start-line="32" selection-start-column="105" selection-end-line="32" selection-end-column="105" />
+              <caret line="63" column="105" selection-start-line="63" selection-start-column="105" selection-end-line="63" selection-end-column="105" />
+              <caret line="92" column="105" selection-start-line="92" selection-start-column="105" selection-end-line="92" selection-end-column="105" />
+              <caret line="123" column="105" selection-start-line="123" selection-start-column="105" selection-end-line="123" selection-end-column="105" />
               <folding />
             </state>
           </provider>
@@ -126,8 +134,11 @@
       <file leaf-file-name="iphone_price_setup.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/host/iphone_price_setup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.625">
-              <caret line="117" column="47" selection-start-line="117" selection-start-column="47" selection-end-line="117" selection-end-column="47" />
+            <state vertical-scroll-proportion="-27.416666">
+              <caret line="33" column="109" selection-start-line="33" selection-start-column="109" selection-end-line="33" selection-end-column="109" />
+              <caret line="63" column="105" selection-start-line="63" selection-start-column="105" selection-end-line="63" selection-end-column="105" />
+              <caret line="94" column="105" selection-start-line="94" selection-start-column="105" selection-end-line="94" selection-end-column="105" />
+              <caret line="125" column="105" selection-start-line="125" selection-start-column="105" selection-end-line="125" selection-end-column="105" />
               <folding />
             </state>
           </provider>
@@ -187,7 +198,6 @@
         <option value="$PROJECT_DIR$/db/migrate/20160909032457_create_prices.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/workflow/issue.html" />
         <option value="$PROJECT_DIR$/app/models/price.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/iphonePriceSetupController.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/ipadPriceSetupController.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/samsungPriceSetupController.js" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/technicians_controller.rb" />
@@ -200,10 +210,11 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/colorController.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/reservationController.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availabilityController.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/host/ipad_price_setup.html" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/host/samsung_price_setup.html" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/workflow/availability.html" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/host/iphone_price_setup.html" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/host/ipad_price_setup.html" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/templates/host/samsung_price_setup.html" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/iphonePriceSetupController.js" />
       </list>
     </option>
   </component>
@@ -888,12 +899,6 @@
       <option name="number" value="Default" />
       <updated>1469243953120</updated>
     </task>
-    <task id="LOCAL-00084" summary="Redesign devise template">
-      <created>1472610822679</created>
-      <option name="number" value="00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1472610822679</updated>
-    </task>
     <task id="LOCAL-00085" summary="Fetch user from db for display in availability page">
       <created>1472786585902</created>
       <option name="number" value="00085" />
@@ -1182,7 +1187,13 @@
       <option name="project" value="LOCAL" />
       <updated>1474222391382</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="Hot fix">
+      <created>1474222476972</created>
+      <option name="number" value="00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1474222476972</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1221,7 +1232,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Menu collapse after clicking issue" />
     <MESSAGE value="Fix cancel request not update UI after canceling" />
     <MESSAGE value="Add reason form in case of decline/cancel request" />
     <MESSAGE value="Remove stepper out of html" />
@@ -1246,7 +1256,8 @@
     <MESSAGE value="Update to use description for model of issue" />
     <MESSAGE value="Add loading, error to availability page" />
     <MESSAGE value="Using image from imgur instead of assets" />
-    <option name="LAST_COMMIT_MESSAGE" value="Using image from imgur instead of assets" />
+    <MESSAGE value="Hot fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hot fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1566,14 +1577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/iphonePriceSetupController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/workflow/availabilityController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1614,14 +1617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/host/samsung_price_setup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9583333">
-          <caret line="14" column="88" selection-start-line="14" selection-start-column="88" selection-end-line="14" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/workflow/availability.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="15.708333">
@@ -1634,16 +1629,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/host/iphone_price_setup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.625">
-          <caret line="117" column="47" selection-start-line="117" selection-start-column="47" selection-end-line="117" selection-end-column="47" />
+        <state vertical-scroll-proportion="-27.416666">
+          <caret line="33" column="109" selection-start-line="33" selection-start-column="109" selection-end-line="33" selection-end-column="109" />
+          <caret line="63" column="105" selection-start-line="63" selection-start-column="105" selection-end-line="63" selection-end-column="105" />
+          <caret line="94" column="105" selection-start-line="94" selection-start-column="105" selection-end-line="94" selection-end-column="105" />
+          <caret line="125" column="105" selection-start-line="125" selection-start-column="105" selection-end-line="125" selection-end-column="105" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/host/ipad_price_setup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3997093">
-          <caret line="26" column="73" selection-start-line="26" selection-start-column="73" selection-end-line="26" selection-end-column="73" />
+        <state vertical-scroll-proportion="-27.416666">
+          <caret line="32" column="105" selection-start-line="32" selection-start-column="105" selection-end-line="32" selection-end-column="105" />
+          <caret line="63" column="105" selection-start-line="63" selection-start-column="105" selection-end-line="63" selection-end-column="105" />
+          <caret line="94" column="105" selection-start-line="94" selection-start-column="105" selection-end-line="94" selection-end-column="105" />
+          <caret line="124" column="105" selection-start-line="124" selection-start-column="105" selection-end-line="124" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/host/samsung_price_setup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.416666">
+          <caret line="32" column="105" selection-start-line="32" selection-start-column="105" selection-end-line="32" selection-end-column="105" />
+          <caret line="63" column="105" selection-start-line="63" selection-start-column="105" selection-end-line="63" selection-end-column="105" />
+          <caret line="92" column="105" selection-start-line="92" selection-start-column="105" selection-end-line="92" selection-end-column="105" />
+          <caret line="123" column="105" selection-start-line="123" selection-start-column="105" selection-end-line="123" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ng-app/controllers/host/iphonePriceSetupController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46348315">
+          <caret line="22" column="70" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
           <folding />
         </state>
       </provider>
