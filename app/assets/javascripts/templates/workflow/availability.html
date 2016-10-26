@@ -1,75 +1,76 @@
 <div>
-  <div class="section">
-    <div class="container-fluid workflow-availability">
-      <div class="row">
-        <div class="col-lg-12">
+    <div class="section">
+        <div class="container-fluid workflow-availability">
+            <div class="row">
+                <div class="col-lg-12">
 
-            <div ng-show="loading" class="text-center"><img src="https://i.imgur.com/Ty0Mioy.gif" alt="edit" /></div>
-            <p class="text-center" style="color: red" ng-show="error">{{ error }}</p>
+                    <div ng-show="loading" class="text-center"><img src="https://i.imgur.com/Ty0Mioy.gif" alt="edit" /></div>
+                    <p class="text-center" style="color: red" ng-show="error">{{ error }}</p>
 
-            <div class="col-md-12 col-lg-6  availability-tech" id="left">
-                <div ng-show="notAvailable">
-                    <h4>There is no available shop in this area at this moment.</h4>
-                    <h4>Please subscribe, we will notify you as soon as any shop is available.</h4>
-                    <form>
-                        <div class="form-group input-lg">
-                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                    <div class="col-md-12 col-lg-6  availability-tech" id="left">
+                        <div ng-show="notAvailable">
+                            <h4>There is no available shop in this area at this moment.</h4>
+                            <h4>Please subscribe, we will notify you as soon as any shop is available.</h4>
+                            <form>
+                                <div class="form-group input-lg">
+                                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                                </div>
+                                <button type="submit" class="btn btn-success">Subscribe</button>
+                            </form>
                         </div>
-                        <button type="submit" class="btn btn-success">Subscribe</button>
-                    </form>
-                </div>
 
-                <div class="col-md-6 availability-card" ng-repeat-start="tech in techs">
-                    <div class="card availability-card ">
+                        <div class="col-sm-6 availability-card" ng-repeat-start="tech in techs">
+                            <div class="card availability-card ">
 
-                        <img class="card-img-top img-responsive availability-image text-center col-lg-offset-0 col-md-offset-2 col-sm-offset-3" ng-src="{{ tech.image }}" alt="Card image cap">
-                        <div class="card-block">
-                            <h4 class="text-center col-lg-offset-0 col-md-offset-2 col-sm-offset-3"
-                                style=" white-space: nowrap;
+                                <img class="card-img-top img-responsive availability-image text-center col-lg-offset-0 col-md-offset-2 col-sm-offset-0" ng-src="{{ tech.image }}" alt="Card image cap">
+                                <div class="card-block">
+                                    <h4 class="text-center col-lg-offset-0 col-md-offset-2 col-sm-offset-3"
+                                        style=" white-space: nowrap;
                                     width: 14em;
                                     overflow: hidden;
                                     text-overflow: ellipsis;">
-                                {{ tech.name }}
-                            </h4>
+                                        {{ tech.name }}
+                                    </h4>
 
-                            <span class="availability-icon"><i class="fa fa-fw fa-map-marker text-inverse" aria-hidden="true"></i>{{ tech.distance | limitTo: 3 }} mile</span> -
-                            <span class="availability-icon"><i class="fa fa-fw fa-usd text-inverse" aria-hidden="true"></i>{{ tech.price }}</span> -
-                            <span class="star-icon full">☆</span>{{ tech.rating }} -
-                            <span class="availability-icon"><a ng-href = "{{ tech.reviews_link }}">Reviews: {{ tech.reviews }}</a></span>
-                            <span class="availability-icon">Warranty: {{ tech.warranty}}</span>
-                            <span><button ng-click="pick(tech.id, tech.name, tech.price, tech.warranty)" class="btn btn-danger">Pick</button></span>
+                                    <span class="availability-icon"><i class="fa fa-fw fa-map-marker text-inverse" aria-hidden="true"></i>{{ tech.distance | limitTo: 3 }} mile</span> -
+                                    <span class="availability-icon"><i class="fa fa-fw fa-usd text-inverse" aria-hidden="true"></i>{{ tech.price }}</span> -
+                                    <span class="star-icon full">☆</span>{{ tech.rating }} -
+                                    <span class="availability-icon"><a ng-href = "{{ tech.reviews_link }}">Reviews: {{ tech.reviews }}</a></span>
+                                    <span class="availability-icon">Warranty: {{ tech.warranty}}</span>
+                                    <span><button ng-click="pick(tech.id, tech.name, tech.price, tech.warranty)" class="btn btn-danger">Pick</button></span>
+                                </div>
+                                <br>
+                            </div>
                         </div>
+                        <div ng-repeat-end=""></div>
                     </div>
+
+                    <div class="hidden-xs hidden-sm hidden-md col-lg-6" id="right">
+                        <ui-gmap-google-map center="map.center" zoom="map.zoom">
+
+                            <ui-gmap-window
+                                    show="map.window.show"
+                                    coords="map.window.model"
+                                    options="map.window.options"
+                                    closeClick="map.window.closeClick()"
+                                    templateUrl="'workflow/marker.html'"
+                                    templateParameter="map.window.model">
+                            </ui-gmap-window>
+
+                            <ui-gmap-markers
+                                    models="map.markers"
+                                    coords="'self'"
+                                    events="map.markersEvents"
+                                    options="'options'">
+                            </ui-gmap-markers>
+
+                        </ui-gmap-google-map>
+                    </div>
+
+
                 </div>
-                <div ng-repeat-end=""></div>
+
             </div>
-
-            <div class="hidden-xs hidden-sm hidden-md col-lg-6" id="right">
-                <ui-gmap-google-map center="map.center" zoom="map.zoom">
-
-                    <ui-gmap-window
-                            show="map.window.show"
-                            coords="map.window.model"
-                            options="map.window.options"
-                            closeClick="map.window.closeClick()"
-                            templateUrl="'workflow/marker.html'"
-                            templateParameter="map.window.model">
-                    </ui-gmap-window>
-
-                    <ui-gmap-markers
-                            models="map.markers"
-                            coords="'self'"
-                            events="map.markersEvents"
-                            options="'options'">
-                    </ui-gmap-markers>
-
-                </ui-gmap-google-map>
-            </div>
-
-
         </div>
-
-      </div>
     </div>
-  </div>
 </div>
