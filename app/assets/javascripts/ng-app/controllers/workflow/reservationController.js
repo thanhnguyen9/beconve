@@ -26,11 +26,11 @@ angular.module('BeConve')
 
         };
 
-        Stripe.setPublishableKey('pk_test_8kPHFFUZjXxX2TmqALPXWpM4');
+        //Stripe.setPublishableKey('pk_test_8vy0svTHE9RNRs2uz4F1AnT9');
 
         $scope.pay = function(){
             var handler = StripeCheckout.configure({
-                key: 'pk_test_8kPHFFUZjXxX2TmqALPXWpM4',
+                key: 'pk_test_6pRNASCoBOKtIshFeQd4XMUh',
                 image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
                 locale: 'auto',
                 token: function(token) {
