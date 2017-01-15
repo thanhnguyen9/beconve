@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+  </head>
+  <body>
+    <p>Hi,</p><br>
+
+    <p>Thank you for your service. Technician will be contact you soon.</p>
+
+    <% phone = @tech.phone.scan(/.../).join('-') %>
+    <p><span style="font-weight: bold;">Shop's phone number: </span><a href="tel:+1-<%= phone + @tech.phone.split('').last%>"><%= @tech.phone %></a></p>
+
+    <h1>Summary</h1>
+    <p><span style="font-weight: bold;">Location: </span><a href="http://maps.google.com/?q=<%= @order.location %>"><%= @order.location %></a></p>
+    <p><span style="font-weight: bold;">Deivce: </span><%= @order.device %> - <%= @order.model %> - <%= @order.color %></p>
+    <p><span style="font-weight: bold;">Issue: </span><%= @order.issue %></p>
+    <p><span style="font-weight: bold;">Price: $</span><%= @order.price %></p>
+
+  </body>
+</html>

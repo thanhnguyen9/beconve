@@ -6,15 +6,13 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <!--<link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>-->
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.js"></script>
-  <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>-->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_3uh4OvnMAwwYwl7_KL0isQ77Hu-dTDk&libraries=places"></script>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxScRokhJP4COMMvcSUwGZK0MyUNDF64Y&libraries=places"></script> -->
   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-  <script src="https://checkout.stripe.com/checkout.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
 
 </head>
@@ -24,68 +22,60 @@
 
   <%= yield %>
 
-  <footer class="footer">
-    <div class="section section-primary">
-
-      <div class="container">
-        <h1 class="text-center">Contact Us</h1>
-        <br><br>
-        <div class="row">
-          <div class="col-md-12">
-
-            <div class="col-sm-6">
-              <form role="form">
-                <div class="form-group">
-                  <input class="form-control footer-form" id="footerInputName"
-                         placeholder="Your Name" type="name">
-                </div>
-                <div class="form-group">
-                  <input class="form-control footer-form" id="footerInputEmail"
-                         placeholder="Your Email" type="email">
-                </div>
-                <div class="form-group">
-                  <input class="form-control footer-form" id="footerInputMessage"
-                         placeholder="Your Message" type="message">
-                </div>
-                <button type="submit" class="btn btn-primary btn-lg">Send</button>
-              </form>
+  <footer class="section section-primary">
+    <div class="container">
+      <h1 class="text-center">Contact Us</h1>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-6">
+          <form role="form">
+            <div class="form-group">
+              <input class="form-control footer-form" id="footerInputName"
+                     placeholder="Your Name" type="name">
             </div>
-            <div class="col-sm-6">
-              <p class="text-info text-right">
-                <br>
-                <br>
-              </p>
-              <div class="row">
-                <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
-                  <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
-                  <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-                  <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
-                  <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12 hidden-xs text-right">
-                  <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
-                  <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-                  <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
-                  <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
-                </div>
-              </div>
+            <div class="form-group">
+              <input class="form-control footer-form" id="footerInputEmail"
+                     placeholder="Your Email" type="email">
             </div>
-
+            <div class="form-group">
+              <input class="form-control footer-form" id="footerInputMessage"
+                     placeholder="Your Message" type="message">
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg">Send</button>
+          </form>
+        </div>
+        <div class="col-sm-6">
+          <p class="text-info text-right">
+            <br>
+            <br>
+          </p>
+          <div class="row">
+            <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
+              <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+              <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+              <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+              <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 hidden-xs text-right">
+              <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+              <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+              <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+              <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+            </div>
           </div>
         </div>
-
-        <hr>
-
-        <ul class="list-inline text-center">
-          <li><a href="" class="footer-link">ABOUT</a></li>
-          <li><a href="" class="footer-link">FQA</a></li>
-          <li><a href="" class="footer-link">PRIVACY POLICY</a></li>
-          <li><a href="" class="footer-link">TERMS OF USE</a></li>
-        </ul>
-
       </div>
+
+      <hr>
+
+      <ul class="list-inline text-center">
+        <li><a href="" class="footer-link">ABOUT</a></li>
+        <li><a href="" class="footer-link">FQA</a></li>
+        <li><a href="" class="footer-link">PRIVACY POLICY</a></li>
+        <li><a href="" class="footer-link">TERMS OF USE</a></li>
+      </ul>
 
     </div>
   </footer>
