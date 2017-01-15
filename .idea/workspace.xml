@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47b03c1c-5747-4577-96a7-3f7fe1c1132f" name="Default" comment="First angular test case with scope">
+    <list default="true" id="47b03c1c-5747-4577-96a7-3f7fe1c1132f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/workflow/availability.html" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/workflow/availability.html" />
     </list>
     <ignored path="beconve.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -612,12 +611,6 @@
       <option name="number" value="Default" />
       <updated>1469243953120</updated>
     </task>
-    <task id="LOCAL-00085" summary="Fetch user from db for display in availability page">
-      <created>1472786585902</created>
-      <option name="number" value="00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1472786585903</updated>
-    </task>
     <task id="LOCAL-00086" summary="bug">
       <created>1472786918071</created>
       <option name="number" value="00086" />
@@ -906,12 +899,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474222476972</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="Redesign the availability page">
+      <created>1477454077880</created>
+      <option name="number" value="00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1477454077880</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="23" width="1433" height="817" extended-state="6" />
-    <editor active="false" />
+    <frame x="7" y="23" width="1433" height="817" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27285415" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -945,7 +944,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix cancel request not update UI after canceling" />
     <MESSAGE value="Add reason form in case of decline/cancel request" />
     <MESSAGE value="Remove stepper out of html" />
     <MESSAGE value="Change logo font" />
@@ -970,7 +968,8 @@
     <MESSAGE value="Add loading, error to availability page" />
     <MESSAGE value="Using image from imgur instead of assets" />
     <MESSAGE value="Hot fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hot fix" />
+    <MESSAGE value="Redesign the availability page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Redesign the availability page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
