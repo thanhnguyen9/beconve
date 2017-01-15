@@ -26,7 +26,7 @@ angular.module('BeConve')
 
         };
 
-        //Stripe.setPublishableKey('pk_test_8vy0svTHE9RNRs2uz4F1AnT9');
+        Stripe.setPublishableKey('pk_test_8kPHFFUZjXxX2TmqALPXWpM4');
 
         $scope.pay = function(){
             var handler = StripeCheckout.configure({
