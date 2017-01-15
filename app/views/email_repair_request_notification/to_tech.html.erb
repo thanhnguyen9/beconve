@@ -6,12 +6,13 @@
   <body>
     <p>Hi,</p><br>
 
-    <p>A customer have requested you to repair his devise. Please <a href="http://beconve.herokuapp.com#iphone_price_setup" style="color: blue">ACCEPT</a> or <a href="http://beconve.herokuapp.com#iphone_price_setup" style="color: red">DECLINE</a> the quest.</p><br>
+    <p>A customer have requested you to repair his device. Please <a href="http://beconve.herokuapp.com#iphone_price_setup" style="color: blue">ACCEPT</a> or <a href="http://beconve.herokuapp.com#iphone_price_setup" style="color: red">DECLINE</a> the quest.</p><br>
 
     <p>The request will be declined automaticaly after 5 minutes.</p>
 
+    <h1>Summary</h1>
     <% phone = @order.customer_phone.scan(/.../).join('-') %>
-    <p><span style="font-weight: bold;">Customer phone number: </span><a href="tel:+1-<%= phone + @order.customer_phone.split('').last%>"><%= @order.customer_phone %></a></p>
+    <p><span style="font-weight: bold;">Customer's phone number: </span><a href="tel:+1-<%= phone + @order.customer_phone.split('').last%>"><%= @order.customer_phone %></a></p>
     <p><span style="font-weight: bold;">Customer Email: </span><a href="mailto:<%= @order.customer_email %>" target="_top"><%= @order.customer_email %></a></p>
     <p><span style="font-weight: bold;">Location: </span><a href="http://maps.google.com/?q=<%= @order.location %>"><%= @order.location %></a></p>
     <p><span style="font-weight: bold;">Deivce: </span><%= @order.device %> - <%= @order.model %> - <%= @order.color %></p>

@@ -35,7 +35,8 @@ module Api
           @order.customer_email = charge.source.name
 
           if @order.save
-            EmailRepairRequestNotification.to_tech(tech, @order).deliver_now
+            EmailRepairRequestNotification.to_tech(@order).deliver_now
+            EmailRepairRequestNotification.to_customer(@order).deliver_now
             render json: {result: 'success'}
           else
             render json: {result: 'Something went wrong. Please refresh the page and try again'}
