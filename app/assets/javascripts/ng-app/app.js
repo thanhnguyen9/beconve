@@ -23,7 +23,7 @@ angular
         function ($routeProvider, $locationProvider, uiGmapGoogleMapApiProvider, $httpProvider, AuthProvider, AuthInterceptProvider, $windowProvider) {
 
         var $window = $windowProvider.$get();
-        //$window.Stripe.setPublishableKey('pk_test_8kPHFFUZjXxX2TmqALPXWpM4');
+        $window.Stripe.setPublishableKey('pk_test_8kPHFFUZjXxX2TmqALPXWpM4');
 
         $httpProvider.defaults.withCredentials = true;
         AuthInterceptProvider.interceptAuth(true);

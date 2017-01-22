@@ -32,7 +32,6 @@ module Api
           # @order.customer_id = customer.id
           @order.user_id = tech.id
           @order.charge_id = charge.id
-          @order.customer_email = charge.source.name
 
           if @order.save
             EmailRepairRequestNotification.to_tech(@order).deliver_now

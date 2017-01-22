@@ -27,18 +27,32 @@
 
                                                 <form stripe-form="stripeCallback" name="checkoutForm">
 
-                                                    <label>Phone number</label><br>
-                                                    <input class="form-control input-phone input-lg" type='text' name="phone" phone-input ng-model="phoneVal" placeholder="(123) 456-6789" ng-minlength="14" ng-maxlength="14" required/><br>
+                                                    <label>Email</label>
+                                                    <input class="form-control" type="email" id="email" ng-model="customer_email" placeholder="contact@beconve.com" required>
 
-                                                    <div ng-messages="checkoutForm.phone.$error" style="color:maroon" role="alert">
-                                                        <div ng-message="required">Please input phone number</div>
-                                                        <div ng-message="minlength">Phone number is not correct</div>
-                                                        <div ng-message="maxlength">Phone number is not correct</div>
+                                                    <label>Phone number</label><br>
+                                                    <input class="form-control input-phone" type='text' phone-input ng-model="phoneVal" placeholder="(123) 456-6789" required/><br>
+
+                                                    <label>Card Number</label>
+                                                    <input class="form-control" ng-model="number" placeholder="Card Number"
+                                                           payments-format="card" payments-validate="card" name="card" required/><br>
+
+                                                    <label>Expiration MM/YYYY</label>
+                                                    <input class="form-control" ng-model="expiry" placeholder="MM/YYYY"
+                                                           payments-format="expiry" payments-validate="expiry"
+                                                           name="expiry" required/><br>
+
+                                                    <label>CVC</label>
+                                                    <input class="form-control" ng-model="cvc" placeholder="CVC" payments-format="cvc" payments-validate="cvc" name="cvc" required/><br>
+
+                                                    <div ng-if="checkoutForm.$invalid" class="alert alert-danger">
+                                                        Error: Please correct card's information
                                                     </div>
 
-                                                    <button id="customButton" class="btn btn-success btn-lg pull-right" ng-hide="paying" ng-click="checkoutForm.$valid && pay()" >Finish Order</button>
+                                                    <button type="submit" class="btn btn-success btn-lg pull-right" ng-hide="paying" ng-click="pay()">Finish Order</button>
+                                                    <img src="http://i.imgur.com/Ty0Mioy.gif" class="stripe-connect-icon img-responsive" style="text-align: center" alt="" ng-show="paying">
                                                 </form>
-
+                                               
                                             </div>
 
                                         </div>
@@ -52,3 +66,4 @@
         </div>
     </div>
 </div>
+<script src="https://checkout.stripe.com/checkout.js"></script>
