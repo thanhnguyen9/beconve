@@ -8,6 +8,7 @@
     "angular-google-maps": "latest",
     "angular-resource": "latest",
     "angular-payments": "latest",
-    "angular-spinner": "latest"
+    "angular-spinner": "latest",
+    "angular-ui-bootstrap": "latest"
   }
 }

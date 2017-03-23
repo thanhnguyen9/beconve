@@ -1,0 +1,127 @@
+<div ng-controller="ModalDemoCtrl as $ctrl" class="modal-demo">
+
+    <br><br>
+    <div class="jumbotron">
+        <div class="container">
+            <br><br>
+            <h1 style="color: white;">{{ $ctrl.shop.name }}</h1>
+            <br><br><br><br>
+        </div>
+    </div><div class="add-margin"></div>
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-offset-1">
+                    <p>I have over seven years in the business and I'm passionate about my work. I will make sure your walking out in style and satisfied. When you sit in my chair your nail right belong to me.</p>
+                    <hr>
+
+                    <!--         <h4 class="text-center">Cancellation Policy</h4>
+                            <p>You can call the shop to cancel your appointment any time. Otherwise, you will be charged $10 for no shows.</p> -->
+                    <!--<hr>-->
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <b>Nails</b>
+                            <p>Up for 60 minutes</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="button" class="btn btn-success" ng-click="$ctrl.open()">Book</button>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <b>Pedicure</b>
+                            <p>Up for 60 minutes</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="button" class="btn btn-success" ng-click="$ctrl.open()">Book</button>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <b>Wax</b>
+                            <p>Up for 20 minutes</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="button" class="btn btn-success" ng-click="$ctrl.open()">Book</button>
+                        </div>
+                    </div>
+                    <hr>
+
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="https://maps.google.com?q={{ shop.address }}"><img class="img-responsive text-center" src="http://maps.googleapis.com/maps/api/staticmap?center=-15.800513,-47.91378&zoom=13&size=390x200&maptype=roadmap
+    &markers=color:red%7Ccolor:red%7Clabel:%7C-15.800513,-47.91378&sensor=false"></a><br><br>
+
+                    <a href="https://maps.google.com?q={{ shop.address }}">{{ $ctrl.shop.address }}</a><br>
+                    <a href="tel:{{shop.phone}}">{{$ctrl.shop.phone}}</a>
+
+                    <hr>
+
+                    <h4 class="text-center">Business Hours</h4>
+                    <div class="row">
+                        <ul>
+                            <li ng-repeat="hour in $ctrl.hours" ng-bind-html-unsafe="opt.text", class="" style="list-style-type: none;">
+                                {{ hour.date }}: {{ hour.hour }}
+                            </li>
+                        </ul>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <p class="modal-title text-center" id="modal-title">SELECT A TIME</p>
+        </div>
+        <div class="modal-body" id="modal-body">
+
+            <h4> {{ shopName }}</h4>
+
+            <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+            </p>
+            <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+        </div>
+    </script>
+    <script type="text/ng-template" id="stackedModal.html">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modal-title-{{name}}">The {{name}} modal!</h3>
+        </div>
+        <div class="modal-body" id="modal-body-{{name}}">
+            Having multiple modals open at once is probably bad UX but it's technically possible.
+        </div>
+    </script>
+
+    <div class="modal-parent">
+    </div>
+
+    <style>
+        .full button span {
+            background-color: limegreen;
+            border-radius: 32px;
+            color: black;
+        }
+        .partially button span {
+            background-color: orange;
+            border-radius: 32px;
+            color: black;
+        }
+    </style>
+
+</div>

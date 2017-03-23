@@ -1,13 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "home";
-@import "location";
-@import "device";
 @import "availability";
 @import "host";
 @import "reservation";
-@import "model";
-@import "color";
+@import "shop_detail";
 
 body {
   background: white;

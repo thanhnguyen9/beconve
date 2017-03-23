@@ -9,7 +9,7 @@ module Api
 
       def show
         user = User.find(params[:id])
-        render json: {response: user}
+        render json: {status: 'success',response: user}
       end
 
       def update
