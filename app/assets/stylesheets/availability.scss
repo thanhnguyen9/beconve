@@ -63,3 +63,20 @@ button.btn.btn-danger {
     line-height: 34px;
   }
 }
+
+.col-sm-12.availability-card.ng-scope {
+  border: 1px solid #dbdedd;
+  margin-bottom: 2em;
+  padding-left: 0em;
+  padding-right: 0em;
+}
+
+.col-sm-6.availability-image {
+  padding-left: 0em;
+  padding-right: 0em;
+}
+
+img.card-img-top.img-responsive.availability-image {
+  height: 190px;
+  width: 318px;
+}
