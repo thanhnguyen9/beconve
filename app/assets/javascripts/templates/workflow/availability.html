@@ -8,7 +8,7 @@
                     <p class="text-center" style="color: red" ng-show="error">{{ error }}</p>
 
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-7">
                         <div ng-show="notAvailable">
                             <h4>There is no available shop in this area at this moment.</h4>
                             <h4>Please subscribe, we will notify you as soon as any shop is available.</h4>
@@ -23,25 +23,30 @@
 
 
                         <div class="col-sm-12 availability-card"  ng-repeat-start="shop in shops">
-                            <div class="col-sm-6 availability-image">
-                                <img class="card-img-top img-responsive availability-image text-center col-lg-offset-0 col-md-offset-2 col-sm-offset-0" ng-src="{{ shop.image }}" alt="Card image cap">
+
+                            <div class="col-sm-5 availability-image">
+                                <img style="padding-top: 10px;"
+                                     class="card-img-top img-responsive availability-image text-center col-lg-offset-0 col-md-offset-2
+                                     col-sm-offset-0" ng-src="{{ shop.image }}" alt="Card image cap">
                             </div>
 
-                            <div class="col-sm-6 text-center">
+                            <div class="col-sm-7 text-center">
                                 <br>
                                 <b>{{ shop.name }}</b>
                                 <hr>
 
+                                <a href="https://maps.google.com?q={{ shop.address }}">{{ shop.address }}</a><br>
                                 <span class="star-icon full">☆</span>{{ shop.rating }} -
                                 <span class="availability-icon">Reviews: {{ shop.reviews }}</span><br><br>
                                 <button class="btn btn-success" ng-click="pick(shop.id)">Book</button>
+                                <br><br>
                             </div>
                         </div>
                         <div ng-repeat-end=""></div>
 
                     </div>
 
-                    <div class="hidden-xs hidden-sm hidden-md col-lg-6" id="right">
+                    <div class="hidden-xs hidden-sm hidden-md col-lg-5" id="right">
                         <ui-gmap-google-map center="map.center" zoom="map.zoom">
 
                             <ui-gmap-window
