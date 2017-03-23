@@ -1,31 +1,32 @@
 angular
     .module('BeConve')
 
-    .controller('availabilityController', ['$scope', '$sessionStorage', '$location', 'Technician', '$http',
-        function($scope, $sessionStorage, $location, Technician, $http) {
+    .controller('availabilityController', ['$scope', '$sessionStorage', '$location', 'Shop', '$http',
+        function($scope, $sessionStorage, $location, Shop, $http) {
 
-            if (angular.isUndefined($sessionStorage.issue) || $sessionStorage.issue === ''){
-                $location.url('/issue');
-            }
+
             $scope.loading = true;
-            Technician.query({'address':$sessionStorage.location, 'model': $sessionStorage.model.desc, 'issue': $sessionStorage.issue.desc}, function(res){
+
+            Shop.query({'location':$sessionStorage.location}, function(res){
 
                 if(res.status === 'success'){
-                    $scope.techs = res.users;
 
-                    if ($scope.techs.length > 0){
+                    $scope.shops = res.response;
+
+                    if ($scope.shops.length > 0){
                         var arr = [];
-                        for( i = 0; i < $scope.techs.length; i++){
+                        for( i = 0; i < $scope.shops.length; i++){
                             arr.push({
-                                id: $scope.techs[i].id,
-                                tech: $scope.techs[i],
-                                latitude: $scope.techs[i].latitude,
-                                longitude: $scope.techs[i].longitude
+                                id: $scope.shops[i].id,
+                                shop: $scope.shops[i],
+                                latitude: $scope.shops[i].latitude,
+                                longitude: $scope.shops[i].longitude
                             });
                         }
-                        $scope.map.center = {
-                            latitude: res.customer_lat_log[0],
-                            longitude: res.customer_lat_log[1]
+
+                        $scope.center = {
+                            latitude: $scope.shops[0].longitude,
+                            longitude: $scope.shops[0].latitude
                         };
 
                         $scope.map.markers = arr;
@@ -40,8 +41,8 @@ angular
 
             $scope.map = {
                 center: {
-                    latitude: 32.7767,
-                    longitude: -96.7970
+                    latitude: 33.1972,
+                    longitude: -96.6398
                 },
                 zoom: 12,
                 markers: null,
@@ -63,24 +64,18 @@ angular
                 }
             };
 
-            $scope.pick = function(techId, techName, price, warranty){
-                $sessionStorage['techId'] = techId;
-                $sessionStorage['techName'] = techName;
-                $sessionStorage['price'] = price;
-                $sessionStorage['warranty'] = warranty;
+            $scope.pick = function(shopId){
+                $sessionStorage['shopId'] = shopId;
 
-                $location.path('/reservation');
-            }
+                $location.path('/shops/' + shopId);
+            };
         }])
     .controller('templateController',[ '$scope', '$http', '$sessionStorage', '$location', function($scope, $http, $sessionStorage, $location){
 
-        $scope.pick = function(techId, techName, price, warranty){
-            $sessionStorage['techId'] = techId;
-            $sessionStorage['techName'] = techName;
-            $sessionStorage['price'] = price;
-            $sessionStorage['warranty'] = warranty;
+        $scope.pick = function(shopId){
+            $sessionStorage['shopId'] = shopId;
 
-            $location.path('/reservation');
+            $location.path('/shops/' + shopId);
         };
     }])
 ;

@@ -10,76 +10,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.js"></script>
-  <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script> -->
-  
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxScRokhJP4COMMvcSUwGZK0MyUNDF64Y&libraries=places"></script>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+
+
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxScRokhJP4COMMvcSUwGZK0MyUNDF64Y&libraries=places"></script> -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+
   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
   <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 <body ng-app="BeConve">
 
-  <%= render partial: "layouts/navbar" %>
+<%= render partial: "layouts/navbar" %>
 
-  <%= yield %>
+<%= yield %>
 
-  <footer class="section section-primary">
-    <div class="container">
-      <h1 class="text-center">Contact Us</h1>
-      <br><br>
-      <div class="row">
-        <div class="col-sm-6">
-          <form role="form">
-            <div class="form-group">
-              <input class="form-control footer-form" id="footerInputName"
-                     placeholder="Your Name" type="name">
-            </div>
-            <div class="form-group">
-              <input class="form-control footer-form" id="footerInputEmail"
-                     placeholder="Your Email" type="email">
-            </div>
-            <div class="form-group">
-              <input class="form-control footer-form" id="footerInputMessage"
-                     placeholder="Your Message" type="message">
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg">Send</button>
-          </form>
-        </div>
-        <div class="col-sm-6">
-          <p class="text-info text-right">
-            <br>
-            <br>
-          </p>
-          <div class="row">
-            <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
-              <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
-              <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-              <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
-              <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
-            </div>
+<footer class="section section-primary">
+  <div class="container">
+    <h1 class="text-center">Contact Us</h1>
+    <br><br>
+    <div class="row">
+      <div class="col-sm-6">
+        <form role="form">
+          <div class="form-group">
+            <input class="form-control footer-form" id="footerInputName"
+                   placeholder="Your Name" type="name">
           </div>
-          <div class="row">
-            <div class="col-md-12 hidden-xs text-right">
-              <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
-              <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-              <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
-              <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
-            </div>
+          <div class="form-group">
+            <input class="form-control footer-form" id="footerInputEmail"
+                   placeholder="Your Email" type="email">
+          </div>
+          <div class="form-group">
+            <input class="form-control footer-form" id="footerInputMessage"
+                   placeholder="Your Message" type="message">
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">Send</button>
+        </form>
+      </div>
+      <div class="col-sm-6">
+        <p class="text-info text-right">
+          <br>
+          <br>
+        </p>
+        <div class="row">
+          <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
+            <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+            <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+            <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+            <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 hidden-xs text-right">
+            <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+            <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+            <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+            <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
           </div>
         </div>
       </div>
-
-      <hr>
-
-      <ul class="list-inline text-center">
-        <li><a href="" class="footer-link">ABOUT</a></li>
-        <li><a href="" class="footer-link">FQA</a></li>
-        <li><a href="" class="footer-link">PRIVACY POLICY</a></li>
-        <li><a href="" class="footer-link">TERMS OF USE</a></li>
-      </ul>
-
     </div>
-  </footer>
+
+    <hr>
+
+    <ul class="list-inline text-center">
+      <li><a href="" class="footer-link">ABOUT</a></li>
+      <li><a href="" class="footer-link">FQA</a></li>
+      <li><a href="" class="footer-link">PRIVACY POLICY</a></li>
+      <li><a href="" class="footer-link">TERMS OF USE</a></li>
+    </ul>
+
+  </div>
+</footer>
 
 </body>
 </html>

@@ -1,12 +1,10 @@
 module Api
   module V1
-    class TechniciansController < ApplicationController
+    class ShopsController < ApplicationController
 
       def index
-        params[:address] = '6632 Deseo, Irving TX 75039'
-        customer_lat_log = Geocoder.coordinates(params[:address])
-
-        render json: {status: 'success', users: User.available(params[:address], params[:model], params[:issue]), customer_lat_log: customer_lat_log}
+        render json: {status: 'success', response: User.near(params[:location], 50,
+                                                             :order => "distance")}
       end
 
       def show
