@@ -4,120 +4,81 @@
       <div class="row">
         <div class="col-md-12 text-center hero">
           <h2 class="text-jumbo">BE CONVENIENT</h2>
-          <h3 style="line-height: 1.4em">Get your smartphone or ipad fixed anytime, anywhere by a professional that come to you.</h3><br><br>
-          <h3>Find out who is available at this moment</h3>
 
-          <div class="row">
-            <div class="col-md-12">
+          <h2>Discover & book beauty appointments 24/7</h2><br>
+            <h3>No more waiting. Save more time</h3>
+            <br>
+
+            <div class="row">
               <div class="col-md-6 col-md-offset-3">
-
-                <form name="locationForm">
+                <form name="locationForm" autocomplete="off">
                   <div class="input-group">
-                    <input type="text" ng-model="location" id="Autocomplete" class="form-control input-lg" ng-autocomplete="location" placeholder="Where to meet?" details="details1" options="options1"/>
+                    <input name="states" id="states" type="text" placeholder="Anywhere" ng-model="selected" typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control input-lg">
                     <span class="input-group-btn">
-                      <button type="submit" class="btn btn-danger btn-lg pull-right" ng-click="next()"> Next </button>
-                    </span>
+                    <button type="submit" class="btn btn-danger btn-lg pull-right" ng-click="next()"> Search </button>
+                  </span>
                   </div>
                 </form>
               </div>
             </div>
-          </div>
-          <p class="center" ng-show="alert" style="color: white;"> Please input location </p>
 
         </div>
       </div>
     </div>
   </div>
-  <br><br>
-
-  <div class="section text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1>How it works</h1>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <br><br>
 
   <div class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-
-          <div class="col-md-3 col-md-offset-0  col-sm-5 col-sm-offset-1 ">
-            <img src="https://i.imgur.com/sBMwRWu.jpg" class="center-block img-circle img-responsive work-flow">
-            <h4 class="text-center">Tell us where to meet</h4>
+    <div class="container text-center">
+      <h1>Browse & Discover</h1><br><br>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="http://i.imgur.com/A1hjoM0.jpg"
+                 class="img-responsive"><br>
           </div>
-          <div class="col-md-3 col-sm-5">
-            <img src="https://i.imgur.com/8Nz0gEb.png" class="center-block img-circle img-responsive work-flow">
-            <h4 class="text-center">Tell us what is the device/issue</h4>
+          <div class="col-md-4">
+            <img src="http://i.imgur.com/PnNvYe7.jpg"
+                 class="img-responsive"><br>
           </div>
-          <div class="col-md-3 col-md-offset-0  col-sm-5 col-sm-offset-1">
-            <img src="https://i.imgur.com/M6KEzzu.png" class="center-block img-circle img-responsive work-flow">
-            <h4 class="text-center">Pick your favourite shop</h4>
+          <div class="col-md-4">
+            <img src="http://i.imgur.com/7XOPZrt.jpg"
+                 class="img-responsive"><br>
           </div>
-          <div class="col-md-3 col-sm-5">
-            <img src="https://i.imgur.com/vL9bDtW.jpg" class="center-block img-circle img-responsive work-flow">
-            <h4 class="text-center">Make a reservation</h4>
-          </div>
-
         </div>
-      </div>
+    </div>
+  </div>
+
+  <br><br>
+
+  <div class="jumbotron home-owner">
+    <div class="container text-center">
+      <b style="color: white;font-size: 35px;">Are you the owner?</b>
       <br><br>
-      <div class="text-center" style="font-weight: bold">
-        <h2>DONE!</h2>
-        <h4>A tech will be sent to you right away</h4>
-        <h4>No fix - No fee</h4>
-      </div>
+      <p style="color: white;">Manage your business, accept payments and grow your business using Beconve salon software.</p>
+      <br>
+      <button class="btn btn-danger btn-lg">Sign Up</button><br>
     </div>
   </div>
 
+
   <br><br>
-  <div class="section front-page-pic gray-background">
+  <div class="section">
     <div class="container">
       <div class="row">
-        <div class="col-md-12 text-center">
-
-          <div class="col-md-6">
-            <h1>Less frustration</h1>
-            <p class="app-text">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-              Cum sociis natoque penatibus et magnis dis parturient montes
-            </p>
-          </div>
-          <div class="col-md-6 col-md-offset-0 col-sm- col-sm-offset-2">
-            <img src="http://i.imgur.com/Q0QtIC9.jpg" class="img-responsive">
-          </div>
-
+        <div class="col-md-6">
+          <blockquote>
+            <p>An entire category of entrepreneurs are building businesses around simplifying and automating those tasks</p>
+            <footer>Forbes</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-6">
+          <blockquote>
+            <p>It allows shop owner more time on task with the creative acts they love.</p>
+            <footer>Janie</footer>
+          </blockquote>
         </div>
       </div>
     </div>
   </div>
-
   <br><br>
-  <div class="section front-page-pic">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center">
-
-          <div class="col-md-6 col-md-push-6">
-            <h1>More joyful</h1>
-            <p class="app-text">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-              Cum sociis natoque penatibus et magnis dis parturient montes,
-            </p>
-          </div>
-
-          <!--Sidebar-->
-          <div class="col-md-6 col-md-pull-6 col-md-offset-0 col-sm-offset-2">
-            <img src="http://i.imgur.com/W37HoWS.jpg" class="img-responsive">
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
