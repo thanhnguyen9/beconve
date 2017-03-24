@@ -1,9 +1,8 @@
 angular
     .module('BeConve')
 
-    .controller('availabilityController', ['$scope', '$sessionStorage', '$location', 'Shop', '$http',
-        function($scope, $sessionStorage, $location, Shop, $http) {
-
+    .controller('availabilityController', ['$scope', '$sessionStorage', '$location', 'Shop',
+        function($scope, $sessionStorage, $location, Shop) {
 
             $scope.loading = true;
 
@@ -85,3 +84,13 @@ angular
         };
     }])
 ;
+
+angular.module('BeConve')
+    .factory('Shop', function($resource) {
+        return $resource('/api/v1/shops/:id', { id: '@id' }, {
+            update: {method: 'PUT'},
+            query: {method: 'GET'},
+            get: {method: 'GET'},
+            delete: {method: 'DELETE'}
+        })
+    });
