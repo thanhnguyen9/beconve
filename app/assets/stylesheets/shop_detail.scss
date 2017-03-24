@@ -1,11 +1,11 @@
-button.btn.btn-success {
+button.btn.btn-success.book {
   background-color: #2a3842;
   width: 90px;
   border-radius: 100px;
   border: 2px solid #2a3842;
 }
 
-button.btn.btn-success:hover, button.btn.btn-success:focus, button.btn.btn-success:active, button.btn.btn-success.activey {
+button.btn.btn-success.book:hover, button.btn.btn-success.book:focus, button.btn.btn-success.book:active, button.btn.btn-success.bookactivey {
   background-color: #2a3842;
   border-radius: 100px;
   border: 2px solid #2a3842;
@@ -25,4 +25,13 @@ button.btn.btn-success:hover, button.btn.btn-success:focus, button.btn.btn-succe
   margin: 0;
   line-height: 1.42857143;
   font-size: 20px;
+}
+
+button.btn.btn-default.time-slot.ng-binding {
+  color: white;
+  background-color: #39D2C9;
+  border-color: #39D2C9;
+  border-radius: 100px;
+  margin: 0.5em;
+  width: 80px;
 }

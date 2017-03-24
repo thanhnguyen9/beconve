@@ -7,6 +7,11 @@ angular
 
             $scope.loading = true;
 
+            $scope.testHours = [
+                "9:00 AM", "9:01 AM","9:02 AM","9:03 AM","9:04 AM","9:05 AM","9:06 AM","9:07 AM","9:08 AM","9:09 AM","9:10 AM","9:11 AM",
+
+            ];
+
             Shop.query({'location':$sessionStorage.location}, function(res){
 
                 if(res.status === 'success'){
@@ -69,6 +74,7 @@ angular
 
                 $location.path('/shops/' + shopId);
             };
+
         }])
     .controller('templateController',[ '$scope', '$http', '$sessionStorage', '$location', function($scope, $http, $sessionStorage, $location){
 
