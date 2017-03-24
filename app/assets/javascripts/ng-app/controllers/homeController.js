@@ -1,4 +1,6 @@
-angular.module('BeConve')
+angular
+    .module('BeConve')
+
     .controller('homeController', ['$scope', '$location', 'Auth', '$sessionStorage',
         function($scope, $location, Auth, $sessionStorage) {
 

@@ -1,4 +1,6 @@
-angular.module('BeConve')
+angular
+    .module('BeConve')
+
     .controller('reservationController', ['$scope', '$location', '$sessionStorage', '$http', 'Auth', '$window', 'Order',
         function($scope, $location, $sessionStorage, $http, Auth, $window, Order) {
 

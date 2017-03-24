@@ -1,4 +1,6 @@
-angular.module('BeConve')
+angular
+    .module('BeConve')
+
     .controller('navbarController', ['$scope', '$window', 'Auth', function($scope, $window) {
 
 

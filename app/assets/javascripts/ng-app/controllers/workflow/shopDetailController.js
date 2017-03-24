@@ -1,4 +1,7 @@
-angular.module('BeConve').controller('ModalDemoCtrl', ['$scope', '$routeParams', '$sessionStorage', '$location', 'Shop', '$http',
+angular
+    .module('BeConve')
+
+    .controller('ModalDemoCtrl', ['$scope', '$routeParams', '$sessionStorage', '$location', 'Shop', '$http',
     '$uibModal', '$log', '$document', 'ModalData',
     function($scope, $routeParams, $sessionStorage, $location, Shop, $http, $uibModal, $log, $document, ModalData) {
         var $ctrl = this;
