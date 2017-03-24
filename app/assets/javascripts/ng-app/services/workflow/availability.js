@@ -23,5 +23,4 @@ angular.module('BeConve')
             update: {method: 'PUT'},
             query: {method: 'GET', isArray: true}
         })
-    }])
-;
+    }]);

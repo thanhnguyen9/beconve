@@ -1,6 +1,6 @@
 angular
     .module('BeConve')
-    
+
     .controller('availabilityController', ['$scope', '$sessionStorage', '$location', 'Shop',
         function($scope, $sessionStorage, $location, Shop) {
 
