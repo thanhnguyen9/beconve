@@ -55,11 +55,11 @@
 
                 </div>
                 <div class="col-sm-4 text-center">
-                    <a href="https://maps.google.com?q={{ shop.address }}"><img class="img-responsive text-center" src="http://maps.googleapis.com/maps/api/staticmap?center=-15.800513,-47.91378&zoom=13&size=390x200&maptype=roadmap
-    &markers=color:red%7Ccolor:red%7Clabel:%7C-15.800513,-47.91378&sensor=false"></a><br><br>
+                    <a href="https://maps.google.com?q={{ $ctrl.shop.address }}"><img class="img-responsive text-center" src="http://maps.googleapis.com/maps/api/staticmap?center={{ $ctrl.shop.latitude }},{{ $ctrl.shop.longitude }}&zoom=17&size=390x200&maptype=roadmap
+    &markers=color:red%7Ccolor:red%7Clabel:%7C{{ $ctrl.shop.latitude}},{{ $ctrl.shop.longitude }}&sensor=false"></a><br><br>
 
-                    <a href="https://maps.google.com?q={{ shop.address }}">{{ $ctrl.shop.address }}</a><br>
-                    <a href="tel:{{shop.phone}}">{{$ctrl.shop.phone}}</a>
+                    <a href="https://maps.google.com?q={{ $ctrl.shop.address }}">{{ $ctrl.shop.address }}</a><br>
+                    <a href="tel:{{$ctrl.shop.phone}}">{{$ctrl.shop.phone}}</a>
 
                     <hr>
 

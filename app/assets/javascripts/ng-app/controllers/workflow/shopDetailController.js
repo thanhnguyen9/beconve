@@ -62,7 +62,7 @@ angular
 
                 $ctrl.shop = res.response;
                 $sessionStorage['shopName'] = $ctrl.shop.name
-
+debugger;
             }else{
                 $ctrl.error = 'Something went wrong. Please refresh the page'
             }
