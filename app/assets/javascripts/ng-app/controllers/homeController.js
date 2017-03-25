@@ -15,3 +15,4 @@ angular
                 $location.url('/availability');
             };
         }]);
+

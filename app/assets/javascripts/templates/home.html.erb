@@ -13,10 +13,16 @@
               <div class="col-md-6 col-md-offset-3">
                 <form name="locationForm" autocomplete="off">
                   <div class="input-group">
-                    <input name="states" id="states" type="text" placeholder="Enter state and select a city" ng-model="selected" typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control input-lg">
+                    <input name="states"
+                           id="states"
+                           type="text"
+                           placeholder="Enter state and select a city"
+                           ng-model="selected"
+                           uib-typeahead="state for state in states | filter:$viewValue | limitTo:8"
+                           class="form-control input-lg">
                     <span class="input-group-btn">
-                    <button type="submit" class="btn btn-danger btn-lg pull-right" ng-click="next()"> Search </button>
-                  </span>
+                      <button type="submit" class="btn btn-danger btn-lg pull-right" ng-click="next()"> Search </button>
+                    </span>
                   </div>
                 </form>
               </div>
