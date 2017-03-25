@@ -1,4 +1,4 @@
-a = User.create
+a = User.new
 a.email = 'a@yaho.com'
 a.password = '11111111'
 a.name = 'Venus Signature Nails & Spa'
@@ -9,7 +9,7 @@ a.phone = '(214) 592-9988'
 a.image = 'https://s3-media2.fl.yelpcdn.com/bphoto/xIEdQO_ubEtkfI0vDFTfzw/o.jpg'
 a.save
 
-a = User.create
+a = User.new
 a.email = 'b@yaho.com'
 a.password = '11111111'
 a.name = 'Hollywood Nails & Spa'
@@ -20,7 +20,7 @@ a.phone = '(972) 548-8910'
 a.image = 'http://www.hollywoodstarnailspa.com/images/images_home/03.jpg'
 a.save
 
-a = User.create
+a = User.new
 a.email = 'c@yaho.com'
 a.password = '11111111'
 a.name = 'Virginia Nails'
@@ -31,3 +31,6 @@ a.phone = '(972) 325-5253'
 a.warranty = '9 months'
 a.image = 'http://az616578.vo.msecnd.net/files/2016/06/03/636005240725965631-621871392_1417037504860.jpeg'
 a.save
+
+AvailableCity.create(name: 'McKinney, Texas', longitude: -96.6398, latitude: 33.1972)
+AvailableCity.create(name: 'Dallas, Texas', longitude: -96.7970, latitude: 32.7767)

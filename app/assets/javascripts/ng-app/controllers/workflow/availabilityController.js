@@ -45,8 +45,8 @@ angular
 
             $scope.map = {
                 center: {
-                    latitude: 33.1972,
-                    longitude: -96.6398
+                    latitude: $sessionStorage['latitude'],
+                    longitude: $sessionStorage['longitude']
                 },
                 zoom: 12,
                 markers: null,
