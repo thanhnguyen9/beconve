@@ -3,8 +3,7 @@ module Api
     class ShopsController < ApplicationController
 
       def index
-        render json: {status: 'success', response: User.near(params[:location], 50,
-                                                             :order => "distance")}
+        render json: {status: 'success', response: User.order('id ASC').near(params[:location])}
       end
 
       def show
