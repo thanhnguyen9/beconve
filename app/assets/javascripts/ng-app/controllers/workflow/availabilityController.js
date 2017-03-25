@@ -70,7 +70,6 @@ angular
 
             $scope.pick = function(shopId){
                 $sessionStorage['shopId'] = shopId;
-
                 $location.path('/shops/' + shopId);
             };
 
@@ -79,7 +78,6 @@ angular
 
         $scope.pick = function(shopId){
             $sessionStorage['shopId'] = shopId;
-
             $location.path('/shops/' + shopId);
         };
     }]);

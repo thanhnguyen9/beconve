@@ -1,13 +1,10 @@
 <div ng-controller="templateController">
     <p style="color: red" ng-show="alert">{{ alert }}</p>
-    <h4>{{ parameter.tech.name }}</h4>
+    <h4>{{ parameter.shop.name }}</h4>
     <p>
-        <i class="fa fa-fw fa-map-marker text-inverse" aria-hidden="true"></i>{{ parameter.tech.distance | limitTo: 3 }} mile -
-        <span class="star-icon full">☆</span>{{ parameter.tech.rating }} - <a ng-href="{{ parameter.tech.reviews_link }}">Reviews: {{ parameter.tech.reviews }}</a>
+        <span class="star-icon full">☆</span>{{ parameter.shop.rating }} - <a ng-href="{{ parameter.shop.reviews_link }}">Reviews: {{ parameter.shop.reviews }}</a>
     </p>
     <p>
-        <i class="fa fa-fw fa-usd text-inverse" aria-hidden="true"></i>{{ parameter.tech.price }} -
-        Warranty: {{ parameter.tech.warranty }}
-        <button ng-click="pick(parameter.tech.id, parameter.tech.name, parameter.tech.price, parameter.tech.warranty)" class="btn btn-danger">Pick</button>
+        <button class="btn btn-success book" ng-click="pick(parameter.shop.id)">Book</button>
     </p>
 </div>
