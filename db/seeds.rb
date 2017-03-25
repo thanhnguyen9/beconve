@@ -1,4 +1,6 @@
 a = User.create
+a.email = 'a@yaho.com'
+a.password = '11111111'
 a.name = 'Venus Signature Nails & Spa'
 a.address = '4550 Eldorado Pkwy, McKinney, TX 75070'
 a.rating = 4.6
@@ -8,6 +10,8 @@ a.image = 'https://s3-media2.fl.yelpcdn.com/bphoto/xIEdQO_ubEtkfI0vDFTfzw/o.jpg'
 a.save
 
 a = User.create
+a.email = 'b@yaho.com'
+a.password = '11111111'
 a.name = 'Hollywood Nails & Spa'
 a.address = '2890 Craig Dr #105, McKinney, TX 75070'
 a.rating = 3.2
@@ -17,6 +21,8 @@ a.image = 'http://www.hollywoodstarnailspa.com/images/images_home/03.jpg'
 a.save
 
 a = User.create
+a.email = 'c@yaho.com'
+a.password = '11111111'
 a.name = 'Virginia Nails'
 a.address = '2741 Virginia Pkwy # 200, McKinney, TX 75071'
 a.rating =  3.8
