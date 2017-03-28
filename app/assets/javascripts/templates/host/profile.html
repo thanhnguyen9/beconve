@@ -6,13 +6,13 @@
                     <div class="card">
                         <div class="card-block">
                             <div id="exTab2" class="container text-center">
-                               <h1>Create your Profile</h1>
+                                <div class="col-md-offset-3 col-md-6">
+                                    <div class="add-margin"></div>
+                                    <h1>Create your Profile</h1><br>
 
-                                <p class="alert alert-success" ng-show="info">{{ info }}</p>
+                                    <p class="alert alert-success" ng-show="info">{{ info }}</p>
+                                    <form name="updateProfile" novalidate>
 
-                                <form name="updateProfile" novalidate>
-
-                                    <div class="col-sm-6">
                                         <div class="form-group f-spacing">
                                             <label class="form-span-color">Shop Name</label>
                                             <input type="text"
@@ -36,76 +36,78 @@
                                                 <div style="color: red" ng-show="updateProfile.address.$error.required">Please input address.</div>
                                             </div>
 
-                                            <label class="form-span-color">Rating</label>
-                                            <input type=number step=0.01 min=0
-                                                   pattern="\d*"
-                                                   class="form-control input-lg"
-                                                   placeholder="4.9"
-                                                   ng-model="rating"
-                                                   name="rating"
-                                                   required>
-                                            <div ng-show="updateProfile.$submitted || updateProfile.rating.$touched">
-                                                <div style="color: red" ng-show="updateProfile.rating.$error.required">Please input rating.</div>
-                                            </div>
+                                            <!--<label class="form-span-color">Rating</label>-->
+                                            <!--<input type=number step=0.01 min=0-->
+                                            <!--pattern="\d*"-->
+                                            <!--class="form-control input-lg"-->
+                                            <!--placeholder="4.9"-->
+                                            <!--ng-model="rating"-->
+                                            <!--name="rating"-->
+                                            <!--required>-->
+                                            <!--<div ng-show="updateProfile.$submitted || updateProfile.rating.$touched">-->
+                                            <!--<div style="color: red" ng-show="updateProfile.rating.$error.required">Please input rating.</div>-->
+                                            <!--</div>-->
+                                            <label>Phone number</label><br>
+                                            <input class="form-control input-lg input-phone" type='text' phone-input ng-model="phoneVal" placeholder="(123) 456-6789" required/><br>
 
-                                        </div>
-                                    </div>
-
-                                    <div class="col-sm-6">
-                                        <div class="form-group f-spacing">
-                                            <label class="form-span-color">Reviews</label>
-                                            <input type="number" min=0
-                                                   pattern="\d*"
-                                                   class="form-control input-lg"
-                                                   placeholder="26"
-                                                   ng-model="reviews"
-                                                   name="reviews"
-                                                   required>
-                                            <div ng-show="updateProfile.$submitted || updateProfile.reviews.$touched">
-                                                <div style="color: red" ng-show="updateProfile.reviews.$error.required">Please input reviews.</div>
-                                            </div>
-
-                                            <label class="form-span-color">Reviews Google Link</label>
-                                            <input type="text"
-                                                   class="form-control input-lg"
-                                                   placeholder="https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=shop phone repair&tbs=lf:1,lf_ui:3&rflfq=1&rlha=0&rllag=32910342,-96882988,13846&tbm=lcl&rldimm=16317440246834225274&lrd=0x864c2eee6345cc25:0xe27331737437607a,1,"
-                                                   ng-model="reviews_link"
-                                                   name="reviews_link"
-                                                   required>
-                                            <div ng-show="updateProfile.$submitted || updateProfile.reviews_link.$touched">
-                                                <div style="color: red" ng-show="updateProfile.reviews_link.$error.required">Please input rating.</div>
-                                            </div>
-
-                                            <label class="form-span-color">Warranty</label>
+                                            <label class="form-span-color">Shop picture</label>
                                             <input type="text"
                                                    class="form-control input-lg"
                                                    placeholder=""
-                                                   ng-model="warranty"
-                                                   name="warranty"
+                                                   ng-model="image"
                                                    required>
-                                            <div ng-show="updateProfile.$submitted || updateProfile.warranty.$touched">
-                                                <div style="color: red" ng-show="updateProfile.warranty.$error.required">Please input warranty.</div>
+                                            <div ng-show="updateProfile.$submitted || updateProfile.image.$touched">
+                                                <div style="color: red" ng-show="updateProfile.image.$error.required">Tell us your name.</div>
                                             </div>
 
                                         </div>
-                                    </div>
 
-                                    <label class="form-span-color">Image</label>
-                                    <input type="text"
-                                           class="form-control input-lg"
-                                           placeholder=""
-                                           ng-model="image"
-                                           required>
-                                    <div ng-show="updateProfile.$submitted || updateProfile.image.$touched">
-                                        <div style="color: red" ng-show="updateProfile.image.$error.required">Tell us your name.</div>
-                                    </div>
+                                        <!--<div class="col-sm-6">-->
+                                        <!--<div class="form-group f-spacing">-->
+                                        <!--<label class="form-span-color">Reviews</label>-->
+                                        <!--<input type="number" min=0-->
+                                        <!--pattern="\d*"-->
+                                        <!--class="form-control input-lg"-->
+                                        <!--placeholder="26"-->
+                                        <!--ng-model="reviews"-->
+                                        <!--name="reviews"-->
+                                        <!--required>-->
+                                        <!--<div ng-show="updateProfile.$submitted || updateProfile.reviews.$touched">-->
+                                        <!--<div style="color: red" ng-show="updateProfile.reviews.$error.required">Please input reviews.</div>-->
+                                        <!--</div>-->
+
+                                        <!--<label class="form-span-color">Reviews Google Link</label>-->
+                                        <!--<input type="text"-->
+                                        <!--class="form-control input-lg"-->
+                                        <!--placeholder="https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=shop phone repair&tbs=lf:1,lf_ui:3&rflfq=1&rlha=0&rllag=32910342,-96882988,13846&tbm=lcl&rldimm=16317440246834225274&lrd=0x864c2eee6345cc25:0xe27331737437607a,1,"-->
+                                        <!--ng-model="reviews_link"-->
+                                        <!--name="reviews_link"-->
+                                        <!--required>-->
+                                        <!--<div ng-show="updateProfile.$submitted || updateProfile.reviews_link.$touched">-->
+                                        <!--<div style="color: red" ng-show="updateProfile.reviews_link.$error.required">Please input rating.</div>-->
+                                        <!--</div>-->
+
+                                        <!--<label class="form-span-color">Warranty</label>-->
+                                        <!--<input type="text"-->
+                                        <!--class="form-control input-lg"-->
+                                        <!--placeholder=""-->
+                                        <!--ng-model="warranty"-->
+                                        <!--name="warranty"-->
+                                        <!--required>-->
+                                        <!--<div ng-show="updateProfile.$submitted || updateProfile.warranty.$touched">-->
+                                        <!--<div style="color: red" ng-show="updateProfile.warranty.$error.required">Please input warranty.</div>-->
+                                        <!--</div>-->
+
+                                        <!--</div>-->
+                                        <!--</div>-->
+
+                                        <br>
+                                        <div>
+                                            <button type="submit" class="btn btn-success btn-lg" ng-click="updateProfile.$valid && submit()">Save profile</button>
+                                        </div>
+                                    </form>
                                     <br>
-                                    <div>
-                                        <button type="submit" class="btn btn-danger btn-lg" ng-click="updateProfile.$valid && submit()">Save profile</button>
-                                    </div>
-                                </form>
-
-
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -9,6 +9,7 @@
     "angular-resource": "latest",
     "angular-payments": "latest",
     "angular-spinner": "latest",
-    "angular-ui-bootstrap": "latest"
+    "angular-ui-bootstrap": "latest",
+    "angular-bootstrap-toggle": "latest"
   }
 }

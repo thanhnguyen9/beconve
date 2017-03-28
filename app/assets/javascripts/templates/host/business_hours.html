@@ -1,0 +1,233 @@
+<div>
+    <div class="section location-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-block">
+                            <div id="exTab2" class="container text-center">
+                                <div class="col-md-offset-3 col-md-6">
+                                    <div class="add-margin"></div>
+                                    <h1>Business Hours</h1>
+
+                                    <form name="updateBusinessHours" novalidate>
+
+                                        <div class="col-md-6">
+
+                                            <label>Monday</label><br>
+                                            <span>Open</span>
+                                            <input  type="radio" name="mondayOpenBox" ng-model="mondayContent" value="mondayOpen">
+                                            <span>Close</span>
+                                            <input type="radio" name="mondayCloseBox" ng-model="mondayContent" value="mondayClose">
+
+                                            <div class="wrapper">
+                                                <div ng-show="mondayContent == 'mondayOpen'">
+                                                    <label>Open</label>
+                                                    <input type="time" name="tuesday" ng-model="tuesday.open.value"
+                                                           required />
+                                                    <div role="alert">
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.required">Required!</span>
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.time">Not a valid date!</span>
+                                                    </div>
+
+                                                    <label>Close</label>
+                                                    <input type="time" name="monday" ng-model="tuesday.close.value"
+                                                           required />
+                                                    <div role="alert">
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.required">Required!</span>
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.time">Not a valid date!</span>
+                                                    </div>
+                                                </div>
+                                                <p ng-show="mondayContent == 'mondayClose'">Close on Monday</p>
+                                            </div>
+
+                                            <hr>
+
+                                            <label>Tuesday</label><br>
+                                            <span>Open</span>
+                                            <input  type="radio" name="tuesdayOpenBox" ng-model="tuesdayContent" value="tuesdayOpen">
+                                            <span>Close</span>
+                                            <input type="radio" name="tuesdayCloseBox" ng-model="tuesdayContent" value="tuesdayClose">
+
+                                            <div class="wrapper">
+                                                <div ng-show="tuesdayContent == 'tuesdayOpen'">
+                                                    <label>Open</label>
+                                                    <input type="time" name="tuesday" ng-model="tuesday.open.value"
+                                                           required />
+                                                    <div role="alert">
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.required">Required!</span>
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.time">Not a valid date!</span>
+                                                    </div>
+
+                                                    <label>Close</label>
+                                                    <input type="time" name="monday" ng-model="tuesday.close.value"
+                                                           required />
+                                                    <div role="alert">
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.required">Required!</span>
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.time">Not a valid date!</span>
+                                                    </div>
+                                                </div>
+                                                <p ng-show="tuesdayContent == 'tuesdayClose'">Close on Tuesday</p>
+                                            </div>
+
+                                            <hr>
+
+                                            <label>Wednesday</label><br>
+                                            <span>Open</span>
+                                            <input  type="radio" name="wednesdayOpenBox" ng-model="wednesdayContent" value="wednesdayOpen">
+                                            <span>Close</span>
+                                            <input type="radio" name="wednesdayCloseBox" ng-model="wednesdayContent" value="wednesdayClose">
+
+                                            <div class="wrapper">
+                                                <div ng-show="wednesdayContent == 'wednesdayOpen'">
+                                                    <label>Open</label>
+                                                    <input type="time" name="wednesday" ng-model="wednesday.open.value"
+                                                           required />
+                                                    <div role="alert">
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.required">Required!</span>
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.time">Not a valid date!</span>
+                                                    </div>
+
+                                                    <label>Close</label>
+                                                    <input type="time" name="wednesday" ng-model="wednesday.close.value"
+                                                           required />
+                                                    <div role="alert">
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.required">Required!</span>
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.time">Not a valid date!</span>
+                                                    </div>
+                                                </div>
+                                                <p ng-show="wednesdayContent == 'wednesdayClose'">Close on Wednesday</p>
+                                            </div>
+
+                                            <hr>
+
+                                            <label>Thursday</label><br>
+                                            <span>Open</span>
+                                            <input  type="radio" name="thursdayOpenBox" ng-model="thursdayContent" value="thursdayOpen">
+                                            <span>Close</span>
+                                            <input type="radio" name="thursdayCloseBox" ng-model="thursdayContent" value="thursdayClose">
+
+                                            <div class="wrapper">
+                                                <div ng-show="thursdayContent == 'thursdayOpen'">
+                                                    <label>Open</label>
+                                                    <input type="time" name="thursday" ng-model="thursday.open.value"
+                                                           required />
+                                                    <div role="alert">
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.required">Required!</span>
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.time">Not a valid date!</span>
+                                                    </div>
+
+                                                    <label>Close</label>
+                                                    <input type="time" name="thursday" ng-model="thursday.close.value"
+                                                           required />
+                                                    <div role="alert">
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.required">Required!</span>
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.time">Not a valid date!</span>
+                                                    </div>
+                                                </div>
+                                                <p ng-show="thursdayContent == 'thursdayClose'">Close on Thursday</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-6">
+                                            <label>Friday</label><br>
+                                            <span>Open</span>
+                                            <input  type="radio" name="fridayOpenBox" ng-model="fridayContent" value="fridayOpen">
+                                            <span>Close</span>
+                                            <input type="radio" name="fridayCloseBox" ng-model="fridayContent" value="fridayClose">
+
+                                            <div class="wrapper">
+                                                <div ng-show="fridayContent == 'fridayOpen'">
+                                                    <label>Open</label>
+                                                    <input type="time" name="friday" ng-model="friday.open.value"
+                                                           required />
+                                                    <div role="alert">
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.required">Required!</span>
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.time">Not a valid date!</span>
+                                                    </div>
+
+                                                    <label>Close</label>
+                                                    <input type="time" name="friday" ng-model="friday.close.value"
+                                                           required />
+                                                    <div role="alert">
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.required">Required!</span>
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.time">Not a valid date!</span>
+                                                    </div>
+                                                </div>
+                                                <p ng-show="fridayContent == 'fridayClose'">Close on Friday</p>
+                                            </div>
+
+                                            <hr>
+
+                                            <label>Saturday</label><br>
+                                            <span>Open</span>
+                                            <input  type="radio" name="saturdayOpenBox" ng-model="saturdayContent" value="saturdayOpen">
+                                            <span>Close</span>
+                                            <input type="radio" name="saturdayCloseBox" ng-model="saturdayContent" value="saturdayClose">
+
+                                            <div class="wrapper">
+                                                <div ng-show="saturdayContent == 'saturdayOpen'">
+                                                    <label>Open</label>
+                                                    <input type="time" name="saturday" ng-model="saturday.open.value"
+                                                           required />
+                                                    <div role="alert">
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.required">Required!</span>
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.time">Not a valid date!</span>
+                                                    </div>
+
+                                                    <label>Close</label>
+                                                    <input type="time" name="saturday" ng-model="saturday.close.value"
+                                                           required />
+                                                    <div role="alert">
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.required">Required!</span>
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.time">Not a valid date!</span>
+                                                    </div>
+                                                </div>
+                                                <p ng-show="saturdayContent == 'saturdayClose'">Close on saturday</p>
+                                            </div>
+
+                                            <hr>
+
+                                            <label>Sunday</label><br>
+                                            <span>Open</span>
+                                            <input  type="radio" name="sundayOpenBox" ng-model="sundayContent" value="sundayOpen">
+                                            <span>Close</span>
+                                            <input type="radio" name="sundayCloseBox" ng-model="sundayContent" value="sundayClose">
+
+                                            <div class="wrapper">
+                                                <div ng-show="sundayContent == 'sundayOpen'">
+                                                    <label>Open</label>
+                                                    <input type="time" name="sunday" ng-model="sunday.open.value"
+                                                           required />
+                                                    <div role="alert">
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.required">Required!</span>
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.time">Not a valid date!</span>
+                                                    </div>
+
+                                                    <label>Close</label>
+                                                    <input type="time" name="sunday" ng-model="sunday.close.value"
+                                                           required />
+                                                    <div role="alert">
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.required">Required!</span>
+                                                        <span class="error" ng-show="updateBusinessHours.input.$error.time">Not a valid date!</span>
+                                                    </div>
+                                                </div>
+                                                <p ng-show="sundayContent == 'sundayClose'">Close on sunday</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12" style="margin: 1em 0 1em 0">
+                                            <button type="submit" class="btn btn-success btn-lg" ng-click="saveHours()">Save Hours</button>
+                                        </div>
+                                    </form>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,10 +1,10 @@
 angular.module('BeConve')
-    .controller('profileController', ['$scope', '$location', 'Technician', 'Auth', '$http',
-        function($scope, $location, Technician, Auth, $http) {
+    .controller('profileController', ['$scope', '$location', 'Shop', 'Auth', '$http',
+        function($scope, $location, Shop, Auth, $http) {
 
         Auth.currentUser().then(function(user) {
 
-            var tech = Technician.get({ id: user.id }, function() {
+            var tech = Shop.get({ id: user.id }, function() {
                 $scope.name = tech.response.name;
                 $scope.phone = tech.response.phone;
                 $scope.rating = tech.response.rating;

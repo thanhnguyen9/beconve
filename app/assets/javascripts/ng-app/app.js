@@ -57,6 +57,10 @@ angular
                     templateUrl: 'host/profile.html',
                     controller: 'profileController'
                 })
+                .when('/business_hour', {
+                    templateUrl: 'host/business_hours.html',
+                    controller: 'businessHoursController'
+                })
             ;
 
             uiGmapGoogleMapApiProvider.configure({
