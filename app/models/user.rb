@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -14,5 +15,9 @@ class User < ActiveRecord::Base
     price_select = Price.prices_search_for_model_and_issue(model, issue)
     nearby = User.where(status: 'online').near(add, 10)
     User.joins(:prices).select('prices.*, users.*').merge(nearby).merge(price_select)
+  end
+
+  def promote
+    self.add_role :host
   end
 end

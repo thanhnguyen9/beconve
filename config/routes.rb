@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
+  devise_for :users, :controllers => {
+      :registrations => "registrations",
+      :omniauth_callbacks => "omniauth_callbacks"
+  }
+
+  devise_scope :user do
+    match 'host/sign_up', to: 'registrations#new', user: { role: 'host' }, via: [:get]
+    match 'user/sign_up', to: 'registrations#new', user: { role: 'customer' }, via: [:get]
+  end
 
   root 'application#index'
 
@@ -10,6 +18,7 @@ Rails.application.routes.draw do
       resources :shops
       resources :checkouts,  only: [:new, :create, :show]
       resources :prices, only: [:index, :create, :update, :show]
+
 
       get '/technicians/complete_request' => 'technicians#complete_request'
       put '/technicians/repair_request/approve' => 'technicians#approve'
@@ -22,6 +31,6 @@ Rails.application.routes.draw do
       put '/repair_requests/cancel_action' => 'repair_requests#cancel_action'
     end
   end
-
+  get '/shops/host_sign_up' => 'tests#host_sign_up'
   get '*path' => 'application#index'
 end
