@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  customer_id: 1
+  start_time: 2017-03-28 23:53:08
+  end_time: 2017-03-28 23:53:08
+  price: 1.5
+
+two:
+  user_id: 1
+  customer_id: 1
+  start_time: 2017-03-28 23:53:08
+  end_time: 2017-03-28 23:53:08
+  price: 1.5
