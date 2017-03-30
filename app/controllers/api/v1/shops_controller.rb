@@ -7,8 +7,12 @@ module Api
       end
 
       def show
+        date = DateTime.now
+        date = params['date'] if params['date'].present?
+
+# binding.pry
         begin
-        user = User.find(params[:id])
+          user = User.find(params[:id])
 
         rescue => e
           respond_to do |format|  ## Add this
@@ -18,6 +22,7 @@ module Api
         end
 
         # user = User.find(params[:id])
+
         respond_to do |format|  ## Add this
           format.json { render json: user.to_json(:include => :business_hours), status: 'success' }
         end

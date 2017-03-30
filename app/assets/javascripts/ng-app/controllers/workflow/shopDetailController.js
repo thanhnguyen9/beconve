@@ -24,37 +24,6 @@ angular
             $scope.itemsPerPage = num;
             $scope.currentPage = 1; //reset to first paghe
         };
-        $ctrl.hours = [
-            {
-                date: "Monday",
-                hour: "9:00AM - 7:00 PM"
-            },
-            {
-                date: "Tuesday",
-                hour: "9:00AM - 7:00 PM"
-            },
-            {
-                date: "Wedsday",
-                hour: "9:00AM - 7:00 PM"
-            },
-            {
-                date: "Thursday",
-                hour: "9:00AM - 7:00 PM"
-            },
-            {
-                date: "Friday",
-                hour: "9:00AM - 7:00 PM"
-            },
-            {
-                date: "Saturday",
-                hour: "12:00AM - 6:00 PM"
-            },
-            {
-                date: "Sunday",
-                hour: "Closed"
-            }
-
-        ];
 
         var shopInfo = Shop.get({id: $routeParams.id});
         shopInfo.$promise.then(function(res){
@@ -169,107 +138,14 @@ angular
             $ctrl.animationsEnabled = !$ctrl.animationsEnabled;
         };
 
-        $ctrl.today = function() {
-            $ctrl.dt = new Date();
-        };
-        $ctrl.today();
-
-        $ctrl.clear = function() {
-            $ctrl.dt = null;
-        };
-
-        $ctrl.inlineOptions = {
-            customClass: getDayClass,
-            minDate: new Date(),
-            showWeeks: true
-        };
-
-        $ctrl.dateOptions = {
-            dateDisabled: disabled,
-            formatYear: 'yy',
-            maxDate: new Date(2020, 5, 22),
-            minDate: new Date(),
-            startingDay: 1
-        };
-
-        // Disable weekend selection
-        function disabled(data) {
-            var date = data.date,
-                mode = data.mode;
-            return mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);
-        }
-
-        $ctrl.toggleMin = function() {
-            $ctrl.inlineOptions.minDate = $ctrl.inlineOptions.minDate ? null : new Date();
-            $ctrl.dateOptions.minDate = $ctrl.inlineOptions.minDate;
-        };
-
-        $ctrl.toggleMin();
-
-        $ctrl.open1 = function() {
-            $ctrl.popup1.opened = true;
-        };
-
-        $ctrl.open2 = function() {
-            $ctrl.popup2.opened = true;
-        };
-
-        $ctrl.setDate = function(year, month, day) {
-            $ctrl.dt = new Date(year, month, day);
-        };
-
-        $ctrl.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
-        $ctrl.format = $ctrl.formats[0];
-        $ctrl.altInputFormats = ['M!/d!/yyyy'];
-
-        $ctrl.popup1 = {
-            opened: false
-        };
-
-        $ctrl.popup2 = {
-            opened: false
-        };
-
-        var tomorrow = new Date();
-        tomorrow.setDate(tomorrow.getDate() + 1);
-        var afterTomorrow = new Date();
-        afterTomorrow.setDate(tomorrow.getDate() + 1);
-        $ctrl.events = [
-            {
-                date: tomorrow,
-                status: 'full'
-            },
-            {
-                date: afterTomorrow,
-                status: 'partially'
-            }
-        ];
-
-        function getDayClass(data) {
-            var date = data.date,
-                mode = data.mode;
-            if (mode === 'day') {
-                var dayToCheck = new Date(date).setHours(0,0,0,0);
-
-                for (var i = 0; i < $ctrl.events.length; i++) {
-                    var currentDay = new Date($ctrl.events[i].date).setHours(0,0,0,0);
-
-                    if (dayToCheck === currentDay) {
-                        return $ctrl.events[i].status;
-                    }
-                }
-            }
-
-            return '';
-        }
-
     }]);
 
 // Please note that $uibModalInstance represents a modal window (instance) dependency.
 // It is not the same as the $uibModal service used above.
 
 angular.module('BeConve').controller('ModalInstanceCtrl', [ '$scope', '$uibModalInstance', 'items', 'ModalData', '$sessionStorage',
-    function ($scope, $uibModalInstance, items, ModalData, $sessionStorage) {
+    'Shop', '$routeParams',
+    function ($scope, $uibModalInstance, items, ModalData, $sessionStorage, Shop, $routeParams) {
 
         var $ctrl = this;
         $ctrl.items = items;
@@ -305,7 +181,7 @@ angular.module('BeConve').controller('ModalInstanceCtrl', [ '$scope', '$uibModal
         $scope.dateOptions = {
             dateDisabled: disabled,
             formatYear: 'yy',
-            maxDate: new Date(2018, 5, 22),
+            maxDate: new Date(2017, 12, 31),
             min: new Date(),
             startingDay: 1
         };
@@ -381,6 +257,48 @@ angular.module('BeConve').controller('ModalInstanceCtrl', [ '$scope', '$uibModal
         $scope.timeSlot = function (timeSlot){
             $scope.timeSlotSelected = timeSlot
         };
+
+        $scope.$watch('dt', function(newVal, oldVal) {
+
+            dateSelected = newVal.getFullYear() + ',' + (parseInt(newVal.getMonth()) + 1).toString() + ',' + newVal.getDate();
+
+            var shopInfo = Shop.get({id: $routeParams.id, 'date': dateSelected});
+            shopInfo.$promise.then(function(res){
+                if(res.status === 'failed'){
+                    $ctrl.error = "Something went wrong. Can't find shop id. Please refresh the page"
+                }else{
+                    $ctrl.shop = res;
+
+                    $ctrl.format_bussiness_hour = [];
+
+                    for(i=0;i < $ctrl.shop.business_hours.length;i++){
+
+                        json_object = {};
+
+
+                        if ($ctrl.shop.business_hours[i].open === true) {
+                            open_time = $ctrl.shop.business_hours[i].open_time.split('T')[1].split(':').slice(0,2).join(':');
+                            close_time = $ctrl.shop.business_hours[i].close_time.split('T')[1].split(':').slice(0,2).join(':');
+                            json_object = {
+                                day: $ctrl.shop.business_hours[i].day,
+                                hour: open_time+ ' - ' + close_time
+                            };
+
+                            $ctrl.format_bussiness_hour.push(json_object)
+                        }else{
+                            json_object = {
+                                day: $ctrl.shop.business_hours[i].day,
+                                hour: 'Closed'
+                            };
+                            $ctrl.format_bussiness_hour.push(json_object)
+                        }
+                    }
+
+                    $sessionStorage['shopName'] = $ctrl.shop.name
+                }
+                $ctrl.loading = false;
+            });
+        })
 
     }]);
 
