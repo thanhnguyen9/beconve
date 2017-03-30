@@ -15,6 +15,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-md-offset-1">
+
+                    <p style="color: red;" ng-if="$ctrl.error">{{ $ctrl.error }}</p>
+
                     <p>I have over seven years in the business and I'm passionate about my work. I will make sure your walking out in style and satisfied. When you sit in my chair your nail right belong to me.</p>
                     <hr>
 
@@ -68,8 +71,8 @@
                     <h4 class="text-center">Business Hours</h4>
                     <div class="row">
                         <ul>
-                            <li ng-repeat="hour in $ctrl.hours" ng-bind-html-unsafe="opt.text", class="" style="list-style-type: none;">
-                                {{ hour.date }}: {{ hour.hour }}
+                            <li ng-repeat="hour in $ctrl.format_bussiness_hour" ng-bind-html-unsafe="opt.text", class="" style="list-style-type: none;">
+                                {{ hour.day }}: {{ hour.hour}}
                             </li>
                         </ul>
                         <br>

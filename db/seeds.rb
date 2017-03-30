@@ -32,5 +32,27 @@ a.warranty = '9 months'
 a.image = 'http://az616578.vo.msecnd.net/files/2016/06/03/636005240725965631-621871392_1417037504860.jpeg'
 a.save
 
+%w(Monday Tuesday Wednesday Thursday Friday Saturday).each do |i|
+  BusinessHour.create(user_id: 1, day: i, open_time:  DateTime.new(2011,10,1,8,30), close_time: DateTime.new(2011,10,1,19), open: true)
+end
+
+a = BusinessHour.new
+a.user_id = 1
+a.day = 'Sunday'
+a.open = false
+a.save
+
+%w(Monday Tuesday Wednesday Thursday Friday Saturday).each do |i|
+  BusinessHour.create(user_id: 2, day: i, open_time:  DateTime.new(2011,10,1,8), close_time: DateTime.new(2011,10,1,20), open: true)
+end
+
+a = BusinessHour.new
+a.user_id = 2
+a.day = 'Sunday'
+a.open_time =  DateTime.new(2011,10,1,10)
+a.close_time = DateTime.new(2011,10,1,18)
+a.open = true
+a.save
+
 AvailableCity.create(name: 'McKinney, Texas', longitude: -96.6398, latitude: 33.1972)
 AvailableCity.create(name: 'Dallas, Texas', longitude: -96.7970, latitude: 32.7767)

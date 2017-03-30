@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
 
   has_many :appointments
   has_many :customers, through: :appointments, class_name: "User"
+  has_many :business_hours
 
   def promote
     self.add_role :host

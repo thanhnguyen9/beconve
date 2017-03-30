@@ -11,7 +11,7 @@ angular
 
             ];
 
-            Shop.query({'location':$sessionStorage.location}, function(res){
+            Shop.query({'location': $sessionStorage.location}, function(res){
 
                 if(res.status === 'success'){
 

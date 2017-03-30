@@ -7,8 +7,20 @@ module Api
       end
 
       def show
+        begin
         user = User.find(params[:id])
-        render json: {status: 'success',response: user}
+
+        rescue => e
+          respond_to do |format|  ## Add this
+            format.json { render json: {status: 'failed'}, status: :not_found }
+          end
+          return
+        end
+
+        # user = User.find(params[:id])
+        respond_to do |format|  ## Add this
+          format.json { render json: user.to_json(:include => :business_hours), status: 'success' }
+        end
       end
 
       def update

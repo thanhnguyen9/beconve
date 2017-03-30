@@ -3,8 +3,8 @@ class CreateAppointments < ActiveRecord::Migration
     create_table :appointments do |t|
       t.integer :user_id
       t.integer :customer_id
-      t.datetime :start_time
-      t.datetime :end_time
+      t.time :start_time
+      t.time :end_time
       t.float :price
 
       t.timestamps null: false

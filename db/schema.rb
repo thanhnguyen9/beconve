@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170329045308) do
+ActiveRecord::Schema.define(version: 20170329153705) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 20170329045308) do
   create_table "appointments", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "customer_id"
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.time     "start_time"
+    t.time     "end_time"
     t.float    "price"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -30,6 +30,16 @@ ActiveRecord::Schema.define(version: 20170329045308) do
     t.text     "name"
     t.float    "longitude"
     t.float    "latitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "business_hours", force: :cascade do |t|
+    t.integer  "user_id"
+    t.text     "day"
+    t.time     "open_time"
+    t.time     "close_time"
+    t.boolean  "open"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
