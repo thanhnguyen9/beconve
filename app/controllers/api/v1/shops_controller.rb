@@ -29,22 +29,13 @@ module Api
         # total_slots.each do |i|
         #   available_slots << "#{i.hour}:#{i.min}"
         # end
+        user = User.find(params[:id])
+        render status: 200, json: {
+            status: "success",
+            shop: user.as_json(:include => :business_hours),
+            slots: total_slots
+        }.to_json
 
-        begin
-          user = User.find(params[:id])
-
-        rescue => e
-          respond_to do |format|  ## Add this
-            format.json { render json: {status: 'failed'}, status: :not_found }
-          end
-          return
-        end
-
-        # user = User.find(params[:id])
-
-        respond_to do |format|  ## Add this
-          format.json { render json: {shop: user.as_json(:include => :business_hours), slots: total_slots, status: 'success'}, status: 'success' }
-        end
       end
 
       def update

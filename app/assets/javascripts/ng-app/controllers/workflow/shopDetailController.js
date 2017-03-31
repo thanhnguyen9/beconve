@@ -269,7 +269,7 @@ angular.module('BeConve').controller('ModalInstanceCtrl', [ '$scope', '$uibModal
                         $scope.data.push(res.slots[i].split('T')[1].split(':').slice(0,2).join(':'));
                     }
 
-                    $scope.viewby = 5;
+                    $scope.viewby = 10;
                     $scope.totalItems = $scope.data.length;
                     $scope.currentPage = 1;
                     $scope.itemsPerPage = $scope.viewby;
