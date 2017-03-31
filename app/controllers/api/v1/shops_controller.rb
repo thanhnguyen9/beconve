@@ -7,10 +7,29 @@ module Api
       end
 
       def show
-        date = DateTime.now
-        date = params['date'] if params['date'].present?
 
-# binding.pry
+        date_selected = DateTime.now
+        if params['date'].present?
+          arr_date = params['date'].split(',')
+          date_selected = Date.new(arr_date[0].to_i, arr_date[1].to_i, arr_date[2].to_i)
+        end
+
+        business_hour = BusinessHour.where(user_id: params[:id], day: date_selected.strftime("%A"))[0]
+
+        open_time = convert_to_date_time(business_hour.open_time)
+        close_time = convert_to_date_time(business_hour.close_time)
+
+        thirty_minutes_step = (1.to_f/24/2)
+        total_slots = []
+        available_slots = []
+
+        open_time.step(close_time, thirty_minutes_step).each{|e| total_slots << e}
+        total_slots.pop
+
+        # total_slots.each do |i|
+        #   available_slots << "#{i.hour}:#{i.min}"
+        # end
+
         begin
           user = User.find(params[:id])
 
@@ -24,7 +43,7 @@ module Api
         # user = User.find(params[:id])
 
         respond_to do |format|  ## Add this
-          format.json { render json: user.to_json(:include => :business_hours), status: 'success' }
+          format.json { render json: {shop: user.as_json(:include => :business_hours), slots: total_slots, status: 'success'}, status: 'success' }
         end
       end
 
@@ -59,6 +78,10 @@ module Api
         params.require(:user).permit(:name, :address, :warranty, :response_time, :rating, :reviews, :reviews_link, :device_count, :image, :status)
       end
 
+      def convert_to_date_time(attr)
+        now = DateTime.now
+        DateTime.new(now.year, now.month, now.day, attr.hour, attr.min, 0, now.zone)
+      end
     end
   end
 end

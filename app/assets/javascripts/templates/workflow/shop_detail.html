@@ -103,13 +103,14 @@
             <hr>
 
             <ul>
-                <li style="display: inline;" ng-repeat="row in data.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))"><button class="btn btn-default time-slot" ng-click="timeSlot(row.name)">{{row.name}}</button></li>
+                <li style="display: inline;" ng-repeat="row in data.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))"><button class="btn btn-default time-slot" ng-click="timeSlot(row)">{{row}}</button></li>
             </ul>
+
             <ul uib-pager total-items="totalItems" ng-model="currentPage"></ul>
 
             <hr>
             <div ng-if="timeSlotSelected">
-                <p style="font-size: 20px" >Schedule at {{ timeSlotSelected }} on {{dt | date:'fullDate' }} </p>
+                <p style="font-size: 20px" >Schedule at {{ timeSlotSelected }} on {{dt}} </p>
             </div>
 
         </div>

@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 20170329153705) do
   create_table "appointments", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "customer_id"
-    t.time     "start_time"
-    t.time     "end_time"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.float    "price"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 20170329153705) do
   create_table "business_hours", force: :cascade do |t|
     t.integer  "user_id"
     t.text     "day"
-    t.time     "open_time"
-    t.time     "close_time"
+    t.datetime "open_time"
+    t.datetime "close_time"
     t.boolean  "open"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
