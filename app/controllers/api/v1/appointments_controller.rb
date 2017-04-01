@@ -8,7 +8,6 @@ module Api
 
       def create
         Stripe.api_key = ENV["STRIPE_SECRET_KEY"]
-binding.pry
         # Get the credit card details submitted by the form
         token = params[:appointment][:stripeToken]
 
