@@ -19,6 +19,7 @@ Rails.application.routes.draw do
       resources :checkouts,  only: [:new, :create, :show]
       resources :prices, only: [:index, :create, :update, :show]
       resources :business_hours
+      resources :appointments
 
       get '/technicians/complete_request' => 'technicians#complete_request'
       put '/technicians/repair_request/approve' => 'technicians#approve'

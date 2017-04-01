@@ -34,8 +34,8 @@ module Api
           @order.charge_id = charge.id
 
           if @order.save
-            EmailRepairRequestNotification.to_tech(@order).deliver_now
-            EmailRepairRequestNotification.to_customer(@order).deliver_now
+            EmailBookNotification.to_tech(@order).deliver_now
+            EmailBookNotification.to_customer(@order).deliver_now
             render json: {result: 'success'}
           else
             render json: {result: 'Something went wrong. Please refresh the page and try again'}

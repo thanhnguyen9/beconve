@@ -92,7 +92,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <p class="input-group">
-                        <input type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                        <input type="text" class="form-control" uib-datepicker-popup ng-model="dateSelected" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
                         <span class="input-group-btn">
                             <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
                           </span>
@@ -110,13 +110,41 @@
             <ul uib-pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" items-per-page="viewby" class="pagination-sm" boundary-link-numbers="true" rotate="false"></ul>
             <hr>
             <div ng-if="timeSlotSelected">
-                <p style="font-size: 20px" >Schedule at {{ timeSlotSelected }} on {{dt}} </p>
+                <p style="font-size: 20px" >Schedule at {{ timeSlotSelected }} on {{dateSelected}} </p>
             </div>
+
+            <form stripe-form="stripeCallback" name="checkoutForm">
+
+                <!--<label>Name</label><br>-->
+                <!--<input class="form-control" type='text' ng-model="customerName" placeholder="John Smith"/><br>-->
+
+                <!--<label>Phone number</label><br>-->
+                <!--<input class="form-control input-phone" type='text' phone-input ng-model="customerPhone" placeholder="(123) 456-6789" required/><br>-->
+
+                <label>Card Number</label>
+                <input class="form-control" ng-model="number" placeholder="Card Number"
+                       payments-format="card" payments-validate="card" name="card" required/><br>
+
+                <label>Expiration MM/YYYY</label>
+                <input class="form-control" ng-model="expiry" placeholder="MM/YYYY"
+                       payments-format="expiry" payments-validate="expiry"
+                       name="expiry" required/><br>
+
+                <label>CVC</label>
+                <input class="form-control" ng-model="cvc" placeholder="CVC" payments-format="cvc" payments-validate="cvc" name="cvc" required/><br>
+
+                <div ng-if="checkoutForm.$invalid" class="alert alert-danger">
+                    Error: Please correct card's information
+                </div>
+
+                <button type="submit" class="btn btn-success btn-lg pull-right" ng-hide="paying" ng-click="reserve()">Book Now</button>
+                <img src="http://i.imgur.com/Ty0Mioy.gif" class="stripe-connect-icon img-responsive" style="text-align: center" alt="" ng-show="paying">
+            </form>
 
         </div>
         <div class="modal-footer">
             <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
-            <button class="btn btn-success" type="button" ng-click="$ctrl.ok()">Continue</button>
+            <button class="btn btn-success" type="button" ng-click="$ctrl.goToPayment()">Next</button>
         </div>
     </script>
 

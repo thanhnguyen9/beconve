@@ -24,6 +24,15 @@ angular.module('BeConve')
         })
     }])
 
+    .factory('Appointment',['$resource', function($resource) {
+        return $resource('/api/v1/appointments/:id', { id: '@id' }, {
+            update: {method: 'PUT'},
+            query: {method: 'GET'},
+            get: {method: 'GET'},
+            delete: {method: 'DELETE'}
+        })
+    }])
+
     .factory('Order',['$resource', function($resource) {
         return $resource('/api/v1/checkouts/:id', { id: '@id' }, {
             update: {method: 'PUT'},

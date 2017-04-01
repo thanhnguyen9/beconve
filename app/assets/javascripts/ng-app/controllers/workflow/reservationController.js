@@ -33,7 +33,7 @@ angular
               $scope.error = response.error;
             } else {
               // got stripe token, now charge it or smt
-              token = response.id
+              token = response.id;
               $scope.order = new Order(); //You can instantiate resource class
 
                 $scope.order.order = {};

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+  </head>
+  <body>
+    <p>Hi,</p><br>
+
+    <p>You have scheduled an appointment at <%= @appointment.start_time %></p>
+
+    <% phone = @shop.phone.scan(/.../).join('-') %>
+    <p><span style="font-weight: bold;">Please call the shop if you would like to cancel the appointment </span><a href="tel:+1-<%= phone + @shop.phone.split('').last%>"><%= @shop.phone %></a></p>
+
+    <p>Thank you for using BECONVE</p>
+  </body>
+</html>

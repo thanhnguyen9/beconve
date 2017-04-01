@@ -133,8 +133,8 @@ angular
 // It is not the same as the $uibModal service used above.
 
 angular.module('BeConve').controller('ModalInstanceCtrl', [ '$scope', '$uibModalInstance', 'items', 'ModalData', '$sessionStorage',
-    'Shop', '$routeParams',
-    function ($scope, $uibModalInstance, items, ModalData, $sessionStorage, Shop, $routeParams, TimeSlots) {
+    'Shop', '$routeParams', 'Appointment',
+    function ($scope, $uibModalInstance, items, ModalData, $sessionStorage, Shop, $routeParams, Appointment) {
 
         var $ctrl = this;
         $ctrl.items = items;
@@ -153,12 +153,12 @@ angular.module('BeConve').controller('ModalInstanceCtrl', [ '$scope', '$uibModal
         // Datepicker
 
         $scope.today = function() {
-            $scope.dt = new Date();
+            $scope.dateSelected = new Date();
         };
         $scope.today();
 
         $scope.clear = function() {
-            $scope.dt = null;
+            $scope.dateSelected = null;
         };
 
         $scope.inlineOptions = {
@@ -194,9 +194,8 @@ angular.module('BeConve').controller('ModalInstanceCtrl', [ '$scope', '$uibModal
         };
 
         $scope.setDate = function(year, month, day) {
-            $scope.dt = new Date(year, month, day);
+            $scope.dateSelected = new Date(year, month, day);
         };
-
 
         $scope.popup2 = {
             opened: false
@@ -227,7 +226,7 @@ angular.module('BeConve').controller('ModalInstanceCtrl', [ '$scope', '$uibModal
             $scope.timeSlotSelected = timeSlot
         };
 
-        $scope.$watch('dt', function(newVal, oldVal) {
+        $scope.$watch('dateSelected', function(newVal, oldVal) {
 
             dateSelected = newVal.getFullYear() + ',' + (parseInt(newVal.getMonth()) + 1).toString() + ',' + newVal.getDate();
 
@@ -292,7 +291,45 @@ angular.module('BeConve').controller('ModalInstanceCtrl', [ '$scope', '$uibModal
                 }
                 $ctrl.loading = false;
             });
-        })
+        });
+
+        $scope.reserve = function () {
+            $scope.appointment = {
+
+            };
+
+            $scope.stripeCallback = function(status, response){
+                if(response.error) {
+                    $scope.error = response.error;
+                } else {
+                    // got stripe token, now charge it or smt
+                    token = response.id;
+                    $scope.appointment = new Appointment(); //You can instantiate resource class
+
+                    $scope.appointment.appointment = {};
+
+                    //tech_id: $scope.tech_id,
+                    $scope.appointment.appointment.stripeToken = token;
+                    $scope.appointment.appointment.user_id = $routeParams.id;
+                    // $scope.appointment.appointment.customerPhone = $scope.customerPhone;
+                    $scope.appointment.appointment.timeSlotSelected = $scope.timeSlotSelected;
+                    $scope.appointment.appointment.dateSelected = $scope.dateSelected;
+
+                    $scope.appointment.$save(function(response) {
+                        if (response.result === 'success'){
+                            $location.path('/thank_you');
+                        } else if (response.result === 'Shop is no longer available. Please select another shop'){
+                            $scope.error = response.result;
+                            $scope.goBackAvailability = true;
+                        } else {
+                            $scope.error = response.result + ' Please refresh and try again';
+                        }
+                    }, function(data,headers) {
+                        $scope.error = 'Something went wrong. Please refresh and try again';
+                    });
+                }
+            }
+        };
 
     }]);
 
