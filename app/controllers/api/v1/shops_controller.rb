@@ -7,7 +7,9 @@ module Api
       end
 
       def show
-        date_selected = Time.now.in_time_zone("Central Time (US & Canada)")
+        user = User.find(params[:id])
+        time_now = Time.now.in_time_zone("Central Time (US & Canada)")
+        date_selected = time_now
 
         if params['date'].present?
           arr_date = params['date'].split(',')
@@ -15,26 +17,36 @@ module Api
         end
 
         business_hour = BusinessHour.where(user_id: params[:id], day: date_selected.strftime("%A"), open: true)[0]
-
-        open_time = convert_to_date_time(business_hour.open_time)
-        close_time = convert_to_date_time(business_hour.close_time)
-
-        thirty_minutes_step = (1.to_f/24/2)
         total_slots = []
-        available_slots = []
 
-        open_time.step(close_time, thirty_minutes_step).each{|e| total_slots << e}
-        total_slots.pop
+        if business_hour.nil?
+          render status: 200, json: {
+              status: "success",
+              shop: user.as_json(:include => :business_hours),
+              slots: total_slots
+          }.to_json
+        else
+          open_time = convert_to_date_time(params['date'], business_hour.open_time)
+          close_time = convert_to_date_time(params['date'], business_hour.close_time)
 
-        # total_slots.each do |i|
-        #   available_slots << "#{i.hour}:#{i.min}"
-        # end
-        user = User.find(params[:id])
-        render status: 200, json: {
-            status: "success",
-            shop: user.as_json(:include => :business_hours),
-            slots: total_slots
-        }.to_json
+          thirty_minutes_step = (1.to_f/24/2)
+          total_slots = []
+          available_slots = []
+
+          open_time.step(close_time, thirty_minutes_step) do |e|
+            total_slots << e if e > time_now + 900
+          end
+          total_slots.pop
+
+          # total_slots.each do |i|
+          #   available_slots << "#{i.hour}:#{i.min}"
+          # end
+          render status: 200, json: {
+              status: "success",
+              shop: user.as_json(:include => :business_hours),
+              slots: total_slots
+          }.to_json
+        end
 
       end
 
@@ -69,9 +81,9 @@ module Api
         params.require(:user).permit(:name, :address, :warranty, :response_time, :rating, :reviews, :reviews_link, :device_count, :image, :status)
       end
 
-      def convert_to_date_time(attr)
-        now = DateTime.now
-        DateTime.new(now.year, now.month, now.day, attr.hour, attr.min, 0, now.zone)
+      def convert_to_date_time(date, time)
+        arr_date = date.split(',')
+        DateTime.new(arr_date[0].to_i, arr_date[1].to_i, arr_date[2].to_i, time.hour, time.min, 0)
       end
     end
   end

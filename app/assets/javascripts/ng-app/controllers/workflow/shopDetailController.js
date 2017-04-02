@@ -15,21 +15,21 @@ angular
 
                 $ctrl.format_bussiness_hour = [];
 
-                for(i=0;i < $ctrl.shop.business_hours.length;i++){
+                for (i = 0; i < $ctrl.shop.business_hours.length; i++) {
 
                     json_object = {};
 
 
                     if ($ctrl.shop.business_hours[i].open === true) {
-                        open_time = $ctrl.shop.business_hours[i].open_time.split('T')[1].split(':').slice(0,2).join(':');
-                        close_time = $ctrl.shop.business_hours[i].close_time.split('T')[1].split(':').slice(0,2).join(':');
+                        open_time = $ctrl.shop.business_hours[i].open_time.split('T')[1].split(':').slice(0, 2).join(':');
+                        close_time = $ctrl.shop.business_hours[i].close_time.split('T')[1].split(':').slice(0, 2).join(':');
                         json_object = {
                             day: $ctrl.shop.business_hours[i].day,
-                            hour: open_time+ ' - ' + close_time
+                            hour: open_time + ' - ' + close_time
                         };
 
                         $ctrl.format_bussiness_hour.push(json_object)
-                    }else{
+                    } else {
                         json_object = {
                             day: $ctrl.shop.business_hours[i].day,
                             hour: 'Closed'
@@ -40,11 +40,13 @@ angular
 
                 $ctrl.availableSlots = [];
 
-                for(i=0;i < res.slots.length;i++){
-                    $ctrl.availableSlots.push(res.slots[i].split('T')[1].split(':').slice(0,2).join(':'));
+                for (i = 0; i < res.slots.length; i++) {
+                    $ctrl.availableSlots.push(res.slots[i].split('T')[1].split(':').slice(0, 2).join(':'));
                 }
 
-                TimeSlots = $ctrl.availableSlots;
+                if ($ctrl.availableSlots.length == 0) {
+                    $ctrl.timeSlotMessage = 'Shop is closed.'
+                }
 
                 $sessionStorage['shopName'] = $ctrl.shop.name
             }
@@ -230,7 +232,7 @@ angular.module('BeConve').controller('ModalInstanceCtrl', [ '$scope', '$uibModal
 
             dateSelected = newVal.getFullYear() + ',' + (parseInt(newVal.getMonth()) + 1).toString() + ',' + newVal.getDate();
 
-            var shopInfo = Shop.get({id: $routeParams.id});
+            var shopInfo = Shop.get({id: $routeParams.id, date: dateSelected});
             shopInfo.$promise.then(function(res){
                 if(res.status === 'failed'){
                     $ctrl.error = "Something went wrong. Can't find shop id. Please refresh the page"
@@ -266,6 +268,12 @@ angular.module('BeConve').controller('ModalInstanceCtrl', [ '$scope', '$uibModal
 
                     for(i=0;i < res.slots.length;i++){
                         $scope.data.push(res.slots[i].split('T')[1].split(':').slice(0,2).join(':'));
+                    }
+
+                    $ctrl.timeSlotMessage = false;
+
+                    if ($scope.data == 0) {
+                        $ctrl.timeSlotMessage = 'Shop is closed.';
                     }
 
                     $scope.viewby = 5;

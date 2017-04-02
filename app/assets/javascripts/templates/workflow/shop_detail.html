@@ -101,7 +101,7 @@
             </div>
 
             <hr>
-
+            <p class="text-center" style="color: red" ng-if="$ctrl.timeSlotMessage">{{ $ctrl.timeSlotMessage }}</p>
             <ul>
                 <li style="display: inline;" ng-repeat="row in data.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))"><button class="btn btn-default time-slot" ng-click="timeSlot(row)">{{row}}</button></li>
             </ul>
