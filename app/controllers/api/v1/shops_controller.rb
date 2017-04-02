@@ -7,14 +7,14 @@ module Api
       end
 
       def show
+        date_selected = Time.now.in_time_zone("Central Time (US & Canada)")
 
-        date_selected = DateTime.now
         if params['date'].present?
           arr_date = params['date'].split(',')
           date_selected = Date.new(arr_date[0].to_i, arr_date[1].to_i, arr_date[2].to_i)
         end
 
-        business_hour = BusinessHour.where(user_id: params[:id], day: date_selected.strftime("%A"))[0]
+        business_hour = BusinessHour.where(user_id: params[:id], day: date_selected.strftime("%A"), open: true)[0]
 
         open_time = convert_to_date_time(business_hour.open_time)
         close_time = convert_to_date_time(business_hour.close_time)
