@@ -43,11 +43,11 @@ module Api
             total_slots << e if e > time_now + 900
           end
 
+          existed_appointments = Appointment.where('DATE(start_time) = ?', Date.today).map{|x| x.start_time}
+
+          total_slots = total_slots.reject{|x| existed_appointments.include? x}
           total_slots.pop
 
-          # total_slots.each do |i|
-          #   available_slots << "#{i.hour}:#{i.min}"
-          # end
           render status: 200, json: {
               status: "success",
               shop: user.as_json(:include => :business_hours),
