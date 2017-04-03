@@ -29,6 +29,11 @@ module Api
         @appointment.customer_id = current_user.id
         @appointment.stripe_customer_id = stripe_customer.id
 
+        arr_date = params['appointment']['dateSelected'].split('-')
+        arr_time = params['appointment']['timeSlotSelected'].split(':')
+        start_time = DateTime.new(arr_date[0].to_i, arr_date[1].to_i, arr_date[2].split('T')[0].to_i, arr_time[0].to_i, arr_time[1].to_i)
+        @appointment.start_time = start_time
+
         if @appointment.save
           EmailBookNotification.to_shop(@appointment).deliver_now
           EmailBookNotification.to_customer(@appointment).deliver_now

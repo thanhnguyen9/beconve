@@ -26,8 +26,8 @@ module Api
               slots: total_slots
           }.to_json
         else
-          open_time = convert_to_date_time(params['date'], business_hour.open_time)
-          close_time = convert_to_date_time(params['date'], business_hour.close_time)
+          open_time = convert_to_date_time(date_selected, business_hour.open_time)
+          close_time = convert_to_date_time(date_selected, business_hour.close_time)
 
           thirty_minutes_step = (1.to_f/24/2)
           total_slots = []
@@ -81,9 +81,8 @@ module Api
         params.require(:user).permit(:name, :address, :warranty, :response_time, :rating, :reviews, :reviews_link, :device_count, :image, :status)
       end
 
-      def convert_to_date_time(date, time)
-        arr_date = date.split(',')
-        DateTime.new(arr_date[0].to_i, arr_date[1].to_i, arr_date[2].to_i, time.hour, time.min, 0)
+      def convert_to_date_time(date_selected, time)
+        DateTime.new(date_selected.year, date_selected.month, date_selected.day, time.hour, time.min, 0)
       end
     end
   end
