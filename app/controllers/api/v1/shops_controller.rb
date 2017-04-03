@@ -8,12 +8,24 @@ module Api
 
       def show
         user = User.find(params[:id])
-        time_now = DateTime.now
+        utc_time_now = DateTime.now.in_time_zone("Central Time (US & Canada)")
+        time_now = Time.new(
+            (utc_time_now.strftime('%Y')).to_i,
+            (utc_time_now.strftime('%m')).to_i,
+            (utc_time_now.strftime('%d')).to_i,
+            (utc_time_now.strftime('%H')).to_i,
+            (utc_time_now.strftime('%m')).to_i)
         date_selected = time_now
 
         if params['date'].present?
           arr_date = params['date'].split(',')
           date_selected = Date.new(arr_date[0].to_i, arr_date[1].to_i, arr_date[2].to_i)
+          time_now = Time.new(
+              arr_date[0].to_i,
+              arr_date[1].to_i,
+              arr_date[2].to_i,
+              (utc_time_now.strftime('%H')).to_i,
+              (utc_time_now.strftime('%m')).to_i)
         end
 
         business_hour = BusinessHour.where(user_id: params[:id], day: date_selected.strftime("%A"), open: true)[0]
