@@ -46,6 +46,7 @@ gem 'omniauth-stripe-connect'
 gem 'geocoder'
 gem "rolify"
 gem 'simple_form'
+gem 'sms_fu'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
