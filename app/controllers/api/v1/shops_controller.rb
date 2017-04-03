@@ -20,12 +20,6 @@ module Api
         if params['date'].present?
           arr_date = params['date'].split(',')
           date_selected = Date.new(arr_date[0].to_i, arr_date[1].to_i, arr_date[2].to_i)
-          time_now = Time.new(
-              arr_date[0].to_i,
-              arr_date[1].to_i,
-              arr_date[2].to_i,
-              (utc_time_now.strftime('%H')).to_i,
-              (utc_time_now.strftime('%m')).to_i)
         end
 
         business_hour = BusinessHour.where(user_id: params[:id], day: date_selected.strftime("%A"), open: true)[0]
