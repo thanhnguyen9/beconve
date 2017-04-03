@@ -8,7 +8,7 @@ module Api
 
       def show
         user = User.find(params[:id])
-        time_now = Time.now.in_time_zone("Central Time (US & Canada)")
+        time_now = DateTime.now
         date_selected = time_now
 
         if params['date'].present?
@@ -36,6 +36,7 @@ module Api
           open_time.step(close_time, thirty_minutes_step) do |e|
             total_slots << e if e > time_now + 900
           end
+
           total_slots.pop
 
           # total_slots.each do |i|
