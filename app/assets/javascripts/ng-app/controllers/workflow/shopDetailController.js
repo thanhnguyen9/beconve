@@ -199,6 +199,10 @@ angular.module('BeConve').controller('ModalInstanceCtrl', [ '$scope', '$uibModal
             $scope.dateSelected = new Date(year, month, day);
         };
 
+        $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+        $scope.format = $scope.formats[0];
+        $scope.altInputFormats = ['M!/d!/yyyy'];
+
         $scope.popup2 = {
             opened: false
         };
@@ -225,13 +229,17 @@ angular.module('BeConve').controller('ModalInstanceCtrl', [ '$scope', '$uibModal
         //    Pager
 
         $scope.timeSlot = function (timeSlot){
-            $scope.timeSlotSelected = timeSlot
+            $scope.timeSlotSelected = timeSlot;
+            $scope.scheduleTime = "Schedule at " + timeSlot + ' on ' + dateSelected.split(',')[1] + '/'
+                                                                     + dateSelected.split(',')[2] + '/'
+                                                                     + dateSelected.split(',')[0]
         };
 
         $scope.$watch('dateSelected', function(newVal, oldVal) {
 
             dateSelected = newVal.getFullYear() + ',' + (parseInt(newVal.getMonth()) + 1).toString() + ',' + newVal.getDate();
 
+            $scope.scheduleTime = '';
             var shopInfo = Shop.get({id: $routeParams.id, date: dateSelected});
             shopInfo.$promise.then(function(res){
                 if(res.status === 'failed'){
@@ -339,6 +347,15 @@ angular.module('BeConve').controller('ModalInstanceCtrl', [ '$scope', '$uibModal
             }
         };
 
+        $scope.reservationProcess = true;
+
+        $ctrl.goToPayment = function(){
+            $scope.reservationProcess = false;
+        };
+
+        $ctrl.backToDateSelection = function(){
+            $scope.reservationProcess = true;
+        }
     }]);
 
 // Please note that the close and dismiss bindings are from $uibModalInstance.

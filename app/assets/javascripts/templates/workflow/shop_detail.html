@@ -84,67 +84,94 @@
     <br>
 
     <script type="text/ng-template" id="myModalContent.html">
-        <div class="modal-header">
-            <p class="modal-title text-center" id="modal-title">SELECT A TIME</p>
-        </div>
-        <div class="modal-body" id="modal-body">
+        <div ng-show="reservationProcess">
+            <div class="modal-header">
+                <div class="col-sm-1">
+                    <span style="font-size: 2em" ng-click="$ctrl.cancel()">X</span>
+                </div>
+                <div class="col-sm-11">
+                    <p class="modal-title text-center" id="modal-title">SELECT A TIME</p>
+                </div>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="input-group">
-                        <input type="text" class="form-control" uib-datepicker-popup ng-model="dateSelected" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
-                        <span class="input-group-btn">
+            </div>
+            <div class="modal-body" id="modal-body">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="input-group">
+                            <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dateSelected" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                            <span class="input-group-btn">
                             <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
                           </span>
-                    </p>
-                </div>
-            </div>
-
-            <hr>
-            <p class="text-center" style="color: red" ng-if="$ctrl.timeSlotMessage">{{ $ctrl.timeSlotMessage }}</p>
-            <ul>
-                <li style="display: inline;" ng-repeat="row in data.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))"><button class="btn btn-default time-slot" ng-click="timeSlot(row)">{{row}}</button></li>
-            </ul>
-
-            <!--<ul uib-pager total-items="totalItems" max-size="maxSize" items-per-page="viewby" ng-model="currentPage"></ul>-->
-            <ul uib-pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" items-per-page="viewby" class="pagination-sm" boundary-link-numbers="true" rotate="false"></ul>
-            <hr>
-            <div ng-if="timeSlotSelected">
-                <p style="font-size: 20px" >Schedule at {{ timeSlotSelected }} on {{dateSelected}} </p>
-            </div>
-
-            <form stripe-form="stripeCallback" name="checkoutForm">
-
-                <!--<label>Name</label><br>-->
-                <!--<input class="form-control" type='text' ng-model="customerName" placeholder="John Smith"/><br>-->
-
-                <!--<label>Phone number</label><br>-->
-                <!--<input class="form-control input-phone" type='text' phone-input ng-model="customerPhone" placeholder="(123) 456-6789" required/><br>-->
-
-                <label>Card Number</label>
-                <input class="form-control" ng-model="number" placeholder="Card Number"
-                       payments-format="card" payments-validate="card" name="card" required/><br>
-
-                <label>Expiration MM/YYYY</label>
-                <input class="form-control" ng-model="expiry" placeholder="MM/YYYY"
-                       payments-format="expiry" payments-validate="expiry"
-                       name="expiry" required/><br>
-
-                <label>CVC</label>
-                <input class="form-control" ng-model="cvc" placeholder="CVC" payments-format="cvc" payments-validate="cvc" name="cvc" required/><br>
-
-                <div ng-if="checkoutForm.$invalid" class="alert alert-danger">
-                    Error: Please correct card's information
+                        </p>
+                    </div>
                 </div>
 
-                <button type="submit" class="btn btn-success btn-lg pull-right" ng-hide="paying" ng-click="reserve()">Book Now</button>
-                <img src="http://i.imgur.com/Ty0Mioy.gif" class="stripe-connect-icon img-responsive" style="text-align: center" alt="" ng-show="paying">
-            </form>
+                <hr>
+                <p class="text-center" style="color: red" ng-if="$ctrl.timeSlotMessage">{{ $ctrl.timeSlotMessage }}</p>
+                <ul>
+                    <li style="display: inline;" ng-repeat="row in data.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))"><button class="btn btn-default time-slot" ng-click="timeSlot(row)">{{row}}</button></li>
+                </ul>
 
+                <!--<ul uib-pager total-items="totalItems" max-size="maxSize" items-per-page="viewby" ng-model="currentPage"></ul>-->
+                <ul uib-pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" items-per-page="viewby" class="pagination-sm" boundary-link-numbers="true" rotate="false"></ul>
+                <hr>
+                <div ng-if="timeSlotSelected">
+                    <p class="text-center" style="font-size: 20px" > {{ scheduleTime }} </p>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+                <button class="btn btn-success" type="button" ng-click="$ctrl.goToPayment()">Next</button>
+            </div>
         </div>
-        <div class="modal-footer">
-            <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
-            <button class="btn btn-success" type="button" ng-click="$ctrl.goToPayment()">Next</button>
+
+        <div ng-hide="reservationProcess">
+            <div class="modal-header">
+                <div class="col-sm-1">
+                    <span style="font-size: 2em" ng-click="$ctrl.backToDateSelection()">&#8592;</span>
+                </div>
+                <div class="col-sm-11">
+                    <p class="modal-title text-center" id="modal-title">Add the Card</p>
+                </div>
+
+            </div>
+            <div class="modal-body" id="modal-body">
+                <p class="text-center">You only get charge if you don't cancel the appointment</p>
+                <form stripe-form="stripeCallback" name="checkoutForm">
+
+                    <!--<label>Name</label><br>-->
+                    <!--<input class="form-control" type='text' ng-model="customerName" placeholder="John Smith"/><br>-->
+
+                    <!--<label>Phone number</label><br>-->
+                    <!--<input class="form-control input-phone" type='text' phone-input ng-model="customerPhone" placeholder="(123) 456-6789" required/><br>-->
+
+                    <label>Card Number</label>
+                    <input class="form-control" ng-model="number" placeholder="Card Number"
+                           payments-format="card" payments-validate="card" name="card" required/><br>
+
+                    <label>Expiration MM/YYYY</label>
+                    <input class="form-control" ng-model="expiry" placeholder="MM/YYYY"
+                           payments-format="expiry" payments-validate="expiry"
+                           name="expiry" required/><br>
+
+                    <label>CVC</label>
+                    <input class="form-control" ng-model="cvc" placeholder="CVC" payments-format="cvc" payments-validate="cvc" name="cvc" required/><br>
+
+                    <!--<div ng-show="checkoutForm.$invalid" class="alert alert-danger">-->
+                        <!--Error: Please input and correct card's information-->
+                    <!--</div>-->
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success btn-lg pull-right" ng-hide="paying" ng-click="reserve()">Book Now</button>
+                    </div>
+
+                    <img src="http://i.imgur.com/Ty0Mioy.gif" class="stripe-connect-icon img-responsive" style="text-align: center" alt="" ng-show="paying">
+                </form>
+
+            </div>
+
         </div>
     </script>
 
