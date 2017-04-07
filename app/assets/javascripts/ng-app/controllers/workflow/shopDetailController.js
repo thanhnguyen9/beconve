@@ -38,11 +38,11 @@ angular
                     }
                 }
 
-                $ctrl.availableSlots = [];
+                $ctrl.availableSlots = res.slots;
 
-                for (i = 0; i < res.slots.length; i++) {
-                    $ctrl.availableSlots.push(res.slots[i].split('T')[1].split(':').slice(0, 2).join(':'));
-                }
+                // for (i = 0; i < res.slots.length; i++) {
+                //     $ctrl.availableSlots.push(res.slots[i]);
+                // }
 
                 if ($ctrl.availableSlots.length == 0) {
                     $ctrl.timeSlotMessage = 'Shop is closed.'
@@ -272,11 +272,11 @@ angular.module('BeConve').controller('ModalInstanceCtrl', [ '$scope', '$uibModal
                         }
                     }
 
-                    $scope.data = [];
+                    $scope.data = res.slots;
 
-                    for(i=0;i < res.slots.length;i++){
-                        $scope.data.push(res.slots[i].split('T')[1].split(':').slice(0,2).join(':'));
-                    }
+                    // for(i=0;i < res.slots.length;i++){
+                    //     $scope.data.push(res.slots[i].split('T')[1].split(':').slice(0,2).join(':'));
+                    // }
 
                     $ctrl.timeSlotMessage = false;
 

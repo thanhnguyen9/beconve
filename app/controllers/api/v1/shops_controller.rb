@@ -40,7 +40,7 @@ module Api
           available_slots = []
 
           open_time.step(close_time, thirty_minutes_step) do |e|
-            total_slots << e if e > time_now + 900
+            total_slots << e.strftime("%l:%M %p") if e > time_now + 900
           end
 
           existed_appointments = Appointment.where('DATE(start_time) = ?', Date.today).map{|x| x.start_time}
