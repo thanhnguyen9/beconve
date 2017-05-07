@@ -17,23 +17,36 @@ module Api
           response = {
               status: 'failed'
           }
-          rend
           render json: {response: response}
         end
       end
 
       def show
-        price = Price.find(params[:id])
-        render json: {response: price}
+        business_hours = BusinessHour.where(user_id: params[:id])
+        format_business_hours = []
+
+        business_hours.each do |i|
+          hash = {}
+          hash['day'] = i.day.capitalize
+
+          if i.open == true
+            hash['open_time'] = i.open_time.strftime("%l:%M %p").delete(' ')
+            hash['close_time'] = i.close_time.strftime("%l:%M %p").delete(' ')
+          else
+            hash['open_time'] = 'Closed'
+            hash['close_time'] = 'Closed'
+          end
+          format_business_hours << hash
+        end
+
+        render status: 200, json: {
+            status: "success",
+            businessHours: format_business_hours
+        }.to_json
       end
 
       def update
-        price = Price.find(params[:id])
-        if price.update(params_price)
-          render json: {response: 'success'}
-        else
-          render json: {response: 'failed'}
-        end
+        binding.pry
       end
 
       private

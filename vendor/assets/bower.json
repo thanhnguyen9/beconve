@@ -10,6 +10,7 @@
     "angular-payments": "latest",
     "angular-spinner": "latest",
     "angular-ui-bootstrap": "latest",
-    "angular-bootstrap-toggle": "latest"
+    "angular-bootstrap-toggle": "latest",
+    "ng-file-upload": "latest"
   }
 }

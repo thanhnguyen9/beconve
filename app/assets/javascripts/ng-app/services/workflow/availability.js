@@ -6,24 +6,6 @@ angular.module('BeConve')
         })
     }])
 
-    .factory('Shop',['$resource', function($resource) {
-        return $resource('/api/v1/shops/:id', { id: '@id' }, {
-            update: {method: 'PUT'},
-            query: {method: 'GET'},
-            get: {method: 'GET'},
-            delete: {method: 'DELETE'}
-        })
-    }])
-
-    .factory('BusinessHours',['$resource', function($resource) {
-        return $resource('/api/v1/business_hours/:id', { id: '@id' }, {
-            update: {method: 'PUT'},
-            query: {method: 'GET'},
-            get: {method: 'GET'},
-            delete: {method: 'DELETE'}
-        })
-    }])
-
     .factory('Appointment',['$resource', function($resource) {
         return $resource('/api/v1/appointments/:id', { id: '@id' }, {
             update: {method: 'PUT'},

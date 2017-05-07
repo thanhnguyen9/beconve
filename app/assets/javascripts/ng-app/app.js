@@ -11,7 +11,8 @@ angular
         'Devise',
         'ngResource',
         'angularPayments',
-        'ui.bootstrap'
+        'ui.bootstrap',
+        'ngFileUpload'
     ])
     .config([
         '$routeProvider',
@@ -60,6 +61,14 @@ angular
                 .when('/business_hour', {
                     templateUrl: 'host/business_hours.html',
                     controller: 'businessHoursController'
+                })
+                .when('/pictures', {
+                    templateUrl: 'host/pictures/index.html',
+                    controller: 'picturesController'
+                })
+                .when('/pictures/:id', {
+                    templateUrl: 'host/pictures/edit.html',
+                    controller: 'picturesEditController'
                 })
             ;
 

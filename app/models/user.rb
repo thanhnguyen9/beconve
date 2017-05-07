@@ -13,6 +13,9 @@ class User < ActiveRecord::Base
   has_many :customers, through: :appointments, class_name: "User"
   has_many :business_hours
 
+  has_many :user_images
+  accepts_nested_attributes_for :user_images
+
   def promote
     self.add_role :host
   end

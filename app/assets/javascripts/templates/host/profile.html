@@ -60,6 +60,7 @@
                                                 <div style="color: red" ng-show="updateProfile.image.$error.required">Tell us your name.</div>
                                             </div>
 
+
                                         </div>
 
                                         <!--<div class="col-sm-6">-->
@@ -106,6 +107,10 @@
                                             <button type="submit" class="btn btn-success btn-lg" ng-click="updateProfile.$valid && submit()">Save profile</button>
                                         </div>
                                     </form>
+
+                                    <input type="file" ngf-select="onFileSelect($file)">
+                                    <button ng-click="upload()">upload me</button>
+
                                     <br>
                                 </div>
                             </div>

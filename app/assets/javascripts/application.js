@@ -22,4 +22,5 @@
 //= require angular-devise/lib/devise
 //= require angular-resource/angular-resource
 //= require angular-payments/lib/angular-payments
+//=require ng-file-upload/ng-file-upload
 //= require_tree .

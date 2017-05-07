@@ -1,0 +1,38 @@
+<div>
+    <div class="section location-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="add-margin"></div>
+                    <h1>Pictures</h1>
+
+                    <p class="alert alert-success text-center" ng-show="info"> {{ info }} </p>
+                    <p class="alert alert-danger text-center" ng-show="alert"> {{ alert }} </p>
+
+                    <input type='file' ng-model-instant onchange="angular.element(this).scope().imageUpload(this)" type="file" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
+                           ngf-accept="'image/*'" class="form-control" required/><br>
+                    <button class="btn btn-success" ng-click="upload()">Upload</button>
+                    <br><br>
+
+                    <div ng-repeat="step in stepsModel">
+                        <img class="text-center" style="width: 300px" ng-src="{{step}}" />
+                    </div>
+                    <br>
+                </div>
+
+                <div class="col-md-3" ng-repeat-start="image in images">
+                    <div class="card" style="width: 20rem;">
+                        <img ng-src="{{image.image.url}}" alt="..." class="img-thumbnail">
+                        <div class="card-block text-center">
+                            <a href="#">Edit</a>
+                            <a href="#">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix" ng-if="($index+1)%4==0"></div>
+                <div ng-repeat-end=""></div>
+                <br><br>
+            </div>
+        </div>
+    </div>
+</div>
