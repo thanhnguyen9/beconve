@@ -22,6 +22,8 @@ Rails.application.routes.draw do
       resources :appointments
       resources :user_images
 
+      post '/user_images/edit' => 'user_images#update'
+
       get '/technicians/complete_request' => 'technicians#complete_request'
       put '/technicians/repair_request/approve' => 'technicians#approve'
 
